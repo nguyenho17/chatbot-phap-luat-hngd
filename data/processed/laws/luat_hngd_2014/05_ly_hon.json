@@ -1,0 +1,23 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Ly hôn",
+  "articles": [
+    {
+      "article": "Điều 51",
+      "title": "Quyền yêu cầu giải quyết ly hôn",
+      "content": "Vợ, chồng hoặc cả hai người có quyền yêu cầu Tòa án giải quyết ly hôn."
+    },
+    {
+      "article": "Điều 55",
+      "title": "Thuận tình ly hôn",
+      "content": "Trong trường hợp vợ chồng cùng yêu cầu ly hôn và đã thỏa thuận được về việc chia tài sản, nuôi con."
+    },
+    {
+      "article": "Điều 56",
+      "title": "Ly hôn theo yêu cầu của một bên",
+      "content": "Khi hòa giải tại Tòa án không thành và có căn cứ cho thấy hôn nhân lâm vào tình trạng trầm trọng thì Tòa án giải quyết cho ly hôn."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}

@@ -1,0 +1,23 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Quyền và nghĩa vụ của vợ chồng",
+  "articles": [
+    {
+      "article": "Điều 17",
+      "title": "Nghĩa vụ chung của vợ chồng",
+      "content": "Vợ chồng có nghĩa vụ thương yêu, chung thủy, tôn trọng, quan tâm, chăm sóc, giúp đỡ nhau."
+    },
+    {
+      "article": "Điều 19",
+      "title": "Tình nghĩa vợ chồng",
+      "content": "Vợ chồng có nghĩa vụ thương yêu, chung thủy và tôn trọng danh dự, nhân phẩm, uy tín của nhau."
+    },
+    {
+      "article": "Điều 21",
+      "title": "Tôn trọng danh dự, nhân phẩm, uy tín",
+      "content": "Vợ, chồng có nghĩa vụ tôn trọng danh dự, nhân phẩm, uy tín của nhau."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}

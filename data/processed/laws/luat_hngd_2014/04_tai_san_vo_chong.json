@@ -1,0 +1,23 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Chế độ tài sản vợ chồng",
+  "articles": [
+    {
+      "article": "Điều 33",
+      "title": "Tài sản chung của vợ chồng",
+      "content": "Tài sản chung của vợ chồng gồm tài sản do vợ chồng tạo ra, thu nhập do lao động, hoạt động sản xuất, kinh doanh."
+    },
+    {
+      "article": "Điều 43",
+      "title": "Tài sản riêng của vợ, chồng",
+      "content": "Tài sản riêng của vợ, chồng gồm tài sản mỗi người có trước khi kết hôn, được thừa kế riêng, được tặng cho riêng."
+    },
+    {
+      "article": "Điều 59",
+      "title": "Nguyên tắc giải quyết tài sản của vợ chồng khi ly hôn",
+      "content": "Việc chia tài sản chung do các bên thỏa thuận; nếu không thỏa thuận được thì Tòa án giải quyết theo nguyên tắc bảo đảm quyền lợi của vợ, con."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}

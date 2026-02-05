@@ -1,0 +1,23 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Quy định chung",
+  "articles": [
+    {
+      "article": "Điều 1",
+      "title": "Phạm vi điều chỉnh",
+      "content": "Luật này quy định chế độ hôn nhân và gia đình; chuẩn mực pháp lý cho cách ứng xử của các thành viên gia đình; trách nhiệm của Nhà nước, xã hội và công dân trong việc xây dựng, củng cố chế độ hôn nhân và gia đình."
+    },
+    {
+      "article": "Điều 2",
+      "title": "Những nguyên tắc cơ bản của chế độ hôn nhân và gia đình",
+      "content": "Hôn nhân tự nguyện, tiến bộ, một vợ một chồng, vợ chồng bình đẳng; hôn nhân giữa công dân Việt Nam với nhau và với người nước ngoài được pháp luật tôn trọng và bảo vệ."
+    },
+    {
+      "article": "Điều 3",
+      "title": "Giải thích từ ngữ",
+      "content": "Trong Luật này, các từ ngữ như kết hôn, ly hôn, gia đình, người chưa thành niên được hiểu theo quy định của pháp luật."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}

@@ -1,0 +1,23 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Nuôi con và cấp dưỡng",
+  "articles": [
+    {
+      "article": "Điều 81",
+      "title": "Việc trông nom, chăm sóc, nuôi dưỡng con",
+      "content": "Sau khi ly hôn, cha mẹ vẫn có quyền, nghĩa vụ trông nom, chăm sóc, nuôi dưỡng con."
+    },
+    {
+      "article": "Điều 82",
+      "title": "Quyền, nghĩa vụ của cha, mẹ không trực tiếp nuôi con",
+      "content": "Cha, mẹ không trực tiếp nuôi con có nghĩa vụ cấp dưỡng và tôn trọng quyền của con."
+    },
+    {
+      "article": "Điều 83",
+      "title": "Quyền thăm nom con",
+      "content": "Cha, mẹ không trực tiếp nuôi con có quyền, nghĩa vụ thăm nom con mà không ai được cản trở."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}

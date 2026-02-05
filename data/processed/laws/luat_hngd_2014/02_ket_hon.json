@@ -1,0 +1,28 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Kết hôn",
+  "articles": [
+    {
+      "article": "Điều 8",
+      "title": "Điều kiện kết hôn",
+      "content": "Nam từ đủ 20 tuổi trở lên, nữ từ đủ 18 tuổi trở lên; việc kết hôn do nam và nữ tự nguyện quyết định; không bị mất năng lực hành vi dân sự; không thuộc các trường hợp cấm kết hôn."
+    },
+    {
+      "article": "Điều 9",
+      "title": "Đăng ký kết hôn",
+      "content": "Việc kết hôn phải được đăng ký tại cơ quan nhà nước có thẩm quyền theo quy định của pháp luật về hộ tịch."
+    },
+    {
+      "article": "Điều 10",
+      "title": "Người có quyền yêu cầu hủy việc kết hôn trái pháp luật",
+      "content": "Người bị cưỡng ép kết hôn, bị lừa dối kết hôn hoặc cơ quan, tổ chức có thẩm quyền có quyền yêu cầu Tòa án hủy việc kết hôn trái pháp luật."
+    },
+    {
+      "article": "Điều 11",
+      "title": "Xử lý việc kết hôn trái pháp luật",
+      "content": "Việc kết hôn trái pháp luật bị Tòa án hủy theo yêu cầu của người có quyền."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}
