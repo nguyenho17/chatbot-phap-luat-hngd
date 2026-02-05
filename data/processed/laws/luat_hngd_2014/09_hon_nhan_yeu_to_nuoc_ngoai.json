@@ -1,0 +1,23 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Hôn nhân và gia đình có yếu tố nước ngoài",
+  "articles": [
+    {
+      "article": "Điều 121",
+      "title": "Áp dụng pháp luật đối với quan hệ hôn nhân có yếu tố nước ngoài",
+      "content": "Việc kết hôn, ly hôn và quan hệ hôn nhân có yếu tố nước ngoài được giải quyết theo quy định của Luật này và điều ước quốc tế."
+    },
+    {
+      "article": "Điều 122",
+      "title": "Kết hôn có yếu tố nước ngoài",
+      "content": "Việc kết hôn giữa công dân Việt Nam với người nước ngoài phải tuân thủ pháp luật Việt Nam."
+    },
+    {
+      "article": "Điều 127",
+      "title": "Ly hôn có yếu tố nước ngoài",
+      "content": "Ly hôn giữa công dân Việt Nam với người nước ngoài được giải quyết tại Tòa án Việt Nam theo quy định của pháp luật."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}

@@ -1,0 +1,23 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Luật Hôn nhân và Gia đình 2014",
+  "group": "Quan hệ gia đình",
+  "articles": [
+    {
+      "article": "Điều 69",
+      "title": "Nghĩa vụ và quyền của cha mẹ",
+      "content": "Cha mẹ có nghĩa vụ thương yêu con, chăm sóc, nuôi dưỡng, bảo vệ quyền và lợi ích hợp pháp của con."
+    },
+    {
+      "article": "Điều 70",
+      "title": "Quyền và nghĩa vụ của con",
+      "content": "Con có quyền được cha mẹ thương yêu, chăm sóc, giáo dục; có nghĩa vụ kính trọng, hiếu thảo với cha mẹ."
+    },
+    {
+      "article": "Điều 71",
+      "title": "Quyền, nghĩa vụ của ông bà và cháu",
+      "content": "Ông bà có quyền, nghĩa vụ chăm sóc, giáo dục cháu; cháu có nghĩa vụ kính trọng, phụng dưỡng ông bà."
+    }
+  ],
+  "source": "Luật Hôn nhân và Gia đình 2014"
+}
