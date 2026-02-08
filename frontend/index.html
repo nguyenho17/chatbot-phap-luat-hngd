@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galaxy AI Law – Tư vấn pháp luật</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <h2><i class="fas fa-atom"></i> Chatbot - Tư vấn luật pháp</h2>
+            <button id="newChat"><i class="fas fa-plus-circle"></i> Chat mới</button>
+            <div style="margin-top: 25px;" class="history" id="history"></div>
+        </aside>
+
+        <main class="chat-area">
+            <header class="header">
+                <div><i class="fas fa-stars"></i> Trợ lý AI Pháp luật</div>
+                <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
+            </header>
+
+            <div class="messages" id="messages"></div>
+
+            <div class="input-section">
+                <div class="input-container">
+                    <textarea id="question" rows="1" placeholder="Khám phá kiến thức luật pháp..."></textarea>
+                    <button id="send"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
