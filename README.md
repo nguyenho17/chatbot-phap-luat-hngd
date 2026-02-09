@@ -1,3 +1,4 @@
+# CHƯƠNG 1: GIỚI THIỆU
 ## 1.1 Lý do chọn đề tài
 
 Trong bối cảnh chuyển đổi số đang diễn ra mạnh mẽ, việc ứng dụng công nghệ thông tin và trí tuệ nhân tạo (AI) vào các lĩnh vực đời sống xã hội ngày càng trở nên phổ biến và cần thiết. Đặc biệt, trong lĩnh vực pháp luật, nhu cầu tư vấn và tra cứu thông tin pháp lý của người dân ngày càng tăng cao, nhất là các vấn đề liên quan đến **luật hôn nhân và gia đình** như kết hôn, ly hôn, quyền nuôi con, phân chia tài sản. Tuy nhiên, việc tiếp cận thông tin pháp luật hiện nay vẫn còn tồn tại nhiều hạn chế do phụ thuộc vào các phương thức truyền thống như tra cứu văn bản giấy, tìm kiếm thủ công trên internet hoặc trực tiếp liên hệ với luật sư. Điều này dẫn đến một số vấn đề sau:
@@ -60,6 +61,7 @@ Việc phát triển Chatbot AI Tư vấn Luật Hôn nhân và Gia đình mang 
 - Nâng cao kỹ năng nghiên cứu và phát triển hệ thống AI: Đề tài giúp sinh viên vận dụng kiến thức về lập trình, trí tuệ nhân tạo, xử lý ngôn ngữ tự nhiên và thiết kế hệ thống phần mềm.
 
 - Tạo nền tảng cho các hướng phát triển tiếp theo: Hệ thống chatbot có thể mở rộng sang các lĩnh vực pháp luật khác hoặc tích hợp thêm cơ sở dữ liệu, góp phần phát triển các ứng dụng AI phục vụ cộng đồng trong tương lai.
+# CHƯƠNG 2: CƠ SỞ LÝ LUẬN VÀ PHƯƠNG PHÁP NGHIÊN CỨU
 ## 2.1 Phân tích yêu cầu
 
 ### 2.1.1 Xác định yêu cầu
@@ -200,7 +202,7 @@ Hệ thống hỗ trợ thống kê các chủ đề tư vấn phổ biến và 
 - **Dịch vụ AI:** Kết hợp dữ liệu luật với mô hình AI để sinh câu trả lời tư vấn.
 - **Quản lý lịch sử hội thoại:** Lưu trữ và truy xuất nội dung tư vấn.
 - **Báo cáo và thống kê:** Tổng hợp dữ liệu sử dụng chatbot và xuất báo cáo.
-## 2.2.2 Thiết kế cơ sở dữ liệu
+### 2.2.2 Thiết kế cơ sở dữ liệu
 
 Hệ thống Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình sử dụng cơ sở dữ liệu quan hệ để lưu trữ thông tin người dùng, nội dung tư vấn pháp luật, hội thoại và đánh giá chất lượng câu trả lời. Thiết kế cơ sở dữ liệu đảm bảo tính chính xác, bảo mật và khả năng mở rộng cho hệ thống.
 
@@ -246,7 +248,7 @@ MaDanhGia (PK), MucDoHaiLong, NhanXet, MaCauTraLoi (FK), MaNguoiDung (FK).
 - CauHoi và CauTraLoi: Quan hệ 1 – N.
 - VanBanPhapLuat và DieuLuat: Quan hệ 1 – N.
 - CauTraLoi và DanhGiaTraLoi: Quan hệ 1 – N.
-## 2.2.3 Giao diện người dùng
+### 2.2.3 Giao diện người dùng
 
 Giao diện người dùng của hệ thống Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình được thiết kế theo hướng trực quan, thân thiện và dễ sử dụng, phù hợp với nhiều đối tượng người dùng như người dân, luật sư và quản trị viên hệ thống. Giao diện tập trung vào việc hỗ trợ người dùng đặt câu hỏi pháp lý nhanh chóng, nhận câu trả lời chính xác và theo dõi lịch sử tư vấn một cách thuận tiện.
 
@@ -324,7 +326,6 @@ Hệ thống Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình được tri�
 Hệ thống được cập nhật định kỳ nhằm cải tiến thuật toán AI, bổ sung dữ liệu pháp luật mới và vá lỗi bảo mật. Dữ liệu được sao lưu định kỳ để đảm bảo an toàn và khả năng khôi phục khi xảy ra sự cố.
 
 ---
-
 ## 2.5 Phương pháp nghiên cứu
 
 ### Phương pháp nghiên cứu lý thuyết
@@ -344,6 +345,7 @@ Hệ thống được cập nhật định kỳ nhằm cải tiến thuật toá
 - Visual Studio Code  
 - MySQL / PostgreSQL  
 - GitHub
+# CHƯƠNG 3:GIỚI THIỆU TỔNG QUAN VỀ VẤN ĐỀ NGHIÊN CỨU
 ## 3.1 Tổng quan về vấn đề nghiên cứu
 
 ### 3.1.1 Khái niệm cơ bản
@@ -382,7 +384,7 @@ Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình là hệ thống ứng d�
 - Dễ mở rộng và nâng cấp.
 - Giao diện thân thiện.
 - Hỗ trợ đa nền tảng.
-# 3.1.6 Tầm quan trọng của hệ thống Chatbot AI Tư vấn Luật Hôn Nhân và Gia Đình
+### 3.1.6 Tầm quan trọng của hệ thống Chatbot AI Tư vấn Luật Hôn Nhân và Gia Đình
 
 Hệ thống Chatbot AI tư vấn Luật Hôn Nhân và Gia Đình đóng vai trò quan trọng trong việc hỗ trợ người dân tiếp cận và hiểu đúng các quy định pháp luật liên quan đến hôn nhân, gia đình, quyền và nghĩa vụ của vợ chồng, cha mẹ và con cái. Trong thực tế, nhiều người gặp khó khăn khi tìm hiểu pháp luật do văn bản pháp luật phức tạp, khó hiểu và thường xuyên thay đổi.
 
@@ -395,10 +397,9 @@ Ngoài ra, Chatbot AI tư vấn luật còn giúp tiết kiệm thời gian và 
 Cuối cùng, hệ thống Chatbot AI là một bước tiến quan trọng trong quá trình chuyển đổi số lĩnh vực pháp lý. Việc ứng dụng trí tuệ nhân tạo giúp nâng cao chất lượng dịch vụ tư vấn luật, mở rộng khả năng phục vụ người dân và tạo nền tảng cho việc xây dựng các hệ thống pháp luật thông minh trong tương lai.
 
 ---
+## 3.2 Khảo sát hiện trạng
 
-# 3.2 Khảo sát hiện trạng
-
-## Thực trạng tư vấn Luật Hôn Nhân và Gia Đình hiện nay
+### Thực trạng tư vấn Luật Hôn Nhân và Gia Đình hiện nay
 
 Hiện nay, việc tư vấn Luật Hôn Nhân và Gia Đình chủ yếu được thực hiện thông qua luật sư, văn phòng tư vấn pháp luật hoặc các website pháp lý. Tuy nhiên, phương thức này vẫn tồn tại nhiều hạn chế như:
 
@@ -407,7 +408,7 @@ Hiện nay, việc tư vấn Luật Hôn Nhân và Gia Đình chủ yếu đư�
 - Thông tin phân tán: Nội dung pháp luật liên quan đến hôn nhân và gia đình nằm rải rác trong nhiều luật, nghị định, thông tư khác nhau, gây khó khăn cho việc tra cứu.
 - Thiếu kênh hỗ trợ nhanh chóng: Người dân không có công cụ tư vấn tức thời khi cần giải đáp các thắc mắc pháp lý khẩn cấp.
 
-## Tình hình ứng dụng công nghệ trong tư vấn pháp luật
+### Tình hình ứng dụng công nghệ trong tư vấn pháp luật
 
 Hiện nay đã có một số website và ứng dụng hỗ trợ tư vấn pháp luật, tuy nhiên vẫn tồn tại nhiều hạn chế:
 
@@ -415,7 +416,7 @@ Hiện nay đã có một số website và ứng dụng hỗ trợ tư vấn ph�
 - Tính năng còn hạn chế, chủ yếu cung cấp văn bản luật, chưa tư vấn theo ngữ cảnh.
 - Chưa tận dụng hiệu quả trí tuệ nhân tạo trong xử lý ngôn ngữ tự nhiên và cá nhân hóa câu trả lời.
 
-## Định hướng phát triển hệ thống Chatbot AI tư vấn Luật Hôn Nhân và Gia Đình
+### Định hướng phát triển hệ thống Chatbot AI tư vấn Luật Hôn Nhân và Gia Đình
 
 Dựa trên thực trạng và nhu cầu thực tế, hệ thống Chatbot AI cần phát triển theo các hướng sau:
 
@@ -427,3 +428,171 @@ Dựa trên thực trạng và nhu cầu thực tế, hệ thống Chatbot AI c�
 - Hỗ trợ đa ngôn ngữ.
 - Tư vấn và cảnh báo pháp lý thông minh.
 - Phân tích và báo cáo nâng cao bằng AI/ML để cải thiện chất lượng tư vấn.
+# CHƯƠNG 4:PHÂN TÍCH VÀ THIẾT KẾ UML
+## 4.1 Phân tích tổng quan hệ thống
+
+Hệ thống **Chatbot AI tư vấn Luật Hôn nhân và Gia đình Việt Nam** được xây dựng nhằm hỗ trợ người dùng tra cứu và tư vấn các quy định pháp luật liên quan đến hôn nhân, gia đình thông qua giao diện web. Hệ thống ứng dụng **trí tuệ nhân tạo (AI)** kết hợp với **cơ sở dữ liệu pháp luật** để phân tích câu hỏi, trích xuất điều luật liên quan và đưa ra câu trả lời phù hợp.
+
+Việc phân tích và thiết kế **UML (Unified Modeling Language)** giúp mô hình hóa hệ thống một cách trực quan, xác định rõ các tác nhân, thực thể, chức năng và mối quan hệ giữa các thành phần, làm cơ sở cho quá trình thiết kế và triển khai hệ thống.
+
+---
+## 4.2 Xác định các tác nhân (Actors)
+
+Hệ thống có các tác nhân chính sau:
+
+### 👤 Người dùng
+Là người dân có nhu cầu tra cứu và tư vấn các vấn đề pháp luật liên quan đến Luật Hôn nhân và Gia đình. Người dùng có thể:
+- Đăng ký, đăng nhập hệ thống  
+- Gửi câu hỏi pháp luật bằng ngôn ngữ tự nhiên  
+- Nhận câu trả lời tư vấn từ Chatbot AI  
+- Xem lại lịch sử hội thoại  
+- Đánh giá chất lượng câu trả lời  
+
+### ⚖️ Luật sư
+Là người hỗ trợ chuyên môn cho hệ thống:
+- Kiểm tra, hiệu chỉnh nội dung tư vấn trong trường hợp cần thiết  
+- Bổ sung dữ liệu pháp luật hoặc góp ý nhằm nâng cao độ chính xác của chatbot  
+
+### 🛠️ Quản trị viên
+Là người quản lý toàn bộ hệ thống:
+- Quản lý người dùng và phân quyền  
+- Quản lý dữ liệu pháp luật, điều luật, chủ đề tư vấn  
+- Theo dõi hoạt động của chatbot  
+- Thống kê và xuất báo cáo  
+
+---
+## 4.3 Xác định các thực thể (Entities)
+
+### Thực thể **NGUOIDUNG**
+- MaNguoiDung (PK)  
+- HoTen  
+- GioiTinh  
+- Email  
+- SDT  
+- DiaChi  
+- VaiTro  
+- NgayDangKy  
+
+### Thực thể **TAIKHOAN**
+- MaTaiKhoan (PK)  
+- TenDangNhap  
+- MatKhau  
+- TrangThai  
+- MaNguoiDung (FK)  
+
+### Thực thể **CHUDEPHAPLUAT**
+- MaChuDe (PK)  
+- TenChuDe  
+- MoTa  
+
+### Thực thể **VANBANPHAPLUAT**
+- MaVanBan (PK)  
+- TenVanBan  
+- SoHieu  
+- NgayBanHanh  
+- CoQuanBanHanh  
+- LinhVuc  
+
+### Thực thể **DIEULUAT**
+- MaDieu (PK)  
+- SoDieu  
+- NoiDungDieu  
+- MaVanBan (FK)  
+
+### Thực thể **CAUHOI**
+- MaCauHoi (PK)  
+- NoiDungCauHoi  
+- ThoiGianGui  
+- MaNguoiDung (FK)  
+- MaChuDe (FK)  
+
+### Thực thể **CAUTRALOI**
+- MaCauTraLoi (PK)  
+- NoiDungTraLoi  
+- ThoiGianTraLoi  
+- NguonTraLoi  
+- MaCauHoi (FK)  
+
+### Thực thể **HOITHOAI**
+- MaHoiThoai (PK)  
+- ThoiGianBatDau  
+- ThoiGianKetThuc  
+- MaNguoiDung (FK)  
+
+### Thực thể **CHITIETHOITHOAI**
+- MaChiTiet (PK)  
+- NoiDung  
+- LoaiNoiDung  
+- ThoiGian  
+- MaHoiThoai (FK)  
+
+### Thực thể **DANHGIATRALOI**
+- MaDanhGia (PK)  
+- MucDoHaiLong  
+- NhanXet  
+- MaCauTraLoi (FK)  
+- MaNguoiDung (FK)  
+
+---
+## 4.4 Xác định các chức năng của hệ thống
+
+### 1️⃣ Quản lý người dùng
+- Đăng ký, đăng nhập hệ thống  
+- Cập nhật thông tin cá nhân  
+- Phân quyền người dùng (Người dùng, Luật sư, Quản trị viên)  
+
+### 2️⃣ Tư vấn pháp luật bằng Chatbot AI
+- Tiếp nhận câu hỏi bằng ngôn ngữ tự nhiên  
+- Phân tích ngữ nghĩa câu hỏi  
+- Tra cứu điều luật liên quan  
+- Sinh câu trả lời tư vấn phù hợp  
+
+### 3️⃣ Quản lý dữ liệu pháp luật
+- Quản lý văn bản pháp luật  
+- Quản lý điều luật  
+- Quản lý chủ đề pháp luật  
+
+### 4️⃣ Quản lý hội thoại
+- Lưu trữ lịch sử hội thoại  
+- Cho phép người dùng xem lại các phiên tư vấn  
+
+### 5️⃣ Đánh giá và thống kê
+- Đánh giá mức độ hài lòng của người dùng  
+- Thống kê số lượng câu hỏi và phiên hội thoại  
+- Xuất báo cáo phục vụ công tác quản lý  
+
+---
+## 4.5 Xác định các mối quan hệ giữa các thực thể
+
+- **NGUOIDUNG – TAIKHOAN**  
+  Một người dùng có một tài khoản đăng nhập  
+  → Quan hệ **1 – 1**
+
+- **NGUOIDUNG – HOITHOAI**  
+  Một người dùng có thể có nhiều phiên hội thoại  
+  → Quan hệ **1 – N**
+
+- **HOITHOAI – CHITIETHOITHOAI**  
+  Một hội thoại gồm nhiều nội dung trao đổi  
+  → Quan hệ **1 – N**
+
+- **NGUOIDUNG – CAUHOI**  
+  Một người dùng có thể gửi nhiều câu hỏi  
+  → Quan hệ **1 – N**
+
+- **CHUDEPHAPLUAT – CAUHOI**  
+  Một chủ đề pháp luật liên quan đến nhiều câu hỏi  
+  → Quan hệ **1 – N**
+
+- **CAUHOI – CAUTRALOI**  
+  Một câu hỏi có thể có nhiều câu trả lời  
+  → Quan hệ **1 – N**
+
+- **VANBANPHAPLUAT – DIEULUAT**  
+  Một văn bản pháp luật có nhiều điều luật  
+  → Quan hệ **1 – N**
+
+- **CAUTRALOI – DANHGIATRALOI**  
+  Một câu trả lời có thể nhận nhiều đánh giá  
+  → Quan hệ **1 – N**
+# CHƯƠNG 5:
