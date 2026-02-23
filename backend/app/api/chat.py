@@ -1,7 +1,6 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
-# Sửa từ 'retrieve_relevant_laws' thành 'retrieve_laws_semantic'
 from app.services.retrieval_service import retrieve_laws_semantic
 from app.services.gemini_service import ask_gemini
 
@@ -12,17 +11,38 @@ class ChatRequest(BaseModel):
     question: str
 
 
-from fastapi import HTTPException
-
-@router.post("/chat")
+@router.post("/")
 def chat(req: ChatRequest):
     try:
+        # 1. Retrieve luật
         laws = retrieve_laws_semantic(req.question)
+
+        if not laws:
+            return {
+                "answer": "Không tìm thấy căn cứ pháp lý phù hợp trong dữ liệu hiện có.",
+                "sources": []
+            }
+
+        # 2. Gọi Gemini (RAG)
         answer = ask_gemini(req.question, laws)
-        return {"answer": answer}
+
+        # 3. Trả kết quả
+        return {
+            "answer": answer,
+            "sources": [
+                {
+                    "law_name": law.get("law_name"),
+                    "article": law.get("article"),
+                    "title": law.get("title"),
+                    "content": law.get("content")
+                }
+                for law in laws
+            ]
+        }
+
     except Exception as e:
         print("Chat error:", e)
         raise HTTPException(
-            status_code=503,
-            detail="Hệ thống AI đang quá tải, vui lòng thử lại sau."
+            status_code=500,
+            detail="Lỗi xử lý hệ thống."
         )

@@ -1,8 +1,9 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from app.services.retrieval_service import retrieve_laws_semantic
-from app.services.gemini_service import ask_gemini
+from app.api.chat import router
 
 app = FastAPI(title="Chatbot AI Luật HNGĐ")
 
@@ -14,12 +15,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class ChatRequest(BaseModel):
-    question: str
-
-@app.post("/chat/chat")
-def chat(req: ChatRequest):
-    laws = retrieve_laws_semantic(req.question)
-    law_text = "\n\n".join([l["content"] for l in laws])
-    answer = ask_gemini(req.question, law_text)
-    return {"answer": answer}
+app.include_router(router)

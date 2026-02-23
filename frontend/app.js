@@ -131,7 +131,15 @@ function loadSession(index) {
  * 6. Xử lý Gửi tin nhắn (SỬA LỖI LƯU TRỮ ĐỒNG BỘ)
  */
 sendBtn.onclick = async () => {
-    const question = questionInput.value.trim();
+    let question = questionInput.value.trim();
+
+    // 🔥 LÀM SẠCH CHUỖI TRƯỚC KHI GỬI JSON (BẮT BUỘC)
+    question = question
+        .replace(/\n/g, " ")
+        .replace(/\r/g, " ")
+        .replace(/\t/g, " ")
+        .replace(/\s+/g, " ");
+
     if (!question) return;
 
     const oldSuggestions = document.querySelector('.suggestions-container');
@@ -156,7 +164,7 @@ sendBtn.onclick = async () => {
     messages.appendChild(loading);
 
     try {
-        const res = await fetch("http://127.0.0.1:8000/chat/chat", {
+        const res = await fetch("http://127.0.0.1:8000/chat", {
             method: "POST",
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({question})
