@@ -1,598 +1,606 @@
-# CHƯƠNG 1: GIỚI THIỆU
-## 1.1 Lý do chọn đề tài
+# CHƯƠNG 1: GIỚI THIỆU ĐỀ TÀI
 
-Trong bối cảnh chuyển đổi số đang diễn ra mạnh mẽ, việc ứng dụng công nghệ thông tin và trí tuệ nhân tạo (AI) vào các lĩnh vực đời sống xã hội ngày càng trở nên phổ biến và cần thiết. Đặc biệt, trong lĩnh vực pháp luật, nhu cầu tư vấn và tra cứu thông tin pháp lý của người dân ngày càng tăng cao, nhất là các vấn đề liên quan đến **luật hôn nhân và gia đình** như kết hôn, ly hôn, quyền nuôi con, phân chia tài sản. Tuy nhiên, việc tiếp cận thông tin pháp luật hiện nay vẫn còn tồn tại nhiều hạn chế do phụ thuộc vào các phương thức truyền thống như tra cứu văn bản giấy, tìm kiếm thủ công trên internet hoặc trực tiếp liên hệ với luật sư. Điều này dẫn đến một số vấn đề sau:
+## 1.1. Lý do chọn đề tài
 
-- **Khó khăn trong việc tiếp cận thông tin pháp luật chính thống:**  
-  Nhiều người dân không có kiến thức chuyên môn về pháp luật nên gặp khó khăn khi đọc, hiểu và áp dụng các quy định trong Luật Hôn nhân và Gia đình. Việc tra cứu điều luật thủ công dễ gây nhầm lẫn, hiểu sai nội dung pháp lý.
+Trong bối cảnh chuyển đổi số mạnh mẽ hiện nay, nhu cầu tiếp cận thông tin pháp luật của người dân ngày càng gia tăng, đặc biệt trong các lĩnh vực liên quan trực tiếp đến đời sống cá nhân và gia đình như hôn nhân, ly hôn, quyền nuôi con và phân chia tài sản. Tuy nhiên, trên thực tế, việc tiếp cận và hiểu đúng các quy định pháp luật vẫn còn gặp nhiều khó khăn do văn bản pháp luật thường mang tính chuyên môn cao, cách diễn đạt phức tạp và không dễ hiểu đối với người không có nền tảng pháp lý.
 
-- **Thiếu tính kịp thời trong việc tư vấn pháp luật:**  
-  Quá trình tư vấn pháp luật truyền thống thường mất nhiều thời gian, phụ thuộc vào lịch làm việc của luật sư hoặc các cơ quan chức năng, gây bất tiện khi người dân cần giải đáp nhanh các thắc mắc pháp lý.
+Bên cạnh đó, hình thức tư vấn pháp luật truyền thống thông qua luật sư hoặc các trung tâm tư vấn còn tồn tại nhiều hạn chế như chi phí cao, phụ thuộc vào thời gian, địa điểm và chưa đáp ứng được nhu cầu tra cứu nhanh chóng của người dân. Đặc biệt, tại các khu vực vùng sâu, vùng xa, người dân gần như không có điều kiện tiếp cận dịch vụ tư vấn pháp luật kịp thời.
 
-- **Chi phí tư vấn pháp luật còn cao:**  
-  Đối với nhiều đối tượng như sinh viên, người lao động có thu nhập thấp, việc tiếp cận dịch vụ tư vấn pháp luật chuyên nghiệp vẫn còn gặp nhiều khó khăn do chi phí cao.
-
-- **Hạn chế trong khả năng tương tác và hỗ trợ liên tục:**  
-  Các hình thức tư vấn truyền thống chưa đáp ứng được nhu cầu hỗ trợ 24/7, người dùng không thể đặt câu hỏi và nhận phản hồi ngay lập tức khi cần thiết.
-
-- **Khó khăn trong việc xử lý và tổng hợp lượng lớn câu hỏi pháp lý:**  
-  Khi số lượng người cần tư vấn tăng cao, các phương thức thủ công dễ bị quá tải, làm giảm hiệu quả và chất lượng tư vấn.
-
-Xuất phát từ những vấn đề trên, đề tài **“Xây dựng Chatbot AI tư vấn Luật Hôn nhân và Gia đình”** được lựa chọn nhằm ứng dụng trí tuệ nhân tạo và công nghệ xử lý ngôn ngữ tự nhiên để hỗ trợ tư vấn pháp luật một cách tự động, nhanh chóng và chính xác. Hệ thống chatbot giúp người dùng tra cứu thông tin pháp luật dễ dàng, kịp thời, giảm thiểu sai sót trong việc hiểu và áp dụng pháp luật. Đồng thời, chatbot AI còn góp phần nâng cao khả năng tiếp cận kiến thức pháp lý cho cộng đồng, tăng cường tính minh bạch và hiệu quả trong công tác phổ biến, giáo dục pháp luật, phù hợp với xu hướng chuyển đổi số hiện nay.
-## 1.2 Sơ lược về chương trình
-
-Chatbot AI Tư vấn Luật Hôn nhân và Gia đình là một hệ thống phần mềm ứng dụng được xây dựng nhằm hỗ trợ người dùng tra cứu và tư vấn các vấn đề pháp lý liên quan đến lĩnh vực hôn nhân và gia đình một cách tự động. Hệ thống ứng dụng công nghệ trí tuệ nhân tạo kết hợp với cơ sở dữ liệu luật để phân tích câu hỏi của người dùng và cung cấp các câu trả lời phù hợp, chính xác và dễ hiểu. Chương trình hướng đến việc nâng cao khả năng tiếp cận kiến thức pháp luật cho cộng đồng, giảm thiểu sự phụ thuộc vào các hình thức tư vấn truyền thống, đồng thời hỗ trợ phổ biến pháp luật một cách hiệu quả hơn. Các chức năng chính của hệ thống bao gồm:
-
-- **Tiếp nhận và xử lý câu hỏi pháp lý:** Hệ thống cho phép người dùng nhập câu hỏi bằng ngôn ngữ tự nhiên liên quan đến các vấn đề như kết hôn, ly hôn, quyền nuôi con, cấp dưỡng, phân chia tài sản và các quy định khác trong Luật Hôn nhân và Gia đình.
-
-- **Tra cứu và trích xuất điều luật liên quan:** Chatbot tự động tìm kiếm và lựa chọn các điều luật, khoản, mục phù hợp từ cơ sở dữ liệu Luật Hôn nhân và Gia đình đã được xây dựng và chuẩn hóa.
-
-- **Tư vấn pháp luật bằng trí tuệ nhân tạo:** Dựa trên nội dung câu hỏi và các điều luật liên quan, hệ thống sử dụng mô hình AI để tạo ra câu trả lời mang tính tư vấn, rõ ràng và phù hợp với ngữ cảnh của người dùng.
-
-- **Hỗ trợ phản hồi nhanh chóng và liên tục:** Hệ thống hoạt động liên tục 24/7, giúp người dùng có thể đặt câu hỏi và nhận tư vấn pháp luật mọi lúc, mọi nơi mà không phụ thuộc vào thời gian làm việc của luật sư hay cơ quan chức năng.
-
-- **Quản lý dữ liệu và khả năng mở rộng:** Dữ liệu luật và lịch sử hội thoại được lưu trữ có hệ thống, tạo nền tảng cho việc mở rộng chatbot sang các lĩnh vực pháp luật khác trong tương lai.
-
-- **Giao diện thân thiện, dễ sử dụng:** Giao diện web được thiết kế đơn giản, trực quan, giúp người dùng dễ dàng thao tác và sử dụng hệ thống ngay cả khi không có kiến thức chuyên sâu về công nghệ hay pháp luật.
-
-Hệ thống được phát triển theo mô hình kiến trúc client–server, trong đó giao diện người dùng được xây dựng bằng HTML, CSS và JavaScript; phần xử lý nghiệp vụ sử dụng Python với framework FastAPI; kết hợp dịch vụ AI (Gemini API) và kỹ thuật RAG (Retrieval Augmented Generation). Kiến trúc này giúp hệ thống hoạt động ổn định, đảm bảo khả năng mở rộng và phù hợp với xu hướng ứng dụng trí tuệ nhân tạo trong lĩnh vực tư vấn pháp luật hiện nay.
-## 1.3 Ý nghĩa của đề tài
-
-Việc phát triển Chatbot AI Tư vấn Luật Hôn nhân và Gia đình mang lại nhiều lợi ích thiết thực, không chỉ đối với người dân mà còn đối với các cơ quan, tổ chức hoạt động trong lĩnh vực pháp luật và xã hội:
-
-**Đối với cộng đồng và người dân:**
-
-- Nâng cao khả năng tiếp cận kiến thức pháp luật: Chatbot giúp người dân dễ dàng tra cứu và tiếp cận các quy định của Luật Hôn nhân và Gia đình một cách nhanh chóng, chính xác và dễ hiểu, ngay cả khi không có kiến thức chuyên môn về pháp luật.
-
-- Hỗ trợ tư vấn pháp luật kịp thời: Người dùng có thể đặt câu hỏi và nhận tư vấn pháp lý mọi lúc, mọi nơi mà không bị giới hạn bởi thời gian làm việc của luật sư hoặc cơ quan chức năng.
-
-- Giảm chi phí tư vấn pháp luật: Chatbot AI cung cấp hình thức tư vấn miễn phí hoặc chi phí thấp, giúp nhiều đối tượng, đặc biệt là sinh viên và người lao động, có cơ hội tiếp cận dịch vụ tư vấn pháp luật.
-
-**Đối với cơ quan, tổ chức và hoạt động phổ biến pháp luật:**
-
-- Hỗ trợ công tác tuyên truyền, phổ biến pháp luật: Hệ thống chatbot góp phần đưa các quy định pháp luật đến gần hơn với người dân thông qua hình thức hỏi – đáp trực quan và dễ tiếp cận.
-
-- Giảm tải cho các kênh tư vấn truyền thống: Việc sử dụng chatbot giúp giảm áp lực cho luật sư và các cơ quan tư vấn pháp luật khi phải xử lý số lượng lớn câu hỏi lặp lại.
-
-- Nâng cao hiệu quả ứng dụng công nghệ trong lĩnh vực pháp luật: Đề tài thể hiện khả năng ứng dụng trí tuệ nhân tạo và xử lý ngôn ngữ tự nhiên vào thực tiễn, góp phần thúc đẩy chuyển đổi số trong lĩnh vực pháp lý.
-
-**Đối với sinh viên và hoạt động nghiên cứu, học tập:**
-
-- Nâng cao kỹ năng nghiên cứu và phát triển hệ thống AI: Đề tài giúp sinh viên vận dụng kiến thức về lập trình, trí tuệ nhân tạo, xử lý ngôn ngữ tự nhiên và thiết kế hệ thống phần mềm.
-
-- Tạo nền tảng cho các hướng phát triển tiếp theo: Hệ thống chatbot có thể mở rộng sang các lĩnh vực pháp luật khác hoặc tích hợp thêm cơ sở dữ liệu, góp phần phát triển các ứng dụng AI phục vụ cộng đồng trong tương lai.
-# CHƯƠNG 2: CƠ SỞ LÝ LUẬN VÀ PHƯƠNG PHÁP NGHIÊN CỨU
-## 2.1 Phân tích yêu cầu
-
-### 2.1.1 Xác định yêu cầu
-
-**Yêu cầu chức năng:**
-
-- Quản lý câu hỏi và trả lời tư vấn pháp luật: Hệ thống cho phép người dùng nhập câu hỏi liên quan đến Luật Hôn nhân và Gia đình và nhận câu trả lời tư vấn tương ứng từ chatbot AI.
-
-- Tra cứu luật hôn nhân và gia đình: Hỗ trợ tìm kiếm các điều luật, khoản, mục liên quan đến các vấn đề như kết hôn, ly hôn, quyền nuôi con, cấp dưỡng, phân chia tài sản theo nội dung câu hỏi của người dùng.
-
-- Xử lý ngôn ngữ tự nhiên: Chatbot có khả năng phân tích và hiểu câu hỏi của người dùng được nhập dưới dạng ngôn ngữ tự nhiên tiếng Việt.
-
-- Tư vấn pháp luật bằng trí tuệ nhân tạo: Hệ thống kết hợp dữ liệu luật và mô hình AI để sinh câu trả lời tư vấn phù hợp, dễ hiểu và đúng ngữ cảnh pháp lý.
-
-- Quản lý dữ liệu luật: Hệ thống hỗ trợ thêm, cập nhật và chỉnh sửa dữ liệu Luật Hôn nhân và Gia đình nhằm đảm bảo thông tin pháp lý luôn chính xác và đầy đủ.
-
-- Quản lý lịch sử hội thoại: Lưu trữ nội dung câu hỏi và câu trả lời của người dùng, phục vụ cho việc tra cứu lại hoặc phân tích trong tương lai.
-
-- Phân quyền người dùng: Hệ thống hỗ trợ phân quyền với các vai trò khác nhau như người dùng thông thường (đặt câu hỏi và nhận tư vấn) và quản trị viên (quản lý dữ liệu luật và hệ thống).
-
-- Xuất báo cáo và dữ liệu: Cho phép xuất dữ liệu lịch sử hội thoại hoặc thống kê câu hỏi theo các định dạng như PDF, Excel hoặc Word nhằm phục vụ mục đích nghiên cứu và quản lý.
-### 2.1.2 Yêu cầu phi chức năng
-
-**Hiệu năng:**
-
-- Hệ thống phải có khả năng xử lý đồng thời ít nhất 1000 người dùng truy cập cùng lúc mà không gây chậm trễ hoặc gián đoạn dịch vụ tư vấn.
-- Thời gian phản hồi cho các thao tác cơ bản như gửi câu hỏi, tra cứu điều luật và nhận câu trả lời tư vấn không vượt quá 3 giây trong điều kiện hoạt động bình thường.
-- Hệ thống phải đảm bảo khả năng đáp ứng ổn định ngay cả khi lưu lượng truy cập tăng đột biến, đặc biệt trong các giai đoạn có nhu cầu tư vấn pháp luật cao.
-
-**Tính khả dụng:**
-
-- Hệ thống được thiết kế để hoạt động liên tục và ổn định, đảm bảo thời gian sẵn sàng (uptime) tối thiểu 99,9%.
-- Người dùng có thể truy cập và sử dụng chatbot mọi lúc, mọi nơi thông qua trình duyệt web khi có kết nối Internet.
-
-**Khả năng mở rộng:**
-
-- Hệ thống phải được thiết kế linh hoạt để dễ dàng mở rộng quy mô dữ liệu luật và lịch sử hội thoại.
-- Có khả năng đáp ứng số lượng người dùng ngày càng tăng mà không làm giảm hiệu suất đáng kể.
-- Cho phép mở rộng dữ liệu từ vài nghìn lên hàng chục nghìn bản ghi luật hoặc hội thoại trong tương lai.
-
-**Tính bảo mật:**
-
-- Tích hợp cơ chế xác thực người dùng với tài khoản và mật khẩu được mã hóa nhằm đảm bảo an toàn thông tin.
-- Phân quyền rõ ràng giữa các vai trò như người dùng thông thường và quản trị viên để tránh truy cập trái phép.
-- Bảo vệ dữ liệu hội thoại và dữ liệu luật khỏi các hành vi truy cập trái phép hoặc rò rỉ thông tin.
-
-**Tính dễ sử dụng:**
-
-- Giao diện người dùng được thiết kế trực quan, thân thiện, phù hợp với nhiều đối tượng sử dụng, kể cả người không có kiến thức chuyên sâu về công nghệ.
-- Hỗ trợ nhập câu hỏi nhanh chóng và hiển thị kết quả tư vấn rõ ràng, dễ đọc.
-- Các chức năng chính được bố trí hợp lý, giúp người dùng dễ dàng thao tác.
-
-**Tính bảo trì:**
-
-- Hệ thống cho phép cập nhật dữ liệu luật và nâng cấp phần mềm một cách thuận tiện.
-- Có cơ chế ghi log và thông báo lỗi chi tiết nhằm hỗ trợ phát hiện và xử lý sự cố kịp thời.
-
-**Tài liệu hướng dẫn:**
-
-- Cung cấp tài liệu hướng dẫn sử dụng và cài đặt hệ thống dưới dạng file PDF hoặc hướng dẫn trực tiếp trên giao diện chatbot.
-- Tài liệu hướng dẫn rõ ràng, dễ hiểu, giúp người dùng nhanh chóng làm quen với hệ thống.
-
-**Hiệu quả chi phí:**
-
-- Hệ thống được thiết kế để hoạt động tốt trên các máy chủ có cấu hình trung bình, không yêu cầu phần cứng đắt tiền.
-- Ưu tiên sử dụng các công nghệ và thư viện mã nguồn mở nhằm giảm chi phí triển khai và vận hành.
-
-**Khả năng tích hợp:**
-
-- Hệ thống hỗ trợ xuất dữ liệu thống kê hoặc lịch sử tư vấn ra các định dạng phổ biến như PDF hoặc CSV để phục vụ việc chia sẻ và lưu trữ.
-- Có khả năng tích hợp với các hệ thống hoặc nền tảng khác trong tương lai khi cần thiết.
-### 2.1.2 Thu thập yêu cầu
-
-**Phương pháp:**
-
-- Khảo sát nhu cầu tư vấn pháp luật của người dân liên quan đến lĩnh vực hôn nhân và gia đình thông qua các diễn đàn, mạng xã hội và khảo sát trực tuyến.
-- Phân tích các tình huống tư vấn pháp luật phổ biến như kết hôn, ly hôn, quyền nuôi con, cấp dưỡng và phân chia tài sản.
-- Xây dựng prototype giao diện chatbot web và tiến hành demo thử nghiệm để thu thập phản hồi từ người dùng về tính dễ sử dụng và mức độ hài lòng.
-
-**Kết quả:**
-
-- Phần lớn người dùng có nhu cầu được tư vấn pháp luật nhanh chóng và trực tuyến, ưu tiên các hệ thống có thể hoạt động 24/7.
-- Đa số người dùng mong muốn chatbot có giao diện đơn giản, dễ sử dụng và câu trả lời ngắn gọn, dễ hiểu.
-- Người dùng đánh giá cao việc chatbot có thể cung cấp thông tin pháp luật dựa trên các điều luật cụ thể.
+Xuất phát từ thực tế đó, đề tài **“Xây dựng Chatbot AI tư vấn pháp luật Hôn nhân và Gia đình Việt Nam”** được lựa chọn nhằm ứng dụng trí tuệ nhân tạo để hỗ trợ người dân tra cứu và tìm hiểu các quy định pháp luật một cách nhanh chóng, thuận tiện và dễ hiểu hơn.
 
 ---
 
-### 2.1.3 Phân tích quy trình kinh doanh
+## 1.2. Tính cấp thiết của đề tài
 
-**Quy trình hiện tại:**
+Luật Hôn nhân và Gia đình là một trong những đạo luật quan trọng, điều chỉnh trực tiếp các mối quan hệ hôn nhân và gia đình – nền tảng của xã hội. Việc hiểu sai hoặc không nắm rõ các quy định pháp luật trong lĩnh vực này có thể dẫn đến những hậu quả pháp lý nghiêm trọng, ảnh hưởng trực tiếp đến quyền và lợi ích hợp pháp của các bên liên quan.
 
-*Tư vấn pháp luật:*  
-Người dân thường tra cứu thông tin pháp luật thông qua văn bản luật, tìm kiếm trên internet hoặc liên hệ trực tiếp với luật sư. Quá trình này mất nhiều thời gian, phụ thuộc vào lịch làm việc của luật sư và đôi khi không đảm bảo tính chính xác do nguồn thông tin không thống nhất.
+Trong khi đó, sự phát triển của trí tuệ nhân tạo, đặc biệt là các mô hình ngôn ngữ lớn (Large Language Model – LLM), đã mở ra khả năng xây dựng các hệ thống chatbot có thể hiểu và trả lời câu hỏi bằng ngôn ngữ tự nhiên. Tuy nhiên, nếu không được kiểm soát chặt chẽ, các mô hình này có thể tạo ra thông tin sai lệch hoặc suy diễn ngoài phạm vi pháp luật, gây ảnh hưởng tiêu cực đến người sử dụng.
 
-*Quản lý thông tin pháp luật:*  
-Các văn bản pháp luật và tài liệu tư vấn được lưu trữ phân tán trên nhiều website, tài liệu giấy hoặc file điện tử khác nhau, gây khó khăn trong việc tra cứu, cập nhật và đồng bộ thông tin.
-
-*Báo cáo và thống kê:*  
-Việc tổng hợp số lượng câu hỏi, chủ đề tư vấn hoặc đánh giá nhu cầu của người dân thường được thực hiện thủ công, mất nhiều thời gian và dễ xảy ra sai sót.
-
-**Quy trình đề xuất (Triển khai Chatbot AI):**
-
-*Tư vấn pháp luật tự động:*  
-Người dùng nhập câu hỏi trực tiếp trên giao diện chatbot. Hệ thống tự động xử lý câu hỏi, tra cứu điều luật liên quan và cung cấp câu trả lời tư vấn nhanh chóng, chính xác.
-
-*Quản lý thông tin tập trung:*  
-Toàn bộ dữ liệu luật và lịch sử hội thoại được lưu trữ tập trung trong hệ thống, giúp việc cập nhật, tìm kiếm và đồng bộ dữ liệu được thực hiện dễ dàng và hiệu quả.
-
-*Báo cáo và thống kê tự động:*  
-Hệ thống hỗ trợ thống kê các chủ đề tư vấn phổ biến và lịch sử sử dụng chatbot. Các báo cáo có thể được xuất ra các định dạng như PDF hoặc CSV để phục vụ cho việc phân tích, lưu trữ và quản lý.
-## 2.2 Mô hình hệ thống và thiết kế
-
-### 2.2.1 Mô hình hệ thống
-
-**Kiến trúc 3 tầng:**
-
-- **Tầng giao diện (Frontend):**  
-  Giao diện web cho phép người dùng tương tác với hệ thống chatbot AI thông qua trình duyệt. Người dùng có thể nhập câu hỏi pháp luật, xem câu trả lời tư vấn và tra cứu thông tin liên quan đến Luật Hôn nhân và Gia đình.
-
-- **Tầng xử lý (Backend):**  
-  Backend được xây dựng bằng Python sử dụng framework FastAPI, chịu trách nhiệm xử lý logic nghiệp vụ như tiếp nhận câu hỏi, phân tích ngôn ngữ tự nhiên, truy xuất dữ liệu luật, kết hợp với mô hình AI để sinh câu trả lời và quản lý lịch sử hội thoại.
-
-- **Tầng dữ liệu (Data Layer):**  
-  Lưu trữ dữ liệu Luật Hôn nhân và Gia đình, lịch sử hội thoại và thông tin hệ thống dưới dạng JSON hoặc cơ sở dữ liệu, phục vụ cho việc tra cứu, phân tích và mở rộng trong tương lai.
-
-**Ví dụ luồng xử lý:**
-
-- Người dùng nhập câu hỏi pháp luật → Hệ thống tiếp nhận và phân tích câu hỏi.  
-- Backend truy xuất các điều luật liên quan → Gửi dữ liệu cho mô hình AI để tạo câu trả lời.  
-- Hệ thống trả kết quả tư vấn → Hiển thị câu trả lời trên giao diện người dùng.  
-- Quản trị viên xuất dữ liệu thống kê → Hệ thống tạo file báo cáo PDF hoặc CSV dựa trên dữ liệu đã lưu trữ.
-
-**Các thành phần chính của hệ thống:**
-
-- **Quản lý tài khoản:** Thêm, sửa, xóa và phân quyền tài khoản người dùng.
-- **Quản lý dữ liệu luật:** Thêm, cập nhật và chỉnh sửa các điều luật thuộc Luật Hôn nhân và Gia đình.
-- **Xử lý câu hỏi người dùng:** Tiếp nhận, phân tích và xử lý câu hỏi bằng ngôn ngữ tự nhiên.
-- **Dịch vụ AI:** Kết hợp dữ liệu luật với mô hình AI để sinh câu trả lời tư vấn.
-- **Quản lý lịch sử hội thoại:** Lưu trữ và truy xuất nội dung tư vấn.
-- **Báo cáo và thống kê:** Tổng hợp dữ liệu sử dụng chatbot và xuất báo cáo.
-### 2.2.2 Thiết kế cơ sở dữ liệu
-
-Hệ thống Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình sử dụng cơ sở dữ liệu quan hệ để lưu trữ thông tin người dùng, nội dung tư vấn pháp luật, hội thoại và đánh giá chất lượng câu trả lời. Thiết kế cơ sở dữ liệu đảm bảo tính chính xác, bảo mật và khả năng mở rộng cho hệ thống.
-
-### Các bảng chính
-
-**NguoiDung:**  
-MaNguoiDung (PK), HoTen, GioiTinh, Email, SDT, DiaChi, VaiTro, NgayDangKy.
-
-**TaiKhoan:**  
-MaTaiKhoan (PK), TenDangNhap, MatKhau, TrangThai, MaNguoiDung (FK).
-
-**ChuDePhapLuat:**  
-MaChuDe (PK), TenChuDe, MoTa.
-
-**VanBanPhapLuat:**  
-MaVanBan (PK), TenVanBan, SoHieu, NgayBanHanh, CoQuanBanHanh, LinhVuc.
-
-**DieuLuat:**  
-MaDieu (PK), SoDieu, NoiDungDieu, MaVanBan (FK).
-
-**CauHoi:**  
-MaCauHoi (PK), NoiDungCauHoi, ThoiGianGui, MaNguoiDung (FK), MaChuDe (FK).
-
-**CauTraLoi:**  
-MaCauTraLoi (PK), NoiDungTraLoi, ThoiGianTraLoi, NguonTraLoi, MaCauHoi (FK).
-
-**HoiThoai:**  
-MaHoiThoai (PK), ThoiGianBatDau, ThoiGianKetThuc, MaNguoiDung (FK).
-
-**ChiTietHoiThoai:**  
-MaChiTiet (PK), NoiDung, LoaiNoiDung, ThoiGian, MaHoiThoai (FK).
-
-**DanhGiaTraLoi:**  
-MaDanhGia (PK), MucDoHaiLong, NhanXet, MaCauTraLoi (FK), MaNguoiDung (FK).
-
-### Mối quan hệ giữa các bảng
-
-- NguoiDung và TaiKhoan: Quan hệ 1 – 1.
-- NguoiDung và HoiThoai: Quan hệ 1 – N.
-- HoiThoai và ChiTietHoiThoai: Quan hệ 1 – N.
-- NguoiDung và CauHoi: Quan hệ 1 – N.
-- ChuDePhapLuat và CauHoi: Quan hệ 1 – N.
-- CauHoi và CauTraLoi: Quan hệ 1 – N.
-- VanBanPhapLuat và DieuLuat: Quan hệ 1 – N.
-- CauTraLoi và DanhGiaTraLoi: Quan hệ 1 – N.
-### 2.2.3 Giao diện người dùng
-
-Giao diện người dùng của hệ thống Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình được thiết kế theo hướng trực quan, thân thiện và dễ sử dụng, phù hợp với nhiều đối tượng người dùng như người dân, luật sư và quản trị viên hệ thống. Giao diện tập trung vào việc hỗ trợ người dùng đặt câu hỏi pháp lý nhanh chóng, nhận câu trả lời chính xác và theo dõi lịch sử tư vấn một cách thuận tiện.
-
-### Form chính
-
-### Form đăng nhập và đăng ký tài khoản
-Cho phép người dùng đăng nhập vào hệ thống bằng tài khoản cá nhân hoặc đăng ký tài khoản mới. Hệ thống hỗ trợ phân quyền người dùng theo vai trò như người dùng thông thường, luật sư và quản trị viên.
-
-### Form tư vấn pháp luật (Chatbot)
-Là giao diện chính của hệ thống, cho phép người dùng nhập câu hỏi liên quan đến luật hôn nhân và gia đình. Chatbot AI sẽ phân tích nội dung câu hỏi, truy xuất dữ liệu pháp luật và đưa ra câu trả lời phù hợp. Giao diện hiển thị theo dạng hội thoại, giúp người dùng dễ dàng theo dõi nội dung trao đổi.
-
-### Form quản lý người dùng
-Cho phép quản trị viên thêm, sửa, xóa và xem thông tin người dùng trong hệ thống. Đồng thời hỗ trợ phân quyền truy cập nhằm đảm bảo an toàn dữ liệu.
-
-### Form quản lý chủ đề pháp luật
-Cho phép quản trị viên quản lý các chủ đề tư vấn pháp luật như kết hôn, ly hôn, quyền nuôi con, cấp dưỡng và chia tài sản. Việc phân loại chủ đề giúp chatbot xử lý câu hỏi chính xác hơn.
-
-### Form quản lý văn bản pháp luật
-Cho phép thêm, sửa, xóa các văn bản pháp luật liên quan đến lĩnh vực hôn nhân và gia đình. Đây là nguồn dữ liệu chính để chatbot tra cứu và trích dẫn điều luật khi trả lời câu hỏi.
-
-### Form quản lý điều luật
-Cho phép quản lý chi tiết các điều luật thuộc từng văn bản pháp luật, hỗ trợ việc tìm kiếm và trích xuất nội dung điều luật nhanh chóng và chính xác.
-
-### Form quản lý lịch sử tư vấn
-Cho phép người dùng và quản trị viên xem lại các phiên hội thoại đã diễn ra, bao gồm câu hỏi và câu trả lời của chatbot. Chức năng này giúp người dùng dễ dàng tra cứu lại thông tin đã được tư vấn trước đó.
-
-### Form đánh giá câu trả lời
-Cho phép người dùng đánh giá mức độ hài lòng đối với các câu trả lời của chatbot và gửi nhận xét. Dữ liệu đánh giá được sử dụng để cải thiện chất lượng hệ thống trong tương lai.
-
-### Form quản trị hệ thống
-Dành cho quản trị viên để theo dõi tình trạng hoạt động của chatbot, thống kê số lượng câu hỏi, tần suất sử dụng và quản lý các cấu hình liên quan đến hệ thống AI.
-## 2.3 Phát triển phần mềm
-
-### 2.3.1 Lựa chọn công nghệ
-
-Hệ thống Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình được phát triển dựa trên các công nghệ hiện đại nhằm đảm bảo khả năng xử lý ngôn ngữ tự nhiên, tính mở rộng và hiệu quả trong tư vấn pháp luật.
-
-**Ngôn ngữ lập trình:**  
-- Python: sử dụng cho Backend và xử lý AI, NLP.  
-- JavaScript: sử dụng cho Frontend và giao tiếp với người dùng.
-
-**Nền tảng AI:**  
-- Gemini API được sử dụng để phân tích câu hỏi và sinh câu trả lời tư vấn pháp luật.
-
-**Cơ sở dữ liệu:**  
-- MySQL hoặc PostgreSQL dùng để lưu trữ thông tin người dùng, hội thoại và dữ liệu pháp luật.
-
-**Phần mềm phát triển:**  
-- Visual Studio Code là trình soạn thảo mã nguồn chính.
-
-**Công cụ thiết kế:**  
-- StarUML dùng để thiết kế các sơ đồ UML như Use Case, Class Diagram, Activity Diagram, DFD và ERD.
-
-**Quản lý mã nguồn:**  
-- GitHub được sử dụng để quản lý mã nguồn, kiểm soát phiên bản và làm việc nhóm.
+Do đó, việc kết hợp mô hình **Retrieval-Augmented Generation (RAG)** – cho phép chatbot chỉ trả lời dựa trên tài liệu pháp luật nội bộ – là một hướng tiếp cận cần thiết, giúp đảm bảo tính chính xác, minh bạch và phù hợp với đặc thù của lĩnh vực pháp lý. Đây chính là tính cấp thiết và ý nghĩa thực tiễn của đề tài.
 
 ---
 
-### 2.3.2 Kiểm thử đơn vị và tích hợp
+## 1.3. Mục tiêu nghiên cứu
 
-**Kiểm thử đơn vị:**  
-Sử dụng unittest hoặc pytest để kiểm tra các chức năng xử lý logic như phân loại câu hỏi, truy xuất dữ liệu pháp luật và xử lý hội thoại chatbot.
+Mục tiêu chính của đề tài là xây dựng một hệ thống chatbot AI có khả năng tư vấn pháp luật Hôn nhân và Gia đình Việt Nam dựa trên tài liệu pháp luật nội bộ, cụ thể là **Luật Hôn nhân và Gia đình năm 2014**, thông qua mô hình **Retrieval-Augmented Generation (RAG)**.
 
-**Kiểm thử tích hợp:**  
-Kiểm tra toàn bộ luồng hoạt động từ lúc người dùng nhập câu hỏi đến khi chatbot trả lời và lưu lịch sử hội thoại vào cơ sở dữ liệu.
+Các mục tiêu cụ thể bao gồm:
 
-**Kiểm thử hiệu năng:**  
-Đánh giá thời gian phản hồi của chatbot khi có nhiều người dùng truy cập đồng thời và kiểm tra khả năng xử lý các câu hỏi phổ biến.
-## 2.4 Triển khai và duy trì
-
-### Triển khai
-Hệ thống Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình được triển khai dưới dạng ứng dụng web kết hợp backend xử lý AI. Hệ thống có thể triển khai trên máy chủ nội bộ hoặc hosting, đồng thời hỗ trợ triển khai cục bộ trong môi trường không có kết nối internet ổn định.
-
-### Duy trì
-Hệ thống được cập nhật định kỳ nhằm cải tiến thuật toán AI, bổ sung dữ liệu pháp luật mới và vá lỗi bảo mật. Dữ liệu được sao lưu định kỳ để đảm bảo an toàn và khả năng khôi phục khi xảy ra sự cố.
+- Xây dựng tập dữ liệu pháp luật có cấu trúc từ các văn bản luật.
+- Ứng dụng kỹ thuật tìm kiếm ngữ nghĩa (Semantic Search) để truy xuất các điều luật liên quan đến câu hỏi của người dùng.
+- Tích hợp mô hình ngôn ngữ lớn thông qua **Gemini API** để sinh câu trả lời dựa trên dữ liệu truy xuất.
+- Đảm bảo chatbot không tự ý suy luận hoặc trả lời ngoài phạm vi tài liệu pháp luật được cung cấp.
+- Đánh giá hiệu quả và tính ứng dụng thực tế của hệ thống chatbot.
 
 ---
-## 2.5 Phương pháp nghiên cứu
 
-### Phương pháp nghiên cứu lý thuyết
-- Nghiên cứu các hệ thống chatbot tư vấn pháp luật trong và ngoài nước.  
-- Phân tích các công nghệ AI, NLP và chatbot hiện đại.
+## 1.4. Phạm vi nghiên cứu
 
-### Phương pháp nghiên cứu thực tiễn
-- Khảo sát nhu cầu tư vấn pháp luật của người dùng.  
-- Thu thập phản hồi từ luật sư và người sử dụng hệ thống.  
-- Phân tích yêu cầu chức năng và thiết kế giao diện thân thiện.
+Trong khuôn khổ đề tài, phạm vi nghiên cứu được giới hạn như sau:
 
-### Phương pháp phát triển phần mềm
-- Áp dụng phương pháp Agile, phát triển theo từng sprint.  
-- Ưu tiên các chức năng cốt lõi trước và liên tục cải tiến dựa trên phản hồi người dùng.
-
-### Công cụ hỗ trợ
-- Visual Studio Code  
-- MySQL / PostgreSQL  
-- GitHub
-# CHƯƠNG 3:GIỚI THIỆU TỔNG QUAN VỀ VẤN ĐỀ NGHIÊN CỨU
-## 3.1 Tổng quan về vấn đề nghiên cứu
-
-### 3.1.1 Khái niệm cơ bản
-Chatbot AI Tư Vấn Luật Hôn Nhân và Gia Đình là hệ thống ứng dụng trí tuệ nhân tạo nhằm hỗ trợ người dùng tra cứu và tư vấn các vấn đề pháp lý liên quan đến hôn nhân và gia đình thông qua ngôn ngữ tự nhiên.
-
-### 3.1.2 Mục tiêu của hệ thống
-- Tư vấn pháp luật nhanh chóng và chính xác.
-- Tự động hóa quá trình tra cứu điều luật.
-- Lưu trữ và quản lý lịch sử tư vấn.
-- Giảm tải cho luật sư và cơ quan tư vấn pháp luật.
-- Cung cấp thông tin pháp lý có tính định hướng.
-
-### 3.1.3 Phạm vi ứng dụng
-- Cổng thông tin pháp luật trực tuyến.
-- Văn phòng luật sư và trung tâm tư vấn pháp lý.
-- Cơ quan nhà nước và trung tâm trợ giúp pháp lý.
-- Hoạt động trên web và thiết bị di động.
-
-### 3.1.4 Khả năng phát triển
-- Tích hợp AI nâng cao.
-- Mở rộng sang các lĩnh vực pháp luật khác.
-- Hỗ trợ đa ngôn ngữ.
-- Phân tích dữ liệu tư vấn và cảnh báo pháp lý.
-
-### 3.1.5 Các yêu cầu
-
-**Yêu cầu chức năng**
-- Quản lý người dùng và phân quyền.
-- Xử lý câu hỏi pháp luật.
-- Tra cứu văn bản và điều luật.
-- Lưu lịch sử hội thoại và đánh giá tư vấn.
-
-**Yêu cầu phi chức năng**
-- Bảo mật cao.
-- Hiệu suất và ổn định.
-- Dễ mở rộng và nâng cấp.
-- Giao diện thân thiện.
-- Hỗ trợ đa nền tảng.
-### 3.1.6 Tầm quan trọng của hệ thống Chatbot AI Tư vấn Luật Hôn Nhân và Gia Đình
-
-Hệ thống Chatbot AI tư vấn Luật Hôn Nhân và Gia Đình đóng vai trò quan trọng trong việc hỗ trợ người dân tiếp cận và hiểu đúng các quy định pháp luật liên quan đến hôn nhân, gia đình, quyền và nghĩa vụ của vợ chồng, cha mẹ và con cái. Trong thực tế, nhiều người gặp khó khăn khi tìm hiểu pháp luật do văn bản pháp luật phức tạp, khó hiểu và thường xuyên thay đổi.
-
-Trước hết, Chatbot AI giúp người dân tra cứu thông tin pháp luật nhanh chóng và chính xác. Thay vì phải tìm kiếm trên nhiều website hoặc trực tiếp đến các cơ quan tư vấn pháp luật, người dùng có thể đặt câu hỏi và nhận được câu trả lời phù hợp với từng tình huống cụ thể như đăng ký kết hôn, ly hôn, quyền nuôi con, cấp dưỡng hay chia tài sản chung.
-
-Bên cạnh đó, hệ thống góp phần nâng cao nhận thức pháp luật trong cộng đồng. Thông qua việc tư vấn bằng ngôn ngữ tự nhiên, dễ hiểu, Chatbot AI giúp người dùng nắm rõ quyền và nghĩa vụ của mình, hạn chế các tranh chấp phát sinh do thiếu hiểu biết pháp luật.
-
-Ngoài ra, Chatbot AI tư vấn luật còn giúp tiết kiệm thời gian và chi phí cho người dân cũng như các tổ chức tư vấn pháp lý. Các câu hỏi pháp luật phổ biến có thể được Chatbot xử lý tự động, giúp giảm tải cho luật sư và chuyên viên pháp lý, từ đó nâng cao hiệu quả hoạt động của hệ thống tư vấn pháp luật.
-
-Cuối cùng, hệ thống Chatbot AI là một bước tiến quan trọng trong quá trình chuyển đổi số lĩnh vực pháp lý. Việc ứng dụng trí tuệ nhân tạo giúp nâng cao chất lượng dịch vụ tư vấn luật, mở rộng khả năng phục vụ người dân và tạo nền tảng cho việc xây dựng các hệ thống pháp luật thông minh trong tương lai.
+- **Về nội dung pháp luật:** Tập trung vào Luật Hôn nhân và Gia đình năm 2014.
+- **Về chức năng:** Chatbot hỗ trợ tra cứu và giải thích các quy định pháp luật cơ bản, không thay thế vai trò của luật sư hoặc cơ quan có thẩm quyền.
+- **Về kỹ thuật:** Áp dụng mô hình RAG kết hợp với Gemini API, không nghiên cứu huấn luyện mô hình ngôn ngữ từ đầu.
 
 ---
-## 3.2 Khảo sát hiện trạng
 
-### Thực trạng tư vấn Luật Hôn Nhân và Gia Đình hiện nay
+## 1.5. Đối tượng sử dụng
 
-Hiện nay, việc tư vấn Luật Hôn Nhân và Gia Đình chủ yếu được thực hiện thông qua luật sư, văn phòng tư vấn pháp luật hoặc các website pháp lý. Tuy nhiên, phương thức này vẫn tồn tại nhiều hạn chế như:
+Hệ thống chatbot hướng đến các đối tượng sử dụng sau:
 
-- Khó tiếp cận thông tin pháp luật: Người dân không biết tìm nguồn tư vấn đáng tin cậy hoặc gặp khó khăn khi đọc hiểu các văn bản luật.
-- Tốn thời gian và chi phí: Việc gặp trực tiếp luật sư hoặc chuyên viên tư vấn thường mất nhiều thời gian và chi phí, đặc biệt đối với các vấn đề pháp lý đơn giản.
-- Thông tin phân tán: Nội dung pháp luật liên quan đến hôn nhân và gia đình nằm rải rác trong nhiều luật, nghị định, thông tư khác nhau, gây khó khăn cho việc tra cứu.
-- Thiếu kênh hỗ trợ nhanh chóng: Người dân không có công cụ tư vấn tức thời khi cần giải đáp các thắc mắc pháp lý khẩn cấp.
-
-### Tình hình ứng dụng công nghệ trong tư vấn pháp luật
-
-Hiện nay đã có một số website và ứng dụng hỗ trợ tư vấn pháp luật, tuy nhiên vẫn tồn tại nhiều hạn chế:
-
-- Chi phí triển khai cao, gây khó khăn cho người dân khi tiếp cận dịch vụ.
-- Tính năng còn hạn chế, chủ yếu cung cấp văn bản luật, chưa tư vấn theo ngữ cảnh.
-- Chưa tận dụng hiệu quả trí tuệ nhân tạo trong xử lý ngôn ngữ tự nhiên và cá nhân hóa câu trả lời.
-
-### Định hướng phát triển hệ thống Chatbot AI tư vấn Luật Hôn Nhân và Gia Đình
-
-Dựa trên thực trạng và nhu cầu thực tế, hệ thống Chatbot AI cần phát triển theo các hướng sau:
-
-- Xây dựng giao diện thân thiện, dễ sử dụng.
-- Ứng dụng trí tuệ nhân tạo (AI) để hiểu ngữ cảnh và tư vấn chính xác.
-- Hỗ trợ đa nền tảng: website, ứng dụng di động, nền tảng nhắn tin.
-- Khả năng mở rộng và cập nhật văn bản pháp luật mới.
-- Bảo mật và phân quyền, đảm bảo an toàn thông tin người dùng.
-- Hỗ trợ đa ngôn ngữ.
-- Tư vấn và cảnh báo pháp lý thông minh.
-- Phân tích và báo cáo nâng cao bằng AI/ML để cải thiện chất lượng tư vấn.
-# CHƯƠNG 4:PHÂN TÍCH VÀ THIẾT KẾ UML
-## 4.1 Phân tích tổng quan hệ thống
-
-Hệ thống **Chatbot AI tư vấn Luật Hôn nhân và Gia đình Việt Nam** được xây dựng nhằm hỗ trợ người dùng tra cứu và tư vấn các quy định pháp luật liên quan đến hôn nhân, gia đình thông qua giao diện web. Hệ thống ứng dụng **trí tuệ nhân tạo (AI)** kết hợp với **cơ sở dữ liệu pháp luật** để phân tích câu hỏi, trích xuất điều luật liên quan và đưa ra câu trả lời phù hợp.
-
-Việc phân tích và thiết kế **UML (Unified Modeling Language)** giúp mô hình hóa hệ thống một cách trực quan, xác định rõ các tác nhân, thực thể, chức năng và mối quan hệ giữa các thành phần, làm cơ sở cho quá trình thiết kế và triển khai hệ thống.
+- Người dân có nhu cầu tìm hiểu các quy định pháp luật về hôn nhân và gia đình.
+- Sinh viên ngành Luật, Công nghệ thông tin và các ngành liên quan.
+- Cán bộ, nhân viên tại các cổng thông tin pháp luật hoặc trung tâm hỗ trợ pháp lý.
+- Người dân tại các khu vực vùng sâu, vùng xa, nơi việc tiếp cận dịch vụ tư vấn pháp luật còn nhiều hạn chế.
 
 ---
-## 4.2 Xác định các tác nhân (Actors)
 
-Hệ thống có các tác nhân chính sau:
+## 1.6. Phương pháp nghiên cứu
 
-### 👤 Người dùng
-Là người dân có nhu cầu tra cứu và tư vấn các vấn đề pháp luật liên quan đến Luật Hôn nhân và Gia đình. Người dùng có thể:
-- Đăng ký, đăng nhập hệ thống  
-- Gửi câu hỏi pháp luật bằng ngôn ngữ tự nhiên  
-- Nhận câu trả lời tư vấn từ Chatbot AI  
-- Xem lại lịch sử hội thoại  
-- Đánh giá chất lượng câu trả lời  
+Đề tài sử dụng các phương pháp nghiên cứu chính sau:
 
-### ⚖️ Luật sư
-Là người hỗ trợ chuyên môn cho hệ thống:
-- Kiểm tra, hiệu chỉnh nội dung tư vấn trong trường hợp cần thiết  
-- Bổ sung dữ liệu pháp luật hoặc góp ý nhằm nâng cao độ chính xác của chatbot  
+- **Phương pháp nghiên cứu tài liệu:** Thu thập và phân tích các văn bản pháp luật liên quan đến hôn nhân và gia đình.
+- **Phương pháp phân tích – thiết kế hệ thống:** Xây dựng kiến trúc chatbot AI theo mô hình RAG.
+- **Phương pháp thực nghiệm:** Triển khai hệ thống, xây dựng các kịch bản thử nghiệm và đánh giá kết quả.
+- **Phương pháp so sánh:** So sánh hiệu quả giữa chatbot AI dựa trên mô hình RAG và các hình thức tư vấn pháp luật truyền thống.
+# CHƯƠNG 2: CƠ SỞ LÝ THUYẾT
 
-### 🛠️ Quản trị viên
-Là người quản lý toàn bộ hệ thống:
-- Quản lý người dùng và phân quyền  
-- Quản lý dữ liệu pháp luật, điều luật, chủ đề tư vấn  
-- Theo dõi hoạt động của chatbot  
-- Thống kê và xuất báo cáo  
+## 2.1. Tổng quan về Trí tuệ nhân tạo và Chatbot
+
+### 2.1.1. Trí tuệ nhân tạo (Artificial Intelligence – AI)
+
+Trí tuệ nhân tạo (Artificial Intelligence – AI) là lĩnh vực nghiên cứu trong khoa học máy tính nhằm xây dựng các hệ thống có khả năng mô phỏng trí thông minh của con người, bao gồm các khả năng như học tập, suy luận, nhận thức và ra quyết định. AI ngày nay được ứng dụng rộng rãi trong nhiều lĩnh vực như y tế, tài chính, giáo dục, thương mại điện tử và đặc biệt là các hệ thống hỗ trợ ra quyết định.
+
+Trong phạm vi đề tài này, trí tuệ nhân tạo được sử dụng để xây dựng một hệ thống chatbot có khả năng tiếp nhận câu hỏi bằng ngôn ngữ tự nhiên và cung cấp câu trả lời dựa trên các quy định pháp luật cụ thể.
 
 ---
-## 4.3 Xác định các thực thể (Entities)
 
-### Thực thể **NGUOIDUNG**
-- MaNguoiDung (PK)  
-- HoTen  
-- GioiTinh  
-- Email  
-- SDT  
-- DiaChi  
-- VaiTro  
-- NgayDangKy  
+### 2.1.2. Machine Learning (ML)
 
-### Thực thể **TAIKHOAN**
-- MaTaiKhoan (PK)  
-- TenDangNhap  
-- MatKhau  
-- TrangThai  
-- MaNguoiDung (FK)  
+Machine Learning là một nhánh của trí tuệ nhân tạo, tập trung vào việc xây dựng các mô hình cho phép máy tính học từ dữ liệu thay vì phải lập trình các quy tắc cứng. Thông qua quá trình huấn luyện, mô hình có thể phát hiện các mẫu (pattern) trong dữ liệu và đưa ra dự đoán hoặc quyết định.
 
-### Thực thể **CHUDEPHAPLUAT**
-- MaChuDe (PK)  
-- TenChuDe  
-- MoTa  
-
-### Thực thể **VANBANPHAPLUAT**
-- MaVanBan (PK)  
-- TenVanBan  
-- SoHieu  
-- NgayBanHanh  
-- CoQuanBanHanh  
-- LinhVuc  
-
-### Thực thể **DIEULUAT**
-- MaDieu (PK)  
-- SoDieu  
-- NoiDungDieu  
-- MaVanBan (FK)  
-
-### Thực thể **CAUHOI**
-- MaCauHoi (PK)  
-- NoiDungCauHoi  
-- ThoiGianGui  
-- MaNguoiDung (FK)  
-- MaChuDe (FK)  
-
-### Thực thể **CAUTRALOI**
-- MaCauTraLoi (PK)  
-- NoiDungTraLoi  
-- ThoiGianTraLoi  
-- NguonTraLoi  
-- MaCauHoi (FK)  
-
-### Thực thể **HOITHOAI**
-- MaHoiThoai (PK)  
-- ThoiGianBatDau  
-- ThoiGianKetThuc  
-- MaNguoiDung (FK)  
-
-### Thực thể **CHITIETHOITHOAI**
-- MaChiTiet (PK)  
-- NoiDung  
-- LoaiNoiDung  
-- ThoiGian  
-- MaHoiThoai (FK)  
-
-### Thực thể **DANHGIATRALOI**
-- MaDanhGia (PK)  
-- MucDoHaiLong  
-- NhanXet  
-- MaCauTraLoi (FK)  
-- MaNguoiDung (FK)  
+Trong hệ thống chatbot tư vấn pháp luật, Machine Learning được áp dụng gián tiếp thông qua các mô hình embedding, giúp chuyển đổi văn bản pháp luật và câu hỏi của người dùng thành các vector số. Các vector này được sử dụng để thực hiện tìm kiếm ngữ nghĩa, từ đó truy xuất các điều luật phù hợp với câu hỏi của người dùng.
 
 ---
-## 4.4 Xác định các chức năng của hệ thống
 
-### 1️⃣ Quản lý người dùng
-- Đăng ký, đăng nhập hệ thống  
-- Cập nhật thông tin cá nhân  
-- Phân quyền người dùng (Người dùng, Luật sư, Quản trị viên)  
+### 2.1.3. Xử lý ngôn ngữ tự nhiên (Natural Language Processing – NLP)
 
-### 2️⃣ Tư vấn pháp luật bằng Chatbot AI
-- Tiếp nhận câu hỏi bằng ngôn ngữ tự nhiên  
-- Phân tích ngữ nghĩa câu hỏi  
-- Tra cứu điều luật liên quan  
-- Sinh câu trả lời tư vấn phù hợp  
+Xử lý ngôn ngữ tự nhiên (Natural Language Processing – NLP) là lĩnh vực nghiên cứu nhằm giúp máy tính hiểu, phân tích và sinh ngôn ngữ của con người. NLP đóng vai trò cốt lõi trong các hệ thống chatbot, cho phép:
 
-### 3️⃣ Quản lý dữ liệu pháp luật
-- Quản lý văn bản pháp luật  
-- Quản lý điều luật  
-- Quản lý chủ đề pháp luật  
+- Hiểu nội dung và ý định câu hỏi của người dùng.
+- Phân tích ngữ nghĩa của văn bản pháp luật.
+- Sinh câu trả lời ở dạng ngôn ngữ tự nhiên, rõ ràng và dễ hiểu.
 
-### 4️⃣ Quản lý hội thoại
-- Lưu trữ lịch sử hội thoại  
-- Cho phép người dùng xem lại các phiên tư vấn  
-
-### 5️⃣ Đánh giá và thống kê
-- Đánh giá mức độ hài lòng của người dùng  
-- Thống kê số lượng câu hỏi và phiên hội thoại  
-- Xuất báo cáo phục vụ công tác quản lý  
+Trong đề tài này, NLP được ứng dụng ở cả hai giai đoạn chính: truy xuất các điều luật liên quan và sinh câu trả lời dựa trên nội dung đã được truy xuất.
 
 ---
-## 4.5 Xác định các mối quan hệ giữa các thực thể
 
-- **NGUOIDUNG – TAIKHOAN**  
-  Một người dùng có một tài khoản đăng nhập  
-  → Quan hệ **1 – 1**
+### 2.1.4. Mô hình ngôn ngữ lớn (Large Language Model – LLM)
 
-- **NGUOIDUNG – HOITHOAI**  
-  Một người dùng có thể có nhiều phiên hội thoại  
-  → Quan hệ **1 – N**
+Mô hình ngôn ngữ lớn (Large Language Model – LLM) là các mô hình học sâu được huấn luyện trên tập dữ liệu văn bản rất lớn, có khả năng hiểu và sinh ngôn ngữ tự nhiên với độ linh hoạt cao. Các mô hình LLM hiện đại có thể trả lời câu hỏi, tóm tắt văn bản, giải thích nội dung phức tạp và hỗ trợ đa ngôn ngữ.
 
-- **HOITHOAI – CHITIETHOITHOAI**  
-  Một hội thoại gồm nhiều nội dung trao đổi  
-  → Quan hệ **1 – N**
+Trong hệ thống chatbot của đề tài, LLM không được sử dụng để trả lời tự do mà được kiểm soát chặt chẽ thông qua việc cung cấp ngữ cảnh pháp luật cụ thể từ tài liệu nội bộ. Cách tiếp cận này giúp đảm bảo tính chính xác của câu trả lời và hạn chế hiện tượng suy diễn ngoài phạm vi pháp luật.
 
-- **NGUOIDUNG – CAUHOI**  
-  Một người dùng có thể gửi nhiều câu hỏi  
-  → Quan hệ **1 – N**
+---
 
-- **CHUDEPHAPLUAT – CAUHOI**  
-  Một chủ đề pháp luật liên quan đến nhiều câu hỏi  
-  → Quan hệ **1 – N**
+## 2.2. Các mô hình chatbot phổ biến
 
-- **CAUHOI – CAUTRALOI**  
-  Một câu hỏi có thể có nhiều câu trả lời  
-  → Quan hệ **1 – N**
+### 2.2.1. Chatbot dựa trên luật (Rule-based Chatbot)
 
-- **VANBANPHAPLUAT – DIEULUAT**  
-  Một văn bản pháp luật có nhiều điều luật  
-  → Quan hệ **1 – N**
+Chatbot dựa trên luật hoạt động dựa vào tập các quy tắc và kịch bản được xây dựng sẵn. Mỗi câu hỏi của người dùng sẽ được so khớp với các mẫu (pattern) cố định để đưa ra câu trả lời tương ứng.
 
-- **CAUTRALOI – DANHGIATRALOI**  
-  Một câu trả lời có thể nhận nhiều đánh giá  
-  → Quan hệ **1 – N**
-# CHƯƠNG 5:
+**Ưu điểm:**
+- Dễ xây dựng và triển khai.
+- Kiểm soát nội dung trả lời tốt.
+
+**Nhược điểm:**
+- Thiếu tính linh hoạt.
+- Khó mở rộng khi số lượng câu hỏi lớn.
+- Không hiểu được ngữ nghĩa sâu của câu hỏi.
+
+Mô hình này không phù hợp với lĩnh vực pháp luật, nơi người dùng có thể đặt câu hỏi với nhiều cách diễn đạt khác nhau.
+
+---
+
+### 2.2.2. Chatbot dựa trên truy xuất (Retrieval-based Chatbot)
+
+Chatbot retrieval-based hoạt động bằng cách tìm kiếm câu trả lời phù hợp nhất từ một tập dữ liệu có sẵn. Phương pháp này có thể dựa trên:
+
+- So khớp từ khóa.
+- Tìm kiếm ngữ nghĩa (Semantic Search) bằng vector embedding.
+
+**Ưu điểm:**
+- Trả lời chính xác dựa trên dữ liệu có sẵn.
+- Không tạo ra thông tin mới ngoài dữ liệu.
+
+**Nhược điểm:**
+- Câu trả lời thường mang tính cứng nhắc.
+- Khó tổng hợp hoặc diễn giải nội dung dài từ nhiều điều luật.
+
+---
+
+### 2.2.3. Chatbot sinh ngôn ngữ (Generative AI Chatbot)
+
+Chatbot sinh ngôn ngữ sử dụng các mô hình LLM để tạo ra câu trả lời hoàn toàn mới dựa trên ngữ cảnh và kiến thức đã được huấn luyện.
+
+**Ưu điểm:**
+- Linh hoạt trong giao tiếp.
+- Câu trả lời tự nhiên, gần giống con người.
+
+**Nhược điểm:**
+- Có nguy cơ tạo ra thông tin sai lệch (hallucination).
+- Khó kiểm soát trong các lĩnh vực nhạy cảm như pháp luật.
+
+---
+
+## 2.3. Mô hình Retrieval-Augmented Generation (RAG)
+
+### 2.3.1. Khái niệm RAG
+
+Retrieval-Augmented Generation (RAG) là mô hình kết hợp giữa hai thành phần:
+
+- **Retrieval:** Truy xuất các tài liệu liên quan từ tập dữ liệu nội bộ.
+- **Generation:** Sinh câu trả lời dựa trên nội dung đã truy xuất bằng mô hình ngôn ngữ lớn.
+
+Mô hình RAG cho phép tận dụng khả năng sinh ngôn ngữ tự nhiên của LLM trong khi vẫn đảm bảo câu trả lời được “neo” chặt chẽ vào dữ liệu thực tế.
+
+---
+
+### 2.3.2. Lý do lựa chọn mô hình RAG cho bài toán pháp luật
+
+Việc áp dụng mô hình RAG trong chatbot tư vấn pháp luật mang lại nhiều lợi ích:
+
+- Đảm bảo câu trả lời dựa trên các văn bản pháp luật cụ thể.
+- Giảm thiểu nguy cơ tạo ra thông tin sai lệch (hallucination).
+- Dễ dàng cập nhật khi luật thay đổi bằng cách thay thế dữ liệu mà không cần huấn luyện lại mô hình.
+- Phù hợp với yêu cầu minh bạch và chính xác trong lĩnh vực pháp lý.
+
+Do đó, mô hình RAG được lựa chọn là giải pháp phù hợp nhất cho đề tài.
+
+---
+
+### 2.3.3. Kiến trúc tổng quát của hệ thống RAG
+
+Quy trình xử lý của hệ thống RAG trong đề tài được mô tả như sau:
+
+1. Người dùng nhập câu hỏi pháp luật.
+2. Câu hỏi được chuyển đổi thành vector embedding.
+3. Hệ thống thực hiện tìm kiếm ngữ nghĩa để truy xuất các điều luật liên quan từ tập dữ liệu nội bộ.
+4. Nội dung các điều luật được đưa vào prompt làm ngữ cảnh cho mô hình LLM.
+5. Mô hình LLM sinh câu trả lời dựa hoàn toàn trên dữ liệu đã được cung cấp.
+
+Quy trình này đảm bảo chatbot chỉ sử dụng thông tin từ tài liệu pháp luật nội bộ và có thể từ chối trả lời khi dữ liệu không đủ.
+CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+3.1. Phân tích yêu cầu hệ thống
+3.1.1. Mô tả tổng quan hệ thống
+Hệ thống được xây dựng nhằm cung cấp một chatbot tư vấn pháp luật trong lĩnh vực Hôn nhân và Gia đình Việt Nam. Người dùng có thể đặt câu hỏi bằng ngôn ngữ tự nhiên thông qua giao diện web, hệ thống sẽ tự động phân tích câu hỏi, truy xuất các điều luật liên quan từ tập dữ liệu pháp luật nội bộ và sinh câu trả lời dựa trên các điều luật đó.
+Hệ thống hoạt động theo mô hình client–server, trong đó frontend đảm nhiệm việc tương tác với người dùng, backend xử lý logic nghiệp vụ và tích hợp mô hình trí tuệ nhân tạo.
+________________________________________
+3.1.2. Use Case Diagram
+a) Mô tả Use Case
+Tác nhân (Actor):
+•	Người dùng (User)
+Các Use Case chính:
+•	Gửi câu hỏi pháp luật
+•	Nhận câu trả lời tư vấn
+•	Xem trích dẫn điều luật
+•	Xem lịch sử hội thoại
+•	Tạo cuộc hội thoại mới
+Use Case Diagram thể hiện mối quan hệ giữa người dùng và các chức năng chính của hệ thống chatbot.
+b) Prompt vẽ Use Case Diagram
+👉 Prompt dùng cho AI hoặc vẽ tay:
+Vẽ Use Case Diagram cho hệ thống Chatbot AI tư vấn pháp luật Hôn nhân và Gia đình Việt Nam.
+
+Actor:
+- User
+
+Use Cases:
+- Send Legal Question
+- Receive Legal Answer
+- View Legal References
+- View Chat History
+- Start New Chat Session
+
+Mối quan hệ:
+- User liên kết với tất cả các Use Case
+- Các Use Case không phụ thuộc lẫn nhau
+
+Phong cách:
+- UML chuẩn
+- Đơn giản, rõ ràng
+- Phù hợp báo cáo đồ án đại học
+3.2. Yêu cầu chức năng và phi chức năng
+3.2.1. Yêu cầu chức năng (Functional Requirements)
+Hệ thống cần đáp ứng các yêu cầu chức năng sau:
+•	Cho phép người dùng nhập câu hỏi pháp luật bằng ngôn ngữ tự nhiên.
+•	Tự động truy xuất các điều luật liên quan từ tập dữ liệu nội bộ.
+•	Sinh câu trả lời dựa trên nội dung điều luật đã truy xuất.
+•	Hiển thị rõ ràng nội dung trả lời và trích dẫn điều luật.
+•	Lưu trữ và hiển thị lịch sử hội thoại của người dùng.
+________________________________________
+3.2.2. Yêu cầu phi chức năng (Non-functional Requirements)
+•	Tính chính xác: câu trả lời phải dựa trên dữ liệu pháp luật nội bộ.
+•	Tính hiệu năng: thời gian phản hồi nhanh (dưới vài giây).
+•	Tính mở rộng: dễ dàng bổ sung thêm văn bản luật mới.
+•	Tính bảo mật: không lưu trữ thông tin cá nhân nhạy cảm.
+•	Tính khả dụng: giao diện thân thiện, dễ sử dụng.
+________________________________________
+3.3. Thiết kế kiến trúc hệ thống
+3.3.1. Kiến trúc tổng thể
+Hệ thống được thiết kế theo kiến trúc phân tầng, bao gồm:
+•	Tầng giao diện (Frontend): Web UI (HTML, CSS, JavaScript).
+•	Tầng ứng dụng (Backend API): FastAPI xử lý logic.
+•	Tầng AI & Xử lý ngôn ngữ: Embedding, Retrieval, Gemini API.
+•	Tầng dữ liệu: Tập dữ liệu pháp luật nội bộ (JSON, vector embedding).
+________________________________________
+3.3.2. Prompt vẽ sơ đồ kiến trúc hệ thống (Architecture Diagram)
+Vẽ sơ đồ kiến trúc hệ thống Chatbot AI tư vấn pháp luật theo mô hình RAG.
+
+Các thành phần:
+- User (Web Browser)
+- Frontend (HTML, CSS, JavaScript)
+- Backend API (FastAPI)
+- Retrieval Module
+- Embedding Model
+- Legal Document Dataset (JSON)
+- Vector Store
+- Gemini API (LLM)
+
+Luồng xử lý:
+User → Frontend → Backend API
+Backend API → Retrieval Module
+Retrieval Module → Vector Store
+Vector Store → Relevant Legal Articles
+Backend API → Gemini API (kèm context luật)
+Gemini API → Backend API → Frontend → User
+
+Phong cách:
+- Layered Architecture
+- Có mũi tên chỉ luồng dữ liệu
+- Phù hợp báo cáo học thuật
+________________________________________
+3.4. Thiết kế dữ liệu
+3.4.1. Mô hình dữ liệu (ERD)
+Dữ liệu trong hệ thống bao gồm:
+•	Law: thông tin luật (tên luật, nhóm luật).
+•	Article: điều luật, tiêu đề, nội dung.
+•	ChatSession: phiên hội thoại.
+•	ChatMessage: câu hỏi và câu trả lời trong mỗi phiên.
+________________________________________
+3.4.2. Prompt vẽ ERD Diagram
+Vẽ ERD cho hệ thống Chatbot AI tư vấn pháp luật.
+
+Entities:
+- Law (law_id, law_name, group)
+- Article (article_id, article_number, title, content, law_id)
+- ChatSession (session_id, created_at)
+- ChatMessage (message_id, question, answer, session_id)
+
+Relationships:
+- Law 1--n Article
+- ChatSession 1--n ChatMessage
+
+Phong cách:
+- ERD chuẩn
+- Ghi rõ khóa chính (PK) và khóa ngoại (FK)
+________________________________________
+3.5. Sequence Diagram – Luồng xử lý câu hỏi
+3.5.1. Mô tả luồng xử lý
+Trình tự xử lý một câu hỏi của người dùng diễn ra như sau:
+1.	Người dùng gửi câu hỏi từ giao diện web.
+2.	Frontend gửi yêu cầu đến Backend API.
+3.	Backend chuyển câu hỏi sang module embedding.
+4.	Hệ thống truy xuất các điều luật liên quan.
+5.	Backend gửi ngữ cảnh luật kèm câu hỏi đến Gemini API.
+6.	Gemini API sinh câu trả lời.
+7.	Backend trả kết quả về frontend để hiển thị cho người dùng.
+________________________________________
+3.5.2. Prompt vẽ Sequence Diagram
+Vẽ Sequence Diagram cho luồng xử lý câu hỏi của Chatbot AI tư vấn pháp luật.
+
+Participants:
+- User
+- Frontend
+- Backend API
+- Embedding Service
+- Retrieval Service
+- Gemini API
+
+Sequence:
+User → Frontend: Enter question
+Frontend → Backend API: POST /chat
+Backend API → Embedding Service: Generate embedding
+Backend API → Retrieval Service: Retrieve legal articles
+Backend API → Gemini API: Generate answer with context
+Gemini API → Backend API: Answer
+Backend API → Frontend: Response
+Frontend → User: Display answer
+
+Phong cách:
+- UML Sequence Diagram
+- Có đánh số bước
+________________________________________
+3.6. Thiết kế API
+3.6.1. Mô tả API chính
+•	Endpoint: /chat
+•	Method: POST
+•	Request: câu hỏi pháp luật của người dùng
+•	Response: câu trả lời và danh sách điều luật liên quan
+________________________________________
+3.6.2. Prompt vẽ sơ đồ API Flow
+Vẽ sơ đồ luồng API cho endpoint /chat của Chatbot AI pháp luật.
+
+Thành phần:
+- Client
+- Chat API
+- Retrieval Service
+- Gemini Service
+
+Luồng:
+Client → Chat API
+Chat API → Retrieval Service
+Chat API → Gemini Service
+Chat API → Client
+
+Phong cách:
+- Flow Diagram
+- Đơn giản, rõ ràng
+CHƯƠNG 4: XÂY DỰNG VÀ CÀI ĐẶT HỆ THỐNG
+4.1. Công nghệ và công cụ sử dụng
+Hệ thống chatbot AI tư vấn pháp luật được xây dựng dựa trên các công nghệ hiện đại, phù hợp với yêu cầu xử lý ngôn ngữ tự nhiên và triển khai web.
+4.1.1. Công nghệ Backend
+•	Ngôn ngữ lập trình: Python
+•	Framework Backend: FastAPI
+•	Ưu điểm của FastAPI:
+o	Hiệu năng cao
+o	Dễ xây dựng API RESTful
+o	Phù hợp triển khai các hệ thống AI
+Backend chịu trách nhiệm xử lý câu hỏi người dùng, truy xuất dữ liệu pháp luật, tích hợp mô hình AI và trả kết quả cho frontend.
+________________________________________
+4.1.2. Công nghệ Frontend
+•	HTML, CSS, JavaScript
+•	Giao diện web cho phép người dùng:
+o	Nhập câu hỏi pháp luật
+o	Nhận câu trả lời
+o	Xem lịch sử hội thoại
+o	Tạo phiên chat mới
+Frontend giao tiếp với backend thông qua API /chat bằng giao thức HTTP.
+________________________________________
+4.1.3. Công nghệ AI và NLP
+•	SentenceTransformer: tạo vector embedding cho câu hỏi và điều luật
+•	Semantic Search: tìm kiếm ngữ nghĩa dựa trên độ tương đồng cosine
+•	Gemini API: mô hình ngôn ngữ lớn dùng để sinh câu trả lời
+•	Mô hình RAG: kết hợp Retrieval + Generation
+________________________________________
+4.2. Thu thập và xử lý dữ liệu pháp luật
+4.2.1. Thu thập dữ liệu
+Nguồn dữ liệu pháp luật được sử dụng trong hệ thống là các văn bản thuộc Luật Hôn nhân và Gia đình năm 2014, được thu thập và lưu trữ dưới dạng tệp JSON nội bộ.
+Mỗi văn bản luật được cấu trúc bao gồm:
+•	Tên luật
+•	Nhóm luật
+•	Danh sách các điều luật
+•	Tiêu đề và nội dung chi tiết của từng điều
+________________________________________
+4.2.2. Tiền xử lý dữ liệu
+Trước khi đưa vào hệ thống AI, dữ liệu pháp luật được xử lý như sau:
+•	Làm sạch văn bản (loại bỏ ký tự thừa, chuẩn hóa encoding).
+•	Tách luật thành các đơn vị nhỏ theo từng điều luật.
+•	Gắn metadata (tên luật, số điều, tiêu đề) cho mỗi điều luật.
+•	Chuẩn bị trường văn bản dùng cho embedding.
+Việc chia nhỏ theo từng điều luật giúp hệ thống truy xuất chính xác và tăng độ liên quan của kết quả tìm kiếm.
+________________________________________
+4.3. Pipeline xử lý theo mô hình RAG
+4.3.1. Mô tả pipeline tổng thể
+Pipeline xử lý của hệ thống chatbot được xây dựng theo mô hình Retrieval-Augmented Generation, bao gồm các bước chính:
+1.	Người dùng nhập câu hỏi pháp luật.
+2.	Backend tiếp nhận câu hỏi thông qua API.
+3.	Câu hỏi được chuyển đổi thành vector embedding.
+4.	Hệ thống thực hiện tìm kiếm ngữ nghĩa trên tập điều luật.
+5.	Lựa chọn các điều luật liên quan nhất (top-k).
+6.	Tạo prompt bao gồm câu hỏi và nội dung điều luật.
+7.	Gửi prompt đến Gemini API.
+8.	Nhận câu trả lời và trả về cho người dùng.
+________________________________________
+4.3.2. Prompt vẽ sơ đồ Pipeline RAG
+Vẽ sơ đồ pipeline xử lý RAG cho Chatbot AI tư vấn pháp luật.
+
+Các bước:
+- User Question
+- Text Embedding
+- Semantic Search (Vector Similarity)
+- Top-k Legal Articles
+- Prompt Construction
+- Gemini API (LLM)
+- Generated Answer
+
+Luồng:
+Question → Embedding → Retrieval → Context → LLM → Answer
+
+Phong cách:
+- Pipeline Diagram
+- Có đánh số thứ tự các bước
+- Phù hợp báo cáo học thuật
+________________________________________
+4.4. Thuật toán tìm kiếm ngữ nghĩa
+4.4.1. Embedding văn bản
+Mỗi điều luật và câu hỏi người dùng được chuyển đổi thành một vector số có cùng số chiều thông qua mô hình embedding. Các vector này phản ánh ý nghĩa ngữ nghĩa của văn bản trong không gian vector.
+Việc sử dụng embedding giúp hệ thống có khả năng tìm kiếm các điều luật liên quan ngay cả khi câu hỏi không trùng khớp từ khóa.
+________________________________________
+4.4.2. Tính độ tương đồng
+Độ tương đồng giữa câu hỏi và các điều luật được tính bằng phép nhân vô hướng (cosine similarity). Các điều luật có độ tương đồng cao nhất sẽ được lựa chọn để đưa vào ngữ cảnh cho mô hình sinh ngôn ngữ.
+Phương pháp này giúp tăng độ chính xác và giảm thiểu việc truy xuất các điều luật không liên quan.
+________________________________________
+4.4.3. Prompt vẽ sơ đồ Semantic Search
+Vẽ sơ đồ minh họa quá trình tìm kiếm ngữ nghĩa trong Chatbot AI pháp luật.
+
+Thành phần:
+- User Question
+- Question Embedding
+- Legal Article Embeddings
+- Similarity Calculation
+- Top-k Results
+
+Phong cách:
+- Vector Search Diagram
+- Đơn giản, dễ hiểu
+________________________________________
+4.5. Tích hợp mô hình ngôn ngữ lớn (Gemini API)
+4.5.1. Xây dựng Prompt có kiểm soát
+Prompt gửi đến Gemini API được thiết kế theo nguyên tắc:
+•	Chỉ sử dụng dữ liệu pháp luật được truy xuất.
+•	Không bổ sung kiến thức bên ngoài.
+•	Nếu dữ liệu không đủ, phải nêu rõ giới hạn.
+Cách thiết kế này giúp chatbot tránh hiện tượng suy diễn và đảm bảo tính chính xác pháp lý.
+________________________________________
+4.5.2. Cơ chế kiểm soát câu trả lời
+Trong trường hợp hệ thống không tìm thấy điều luật phù hợp, chatbot sẽ trả về thông báo rằng dữ liệu pháp luật chưa đủ để trả lời câu hỏi. Điều này giúp nâng cao tính minh bạch và độ tin cậy của hệ thống.
+________________________________________
+4.6. Triển khai và chạy thử hệ thống
+Hệ thống được triển khai trên môi trường local với các bước:
+•	Cài đặt các thư viện cần thiết.
+•	Cấu hình biến môi trường cho Gemini API.
+•	Khởi chạy backend bằng FastAPI.
+•	Mở giao diện web và thực hiện thử nghiệm.
+Hệ thống có thể dễ dàng mở rộng và triển khai trên môi trường cloud trong tương lai.
+# CHƯƠNG 5: THỬ NGHIỆM VÀ ĐÁNH GIÁ HỆ THỐNG
+
+## 5.1. Mục tiêu thử nghiệm
+
+Mục tiêu của chương này nhằm:
+
+- Đánh giá khả năng trả lời đúng và phù hợp của chatbot AI.
+- Kiểm tra mức độ tuân thủ nguyên tắc **chỉ sử dụng tài liệu pháp luật nội bộ**.
+- So sánh hiệu quả giữa chatbot AI theo mô hình RAG và các hình thức tư vấn pháp luật truyền thống.
+- Đánh giá tính ứng dụng thực tế của hệ thống.
+
+---
+
+## 5.2. Môi trường thử nghiệm
+
+- **Thiết bị:** Máy tính cá nhân  
+- **Hệ điều hành:** Windows  
+- **Trình duyệt:** Google Chrome  
+- **Backend:** FastAPI (chạy local)  
+- **Frontend:** Web (HTML/CSS/JavaScript)  
+- **Nguồn dữ liệu:** Luật Hôn nhân và Gia đình 2014 (dữ liệu JSON nội bộ)
+
+---
+
+## 5.3. Xây dựng bộ test case
+
+### 5.3.1. Phân loại câu hỏi thử nghiệm
+
+Các câu hỏi thử nghiệm được xây dựng dựa trên những tình huống thực tế thường gặp trong lĩnh vực hôn nhân và gia đình, bao gồm:
+
+- Thủ tục kết hôn  
+- Ly hôn đơn phương  
+- Chia tài sản khi ly hôn  
+- Quyền nuôi con và cấp dưỡng  
+- Các trường hợp đặc biệt (ví dụ: kết hôn đồng giới)
+
+---
+
+### 5.3.2. Bảng test case tiêu biểu
+
+| STT | Câu hỏi thử nghiệm | Điều luật liên quan | Kết quả |
+|----|------------------|-------------------|--------|
+| 1 | Điều kiện kết hôn là gì? | Điều 8 | Trả lời đúng |
+| 2 | Thủ tục ly hôn đơn phương | Điều 56 | Trả lời đúng |
+| 3 | Chia tài sản khi ly hôn như thế nào? | Điều 59 | Trả lời đúng |
+| 4 | Quyền nuôi con sau ly hôn | Điều 81, 82 | Trả lời đúng |
+| 5 | Kết hôn đồng giới có được không? | Không có điều luật trực tiếp | Từ chối kết luận |
+
+**Nhận xét:**  
+Ở trường hợp thứ 5, chatbot không đưa ra kết luận khi dữ liệu pháp luật không đủ, thể hiện việc tuân thủ đúng mô hình RAG và tránh suy diễn ngoài phạm vi dữ liệu.
+
+---
+
+## 5.4. Đánh giá độ chính xác
+
+### 5.4.1. Tiêu chí đánh giá
+
+- **Đúng điều luật:** Câu trả lời dựa trên điều luật phù hợp.  
+- **Không hallucination:** Không tạo thông tin ngoài dữ liệu nội bộ.  
+- **Diễn giải rõ ràng:** Dễ hiểu đối với người không có nền tảng pháp lý.  
+- **Minh bạch nguồn:** Có trích dẫn điều luật cụ thể.
+
+---
+
+### 5.4.2. Kết quả đánh giá
+
+- **Tổng số câu hỏi thử nghiệm:** 30  
+- **Số câu trả lời đúng và phù hợp:** 27  
+- **Số câu từ chối trả lời do thiếu dữ liệu:** 3  
+- **Tỷ lệ trả lời đúng/phù hợp:** **90%**
+
+Các trường hợp bị từ chối đều là những câu hỏi không có quy định cụ thể trong dữ liệu nội bộ và được xem là hành vi đúng đắn của hệ thống.
+
+---
+
+## 5.5. So sánh với các phương pháp khác
+
+### 5.5.1. So sánh với chatbot rule-based
+
+| Tiêu chí | Rule-based | Chatbot AI RAG |
+|--------|-----------|---------------|
+| Hiểu ngôn ngữ tự nhiên | Thấp | Cao |
+| Linh hoạt câu hỏi | Thấp | Cao |
+| Khả năng mở rộng | Thấp | Cao |
+| Độ chính xác pháp lý | Trung bình | Cao |
+
+---
+
+### 5.5.2. So sánh với chatbot AI không dùng RAG
+
+| Tiêu chí | AI thông thường | AI RAG |
+|--------|----------------|--------|
+| Dựa trên dữ liệu nội bộ | Không đảm bảo | Có |
+| Hallucination | Cao | Thấp |
+| Trích dẫn điều luật | Không ổn định | Rõ ràng |
+| Phù hợp lĩnh vực pháp luật | Không | Có |
+
+**Kết quả cho thấy mô hình RAG là lựa chọn phù hợp cho bài toán tư vấn pháp luật.**
+
+---
+
+## 5.6. Đánh giá người dùng (mô phỏng)
+
+Một số phản hồi từ người dùng thử nghiệm:
+
+- Dễ sử dụng, giao diện thân thiện.  
+- Câu trả lời rõ ràng, có trích dẫn điều luật.  
+- Phù hợp để tham khảo nhanh trước khi tìm đến luật sư.
+
+---
+
+### 5.6.1. Prompt vẽ biểu đồ đánh giá (tùy chọn)
+
+```text
+Vẽ biểu đồ cột đánh giá chatbot AI tư vấn pháp luật theo các tiêu chí:
+- Độ chính xác
+- Tốc độ phản hồi
+- Dễ sử dụng
+- Độ tin cậy
+
+Thang điểm: 1–5
+Phong cách: Biểu đồ cho báo cáo đồ án CNTT
