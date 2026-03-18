@@ -1,0 +1,417 @@
+{
+  "doc_type": "law_group",
+  "law_name": "Nghị định 82/2020/NĐ-CP",
+  "group": "Xử phạt vi phạm hành chính trong lĩnh vực hôn nhân và gia đình",
+  "articles": [
+    {
+      "article": "Điều 1",
+      "title": "Phạm vi điều chỉnh",
+      "content": "Nghị định này quy định về hành vi vi phạm hành chính, hình thức xử phạt, mức xử phạt, biện pháp khắc phục hậu quả, thẩm quyền lập biên bản và thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực bổ trợ tư pháp, hành chính tư pháp, hôn nhân và gia đình, thi hành án dân sự và phá sản doanh nghiệp, hợp tác xã."
+    },
+    {
+      "article": "Điều 2",
+      "title": "Đối tượng bị xử phạt",
+      "content": "Cá nhân, tổ chức Việt Nam; cá nhân, tổ chức nước ngoài có hành vi vi phạm hành chính trong các lĩnh vực quy định tại Nghị định này."
+    },
+    {
+      "article": "Điều 3",
+      "title": "Hình thức xử phạt và biện pháp khắc phục hậu quả",
+      "content": "Các hình thức xử phạt vi phạm hành chính bao gồm cảnh cáo, phạt tiền; ngoài ra còn có các hình thức xử phạt bổ sung và biện pháp khắc phục hậu quả theo quy định."
+    },
+    {
+      "article": "Điều 4",
+      "title": "Mức phạt tiền và thẩm quyền phạt tiền",
+      "content": "Quy định mức phạt tiền cụ thể đối với từng hành vi vi phạm và nguyên tắc áp dụng mức phạt tiền đối với cá nhân và tổ chức."
+    },
+    {
+      "article": "Điều 5",
+      "title": "Hành vi vi phạm quy định về hồ sơ đăng ký tập sự hành nghề luật sư",
+      "content": "Quy định các hành vi vi phạm liên quan đến hồ sơ đăng ký tập sự hành nghề luật sư, cấp chứng chỉ hành nghề luật sư và giấy phép hoạt động của tổ chức hành nghề luật sư."
+    },
+    {
+      "article": "Điều 6",
+      "title": "Hành vi vi phạm quy định về tập sự hành nghề luật sư",
+      "content": "Quy định các hành vi vi phạm liên quan đến việc tập sự hành nghề luật sư và các mức xử phạt tương ứng."
+    },
+    {
+      "article": "Điều 7",
+      "title": "Hành vi vi phạm quy định về hoạt động hành nghề luật sư",
+      "content": "Quy định các hành vi vi phạm trong quá trình hành nghề luật sư và mức xử phạt đối với từng hành vi."
+    },
+    {
+      "article": "Điều 8",
+      "title": "Hành vi vi phạm quy định về tổ chức hành nghề luật sư",
+      "content": "Quy định các hành vi vi phạm trong việc thành lập và hoạt động của tổ chức hành nghề luật sư."
+    },
+    {
+      "article": "Điều 9",
+      "title": "Hành vi vi phạm quy định về hoạt động tư vấn pháp luật",
+      "content": "Quy định các hành vi vi phạm trong hoạt động tư vấn pháp luật và mức xử phạt tương ứng."
+    },
+    {
+      "article": "Điều 10",
+      "title": "Hành vi vi phạm quy định về công chứng",
+      "content": "Quy định các hành vi vi phạm liên quan đến hoạt động công chứng và mức xử phạt đối với từng hành vi."
+    },
+    {
+      "article": "Điều 11",
+      "title": "Hành vi vi phạm quy định về tổ chức và hoạt động của tổ chức hành nghề công chứng",
+      "content": "Quy định các hành vi vi phạm liên quan đến việc thành lập và hoạt động của tổ chức hành nghề công chứng."
+    },
+    {
+      "article": "Điều 12",
+      "title": "Hành vi vi phạm quy định về công chứng viên",
+      "content": "Quy định các hành vi vi phạm của công chứng viên và mức xử phạt tương ứng."
+    },
+    {
+      "article": "Điều 13",
+      "title": "Hành vi vi phạm quy định về giám định tư pháp",
+      "content": "Quy định các hành vi vi phạm trong hoạt động giám định tư pháp và mức xử phạt."
+    },
+    {
+      "article": "Điều 14",
+      "title": "Hành vi vi phạm quy định về tổ chức giám định tư pháp",
+      "content": "Quy định các hành vi vi phạm liên quan đến tổ chức giám định tư pháp."
+    },
+    {
+      "article": "Điều 15",
+      "title": "Hành vi vi phạm quy định về đấu giá tài sản",
+      "content": "Quy định các hành vi vi phạm trong hoạt động đấu giá tài sản và mức xử phạt."
+    },
+    {
+      "article": "Điều 16",
+      "title": "Hành vi vi phạm quy định về đấu giá viên",
+      "content": "Quy định các hành vi vi phạm của đấu giá viên và mức xử phạt tương ứng."
+    },
+    {
+      "article": "Điều 17",
+      "title": "Hành vi vi phạm quy định về tổ chức đấu giá tài sản",
+      "content": "Quy định các hành vi vi phạm trong việc tổ chức và hoạt động đấu giá tài sản."
+    },
+    {
+      "article": "Điều 18",
+      "title": "Hành vi vi phạm quy định về trọng tài thương mại",
+      "content": "Quy định các hành vi vi phạm liên quan đến hoạt động trọng tài thương mại."
+    },
+    {
+      "article": "Điều 19",
+      "title": "Hành vi vi phạm quy định về hòa giải thương mại",
+      "content": "Quy định các hành vi vi phạm trong hoạt động hòa giải thương mại."
+    },
+    {
+      "article": "Điều 20",
+      "title": "Hành vi vi phạm quy định về thừa phát lại",
+      "content": "Quy định các hành vi vi phạm liên quan đến tổ chức và hoạt động của thừa phát lại."
+    },
+    {
+      "article": "Điều 21",
+      "title": "Hành vi vi phạm quy định về kết hôn",
+      "content": "Phạt tiền đối với hành vi vi phạm quy định về điều kiện kết hôn, kết hôn trái pháp luật hoặc cản trở kết hôn theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 22",
+      "title": "Hành vi vi phạm quy định về tảo hôn",
+      "content": "Phạt tiền đối với hành vi tổ chức tảo hôn hoặc cố ý duy trì quan hệ vợ chồng trái pháp luật giữa người chưa đủ tuổi kết hôn."
+    },
+    {
+      "article": "Điều 23",
+      "title": "Hành vi vi phạm quy định về ly hôn",
+      "content": "Phạt tiền đối với hành vi cản trở ly hôn hoặc vi phạm quy định của pháp luật về ly hôn."
+    },
+    {
+      "article": "Điều 24",
+      "title": "Hành vi vi phạm quy định về chế độ một vợ một chồng",
+      "content": "Phạt tiền đối với hành vi đang có vợ hoặc chồng mà kết hôn với người khác hoặc chung sống như vợ chồng với người khác."
+    },
+    {
+      "article": "Điều 25",
+      "title": "Hành vi vi phạm quy định về quan hệ giữa các thành viên trong gia đình",
+      "content": "Phạt tiền đối với hành vi vi phạm nghĩa vụ tôn trọng, chăm sóc giữa các thành viên trong gia đình."
+    },
+    {
+      "article": "Điều 26",
+      "title": "Hành vi vi phạm quy định về nghĩa vụ cấp dưỡng",
+      "content": "Phạt tiền đối với hành vi trốn tránh nghĩa vụ cấp dưỡng theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 27",
+      "title": "Hành vi vi phạm quy định về chăm sóc, nuôi dưỡng con",
+      "content": "Phạt tiền đối với hành vi không thực hiện nghĩa vụ chăm sóc, nuôi dưỡng con theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 28",
+      "title": "Hành vi vi phạm quy định về mang thai hộ",
+      "content": "Phạt tiền đối với hành vi vi phạm quy định của pháp luật về mang thai hộ vì mục đích nhân đạo."
+    },
+    {
+      "article": "Điều 29",
+      "title": "Hành vi vi phạm quy định về xác định cha, mẹ, con",
+      "content": "Phạt tiền đối với hành vi gian dối trong việc xác định cha, mẹ, con."
+    },
+    {
+      "article": "Điều 30",
+      "title": "Hành vi vi phạm quy định về nuôi con nuôi",
+      "content": "Phạt tiền đối với hành vi vi phạm quy định của pháp luật về nuôi con nuôi."
+    },
+    {
+      "article": "Điều 31",
+      "title": "Hành vi vi phạm quy định về đăng ký kết hôn",
+      "content": "Phạt tiền đối với hành vi không thực hiện hoặc thực hiện không đúng thủ tục đăng ký kết hôn theo quy định."
+    },
+    {
+      "article": "Điều 32",
+      "title": "Hành vi vi phạm quy định về đăng ký khai sinh",
+      "content": "Phạt tiền đối với hành vi không đăng ký khai sinh cho trẻ theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 33",
+      "title": "Hành vi vi phạm quy định về đăng ký khai tử",
+      "content": "Phạt tiền đối với hành vi không đăng ký khai tử theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 34",
+      "title": "Hành vi vi phạm quy định về đăng ký nhận cha, mẹ, con",
+      "content": "Phạt tiền đối với hành vi khai báo sai sự thật khi thực hiện thủ tục nhận cha, mẹ, con."
+    },
+    {
+      "article": "Điều 35",
+      "title": "Hành vi vi phạm quy định về thay đổi hộ tịch",
+      "content": "Phạt tiền đối với hành vi khai báo gian dối khi thực hiện thay đổi hộ tịch."
+    },
+    {
+      "article": "Điều 36",
+      "title": "Hành vi vi phạm quy định về cải chính hộ tịch",
+      "content": "Phạt tiền đối với hành vi cải chính hộ tịch trái pháp luật."
+    },
+    {
+      "article": "Điều 37",
+      "title": "Hành vi vi phạm quy định về xác nhận tình trạng hôn nhân",
+      "content": "Phạt tiền đối với hành vi cung cấp thông tin sai khi xin xác nhận tình trạng hôn nhân."
+    },
+    {
+      "article": "Điều 38",
+      "title": "Hành vi vi phạm quy định về giấy tờ hộ tịch",
+      "content": "Phạt tiền đối với hành vi làm giả hoặc sử dụng giấy tờ hộ tịch giả."
+    },
+    {
+      "article": "Điều 39",
+      "title": "Hành vi vi phạm quy định về quản lý hộ tịch",
+      "content": "Phạt tiền đối với hành vi vi phạm quy định về quản lý và lưu trữ sổ hộ tịch."
+    },
+    {
+      "article": "Điều 40",
+      "title": "Hành vi vi phạm quy định khác trong lĩnh vực hôn nhân và gia đình",
+      "content": "Phạt tiền đối với các hành vi vi phạm khác trong lĩnh vực hôn nhân và gia đình theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 41",
+      "title": "Thẩm quyền xử phạt của Chủ tịch Ủy ban nhân dân cấp xã",
+      "content": "Chủ tịch Ủy ban nhân dân cấp xã có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực hôn nhân và gia đình theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 42",
+      "title": "Thẩm quyền xử phạt của Chủ tịch Ủy ban nhân dân cấp huyện",
+      "content": "Chủ tịch Ủy ban nhân dân cấp huyện có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực hôn nhân và gia đình theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 43",
+      "title": "Thẩm quyền xử phạt của Chủ tịch Ủy ban nhân dân cấp tỉnh",
+      "content": "Chủ tịch Ủy ban nhân dân cấp tỉnh có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực hôn nhân và gia đình theo quy định."
+    },
+    {
+      "article": "Điều 44",
+      "title": "Thẩm quyền xử phạt của cơ quan tư pháp",
+      "content": "Cơ quan tư pháp có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực hôn nhân và gia đình theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 45",
+      "title": "Thẩm quyền xử phạt của thanh tra",
+      "content": "Thanh tra chuyên ngành có thẩm quyền xử phạt vi phạm hành chính theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 46",
+      "title": "Thẩm quyền lập biên bản vi phạm hành chính",
+      "content": "Người có thẩm quyền theo quy định của pháp luật được lập biên bản vi phạm hành chính trong lĩnh vực hôn nhân và gia đình."
+    },
+    {
+      "article": "Điều 47",
+      "title": "Áp dụng biện pháp khắc phục hậu quả",
+      "content": "Ngoài việc xử phạt, cá nhân, tổ chức vi phạm còn phải thực hiện các biện pháp khắc phục hậu quả theo quy định."
+    },
+    {
+      "article": "Điều 48",
+      "title": "Nguyên tắc áp dụng mức phạt tiền",
+      "content": "Việc áp dụng mức phạt tiền phải tuân theo các nguyên tắc quy định của pháp luật về xử lý vi phạm hành chính."
+    },
+    {
+      "article": "Điều 49",
+      "title": "Tình tiết giảm nhẹ",
+      "content": "Khi xử phạt vi phạm hành chính có thể xem xét các tình tiết giảm nhẹ theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 50",
+      "title": "Tình tiết tăng nặng",
+      "content": "Khi xử phạt vi phạm hành chính có thể xem xét các tình tiết tăng nặng theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 51",
+      "title": "Thi hành quyết định xử phạt",
+      "content": "Cá nhân, tổ chức vi phạm phải chấp hành quyết định xử phạt vi phạm hành chính theo quy định."
+    },
+    {
+      "article": "Điều 52",
+      "title": "Cưỡng chế thi hành quyết định xử phạt",
+      "content": "Trường hợp không tự nguyện chấp hành quyết định xử phạt thì bị cưỡng chế thi hành theo quy định."
+    },
+    {
+      "article": "Điều 53",
+      "title": "Khiếu nại, tố cáo",
+      "content": "Cá nhân, tổ chức có quyền khiếu nại, tố cáo đối với quyết định xử phạt vi phạm hành chính theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 54",
+      "title": "Giải quyết khiếu nại",
+      "content": "Việc giải quyết khiếu nại trong xử phạt vi phạm hành chính được thực hiện theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 55",
+      "title": "Giải quyết tố cáo",
+      "content": "Việc giải quyết tố cáo liên quan đến xử phạt vi phạm hành chính được thực hiện theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 56",
+      "title": "Trách nhiệm của cơ quan quản lý nhà nước",
+      "content": "Cơ quan quản lý nhà nước có trách nhiệm tổ chức thực hiện và kiểm tra việc thi hành nghị định này."
+    },
+    {
+      "article": "Điều 57",
+      "title": "Trách nhiệm của tổ chức, cá nhân",
+      "content": "Tổ chức, cá nhân có trách nhiệm chấp hành các quy định của nghị định này."
+    },
+    {
+      "article": "Điều 58",
+      "title": "Phối hợp thực hiện",
+      "content": "Các cơ quan, tổ chức liên quan có trách nhiệm phối hợp trong việc thực hiện nghị định này."
+    },
+    {
+      "article": "Điều 59",
+      "title": "Theo dõi và báo cáo",
+      "content": "Việc theo dõi, báo cáo tình hình thực hiện nghị định được thực hiện theo quy định."
+    },
+    {
+      "article": "Điều 60",
+      "title": "Điều khoản chuyển tiếp",
+      "content": "Các vụ việc vi phạm xảy ra trước khi nghị định này có hiệu lực thì xử lý theo quy định trước đó."
+    },
+    {
+      "article": "Điều 61",
+      "title": "Thẩm quyền xử phạt của Chủ tịch Ủy ban nhân dân cấp xã",
+      "content": "Chủ tịch Ủy ban nhân dân cấp xã có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực hôn nhân và gia đình theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 62",
+      "title": "Thẩm quyền xử phạt của Chủ tịch Ủy ban nhân dân cấp huyện",
+      "content": "Chủ tịch Ủy ban nhân dân cấp huyện có thẩm quyền xử phạt vi phạm hành chính theo quy định."
+    },
+    {
+      "article": "Điều 63",
+      "title": "Thẩm quyền xử phạt của Chủ tịch Ủy ban nhân dân cấp tỉnh",
+      "content": "Chủ tịch Ủy ban nhân dân cấp tỉnh có thẩm quyền xử phạt vi phạm hành chính trong lĩnh vực hôn nhân và gia đình."
+    },
+    {
+      "article": "Điều 64",
+      "title": "Thẩm quyền xử phạt của cơ quan tư pháp",
+      "content": "Cơ quan tư pháp có thẩm quyền xử phạt vi phạm hành chính theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 65",
+      "title": "Thẩm quyền xử phạt của thanh tra",
+      "content": "Thanh tra chuyên ngành có thẩm quyền lập biên bản và xử phạt vi phạm hành chính theo quy định."
+    },
+    {
+      "article": "Điều 66",
+      "title": "Thẩm quyền lập biên bản vi phạm hành chính",
+      "content": "Người có thẩm quyền theo quy định của pháp luật được lập biên bản vi phạm hành chính trong lĩnh vực hôn nhân và gia đình."
+    },
+    {
+      "article": "Điều 67",
+      "title": "Áp dụng biện pháp khắc phục hậu quả",
+      "content": "Ngoài việc xử phạt, cá nhân, tổ chức vi phạm còn phải thực hiện các biện pháp khắc phục hậu quả theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 68",
+      "title": "Nguyên tắc áp dụng mức phạt tiền",
+      "content": "Việc áp dụng mức phạt tiền phải tuân theo nguyên tắc của pháp luật về xử lý vi phạm hành chính."
+    },
+    {
+      "article": "Điều 69",
+      "title": "Tình tiết giảm nhẹ",
+      "content": "Khi xử phạt vi phạm hành chính có thể xem xét các tình tiết giảm nhẹ theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 70",
+      "title": "Tình tiết tăng nặng",
+      "content": "Khi xử phạt vi phạm hành chính có thể xem xét các tình tiết tăng nặng theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 71",
+      "title": "Thi hành quyết định xử phạt",
+      "content": "Cá nhân, tổ chức vi phạm phải chấp hành quyết định xử phạt vi phạm hành chính theo quy định."
+    },
+    {
+      "article": "Điều 72",
+      "title": "Cưỡng chế thi hành quyết định xử phạt",
+      "content": "Trường hợp không tự nguyện chấp hành quyết định xử phạt thì bị cưỡng chế thi hành theo quy định."
+    },
+    {
+      "article": "Điều 73",
+      "title": "Khiếu nại, tố cáo",
+      "content": "Cá nhân, tổ chức có quyền khiếu nại, tố cáo đối với quyết định xử phạt vi phạm hành chính."
+    },
+    {
+      "article": "Điều 74",
+      "title": "Giải quyết khiếu nại",
+      "content": "Việc giải quyết khiếu nại trong xử phạt vi phạm hành chính được thực hiện theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 75",
+      "title": "Giải quyết tố cáo",
+      "content": "Việc giải quyết tố cáo liên quan đến xử phạt vi phạm hành chính được thực hiện theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 76",
+      "title": "Trách nhiệm của cơ quan quản lý nhà nước",
+      "content": "Cơ quan quản lý nhà nước có trách nhiệm tổ chức thực hiện và kiểm tra việc thi hành nghị định này."
+    },
+    {
+      "article": "Điều 77",
+      "title": "Trách nhiệm của tổ chức, cá nhân",
+      "content": "Tổ chức, cá nhân có trách nhiệm chấp hành các quy định của nghị định này."
+    },
+    {
+      "article": "Điều 78",
+      "title": "Phối hợp thực hiện",
+      "content": "Các cơ quan, tổ chức liên quan có trách nhiệm phối hợp trong việc thực hiện nghị định này."
+    },
+    {
+      "article": "Điều 79",
+      "title": "Theo dõi và báo cáo",
+      "content": "Việc theo dõi, báo cáo tình hình thực hiện nghị định được thực hiện theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 80",
+      "title": "Điều khoản chuyển tiếp",
+      "content": "Các vụ việc vi phạm xảy ra trước khi nghị định này có hiệu lực thì xử lý theo quy định trước đó."
+    },
+    {
+      "article": "Điều 81",
+      "title": "Trách nhiệm thi hành",
+      "content": "Các cơ quan, tổ chức và cá nhân có liên quan chịu trách nhiệm thi hành nghị định này."
+    },
+    {
+      "article": "Điều 82",
+      "title": "Hiệu lực thi hành",
+      "content": "Nghị định này có hiệu lực thi hành kể từ ngày được quy định trong văn bản ban hành."
+    }
+  ]
+}

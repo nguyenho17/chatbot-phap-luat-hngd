@@ -1,0 +1,231 @@
+{
+  "law_name": "Nghị định 123/2015/NĐ-CP về đăng ký và quản lý hộ tịch",
+  "group": "Hộ tịch",
+  "articles": [
+    {
+      "article": "Điều 1",
+      "title": "Phạm vi điều chỉnh",
+      "content": "Nghị định này quy định chi tiết một số điều của Luật Hộ tịch về đăng ký khai sinh, kết hôn, quản lý và sử dụng Sổ hộ tịch trong giai đoạn Cơ sở dữ liệu hộ tịch điện tử và Cơ sở dữ liệu quốc gia về dân cư chưa được vận hành thống nhất; đăng ký khai sinh cho trẻ bị bỏ rơi, trẻ chưa xác định được cha mẹ, trẻ sinh ra do mang thai hộ; đăng ký khai sinh, kết hôn, nhận cha mẹ con, khai tử tại khu vực biên giới; cấp Giấy xác nhận tình trạng hôn nhân; đăng ký khai sinh cho trẻ sinh ở nước ngoài về cư trú tại Việt Nam; đăng ký kết hôn có yếu tố nước ngoài; ghi vào Sổ hộ tịch việc kết hôn, ly hôn, hủy kết hôn đã được giải quyết ở nước ngoài; đăng ký lại khai sinh, kết hôn, khai tử và các biện pháp thi hành Luật Hộ tịch."
+    },
+    {
+      "article": "Điều 2",
+      "title": "Quy định về xuất trình, nộp giấy tờ khi đăng ký hộ tịch",
+      "content": "Người yêu cầu đăng ký hộ tịch phải xuất trình giấy tờ tùy thân hợp lệ như hộ chiếu, chứng minh nhân dân hoặc căn cước công dân. Khi đăng ký khai sinh phải nộp Giấy chứng sinh; đăng ký khai tử phải nộp Giấy báo tử; đăng ký kết hôn phải nộp Giấy xác nhận tình trạng hôn nhân. Giấy tờ bằng tiếng nước ngoài phải dịch ra tiếng Việt và chứng thực theo quy định."
+    },
+    {
+      "article": "Điều 3",
+      "title": "Cách thức nộp và tiếp nhận hồ sơ đăng ký hộ tịch",
+      "content": "Người yêu cầu đăng ký hộ tịch có thể nộp hồ sơ trực tiếp tại cơ quan đăng ký hộ tịch, qua bưu chính hoặc qua hệ thống đăng ký hộ tịch trực tuyến. Cơ quan tiếp nhận hồ sơ có trách nhiệm kiểm tra tính hợp lệ của hồ sơ và hướng dẫn bổ sung nếu cần."
+    },
+    {
+      "article": "Điều 4",
+      "title": "Xác định nội dung đăng ký khai sinh, khai tử",
+      "content": "Nội dung đăng ký khai sinh gồm họ tên, dân tộc, quốc tịch, ngày tháng năm sinh, nơi sinh, quê quán và thông tin cha mẹ. Nội dung đăng ký khai tử bao gồm họ tên người chết, năm sinh, nơi chết, nguyên nhân chết và thời điểm chết theo Dương lịch."
+    },
+    {
+      "article": "Điều 5",
+      "title": "Cấp Giấy chứng sinh, Giấy báo tử",
+      "content": "Cơ sở y tế có trách nhiệm cấp Giấy chứng sinh hoặc Giấy báo tử và cung cấp số liệu thống kê sinh, tử cho cơ quan đăng ký hộ tịch để phục vụ quản lý nhà nước."
+    },
+    {
+      "article": "Điều 6",
+      "title": "Giá trị pháp lý của Giấy khai sinh",
+      "content": "Giấy khai sinh là giấy tờ hộ tịch gốc của cá nhân. Mọi giấy tờ khác của cá nhân phải phù hợp với nội dung trong Giấy khai sinh."
+    },
+    {
+      "article": "Điều 7",
+      "title": "Điều kiện thay đổi, cải chính hộ tịch",
+      "content": "Việc thay đổi họ tên cho người dưới 18 tuổi phải có sự đồng ý của cha mẹ và người đó nếu từ đủ 9 tuổi trở lên. Việc cải chính hộ tịch chỉ được thực hiện khi có căn cứ xác định thông tin bị sai sót."
+    },
+    {
+      "article": "Điều 8",
+      "title": "Tuyển dụng và bồi dưỡng công chức làm công tác hộ tịch",
+      "content": "Việc tuyển dụng công chức hộ tịch phải đáp ứng tiêu chuẩn theo Luật Hộ tịch. Bộ Tư pháp có trách nhiệm xây dựng chương trình bồi dưỡng nghiệp vụ hộ tịch."
+    },
+    {
+      "article": "Điều 9",
+      "title": "Giấy tờ khi đăng ký khai sinh",
+      "content": "Người yêu cầu đăng ký khai sinh phải nộp giấy tờ theo quy định của Luật Hộ tịch và xuất trình giấy tờ tùy thân. Nếu cha mẹ đã đăng ký kết hôn thì phải xuất trình Giấy chứng nhận kết hôn."
+    },
+    {
+      "article": "Điều 10",
+      "title": "Giấy tờ khi đăng ký kết hôn",
+      "content": "Người yêu cầu đăng ký kết hôn phải xuất trình giấy tờ tùy thân và nộp giấy xác nhận tình trạng hôn nhân theo quy định."
+    },
+    {
+      "article": "Điều 11",
+      "title": "Đăng ký khai sinh cho trẻ em bị bỏ rơi",
+      "content": "Ủy ban nhân dân cấp xã nơi phát hiện trẻ bị bỏ rơi có trách nhiệm lập biên bản về việc trẻ bị bỏ rơi và thực hiện đăng ký khai sinh cho trẻ theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 12",
+      "title": "Đăng ký khai sinh cho trẻ chưa xác định được cha mẹ",
+      "content": "Trường hợp chưa xác định được cha mẹ của trẻ thì nội dung về cha mẹ trong Sổ hộ tịch và Giấy khai sinh để trống theo quy định."
+    },
+    {
+      "article": "Điều 13",
+      "title": "Đăng ký khai sinh cho trẻ sinh ra do mang thai hộ",
+      "content": "Việc đăng ký khai sinh cho trẻ sinh ra do mang thai hộ được thực hiện theo quy định của pháp luật về hôn nhân và gia đình và pháp luật về hộ tịch."
+    },
+    {
+      "article": "Điều 14",
+      "title": "Đăng ký khai sinh tại khu vực biên giới",
+      "content": "Việc đăng ký khai sinh cho trẻ em cư trú tại khu vực biên giới được thực hiện theo quy định của pháp luật về hộ tịch và các điều ước quốc tế có liên quan."
+    },
+    {
+      "article": "Điều 15",
+      "title": "Đăng ký kết hôn tại khu vực biên giới",
+      "content": "Công dân Việt Nam cư trú tại khu vực biên giới được đăng ký kết hôn với công dân nước láng giềng cư trú tại khu vực biên giới theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 16",
+      "title": "Cấp Giấy xác nhận tình trạng hôn nhân",
+      "content": "Ủy ban nhân dân cấp xã nơi cư trú của công dân có thẩm quyền cấp Giấy xác nhận tình trạng hôn nhân theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 17",
+      "title": "Đăng ký khai sinh cho trẻ sinh ra ở nước ngoài về cư trú tại Việt Nam",
+      "content": "Trẻ em sinh ra ở nước ngoài nhưng về cư trú tại Việt Nam được đăng ký khai sinh theo quy định của pháp luật về hộ tịch."
+    },
+    {
+      "article": "Điều 18",
+      "title": "Đăng ký kết hôn có yếu tố nước ngoài",
+      "content": "Việc đăng ký kết hôn giữa công dân Việt Nam với người nước ngoài được thực hiện theo quy định của pháp luật về hộ tịch và pháp luật về hôn nhân và gia đình."
+    },
+    {
+      "article": "Điều 19",
+      "title": "Ghi vào Sổ hộ tịch việc kết hôn đã được giải quyết ở nước ngoài",
+      "content": "Việc kết hôn của công dân Việt Nam đã được giải quyết tại cơ quan có thẩm quyền của nước ngoài được ghi vào Sổ hộ tịch theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 20",
+      "title": "Ghi vào Sổ hộ tịch việc ly hôn hoặc hủy kết hôn ở nước ngoài",
+      "content": "Việc ly hôn hoặc hủy kết hôn đã được giải quyết ở nước ngoài được ghi vào Sổ hộ tịch tại cơ quan có thẩm quyền của Việt Nam theo quy định."
+    },
+    {
+      "article": "Điều 21",
+      "title": "Đăng ký nhận cha, mẹ, con",
+      "content": "Việc đăng ký nhận cha, mẹ, con được thực hiện tại cơ quan đăng ký hộ tịch theo quy định của Luật Hộ tịch và các quy định có liên quan."
+    },
+    {
+      "article": "Điều 22",
+      "title": "Đăng ký khai tử",
+      "content": "Ủy ban nhân dân cấp xã nơi cư trú cuối cùng của người chết thực hiện đăng ký khai tử theo quy định của pháp luật về hộ tịch."
+    },
+    {
+      "article": "Điều 23",
+      "title": "Đăng ký lại khai sinh",
+      "content": "Việc đăng ký lại khai sinh được thực hiện trong trường hợp Sổ hộ tịch và bản chính giấy tờ hộ tịch bị mất hoặc hư hỏng không sử dụng được."
+    },
+    {
+      "article": "Điều 24",
+      "title": "Đăng ký lại kết hôn",
+      "content": "Việc đăng ký lại kết hôn được thực hiện khi Sổ hộ tịch và bản chính giấy chứng nhận kết hôn bị mất theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 25",
+      "title": "Đăng ký lại khai tử",
+      "content": "Trường hợp Sổ hộ tịch và bản chính giấy tờ khai tử bị mất thì việc đăng ký lại khai tử được thực hiện theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 26",
+      "title": "Thay đổi, cải chính hộ tịch",
+      "content": "Việc thay đổi, cải chính hộ tịch được thực hiện khi có căn cứ xác định nội dung hộ tịch đã đăng ký có sai sót."
+    },
+    {
+      "article": "Điều 27",
+      "title": "Bổ sung hộ tịch",
+      "content": "Việc bổ sung hộ tịch được thực hiện khi thông tin hộ tịch của cá nhân chưa được đăng ký đầy đủ trong Sổ hộ tịch."
+    },
+    {
+      "article": "Điều 28",
+      "title": "Xác định lại dân tộc",
+      "content": "Việc xác định lại dân tộc được thực hiện theo quy định của pháp luật về hộ tịch và pháp luật có liên quan."
+    },
+    {
+      "article": "Điều 29",
+      "title": "Xác định lại giới tính",
+      "content": "Việc xác định lại giới tính được thực hiện theo quy định của pháp luật về dân sự và pháp luật có liên quan."
+    },
+    {
+      "article": "Điều 30",
+      "title": "Cập nhật thông tin hộ tịch",
+      "content": "Thông tin hộ tịch của cá nhân được cập nhật vào Sổ hộ tịch và cơ sở dữ liệu hộ tịch điện tử theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 31",
+      "title": "Đăng ký khai sinh lưu động",
+      "content": "Ủy ban nhân dân cấp xã tổ chức đăng ký khai sinh lưu động cho trẻ em tại các địa bàn khó khăn hoặc trường hợp người dân không có điều kiện đến cơ quan đăng ký hộ tịch."
+    },
+    {
+      "article": "Điều 32",
+      "title": "Đăng ký kết hôn lưu động",
+      "content": "Việc đăng ký kết hôn lưu động được thực hiện đối với trường hợp đặc biệt theo quy định của pháp luật nhằm bảo đảm quyền kết hôn của công dân."
+    },
+    {
+      "article": "Điều 33",
+      "title": "Đăng ký khai tử lưu động",
+      "content": "Ủy ban nhân dân cấp xã có thể tổ chức đăng ký khai tử lưu động trong trường hợp cần thiết để bảo đảm việc đăng ký khai tử được thực hiện đầy đủ."
+    },
+    {
+      "article": "Điều 34",
+      "title": "Quản lý và sử dụng Sổ hộ tịch",
+      "content": "Sổ hộ tịch phải được quản lý chặt chẽ, ghi chép đầy đủ, chính xác và lưu trữ theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 35",
+      "title": "Lưu trữ hồ sơ hộ tịch",
+      "content": "Hồ sơ hộ tịch phải được lưu trữ theo quy định của pháp luật về lưu trữ và pháp luật về hộ tịch."
+    },
+    {
+      "article": "Điều 36",
+      "title": "Cơ sở dữ liệu hộ tịch điện tử",
+      "content": "Thông tin hộ tịch của cá nhân được cập nhật vào cơ sở dữ liệu hộ tịch điện tử theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 37",
+      "title": "Trách nhiệm của Bộ Tư pháp",
+      "content": "Bộ Tư pháp chịu trách nhiệm hướng dẫn, kiểm tra việc thực hiện pháp luật về hộ tịch trên phạm vi toàn quốc."
+    },
+    {
+      "article": "Điều 38",
+      "title": "Trách nhiệm của Ủy ban nhân dân các cấp",
+      "content": "Ủy ban nhân dân các cấp có trách nhiệm tổ chức thực hiện việc đăng ký và quản lý hộ tịch tại địa phương."
+    },
+    {
+      "article": "Điều 39",
+      "title": "Trách nhiệm của cơ quan liên quan",
+      "content": "Các cơ quan, tổ chức có liên quan có trách nhiệm phối hợp trong việc thực hiện đăng ký và quản lý hộ tịch."
+    },
+    {
+      "article": "Điều 40",
+      "title": "Thanh tra, kiểm tra",
+      "content": "Việc thanh tra, kiểm tra trong lĩnh vực hộ tịch được thực hiện theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 41",
+      "title": "Xử lý vi phạm",
+      "content": "Cá nhân, tổ chức vi phạm quy định về hộ tịch tùy theo tính chất, mức độ vi phạm sẽ bị xử lý theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 42",
+      "title": "Khen thưởng",
+      "content": "Tổ chức, cá nhân có thành tích trong công tác hộ tịch được khen thưởng theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 43",
+      "title": "Kinh phí thực hiện",
+      "content": "Kinh phí thực hiện công tác đăng ký và quản lý hộ tịch được bảo đảm theo quy định của pháp luật về ngân sách nhà nước."
+    },
+    {
+      "article": "Điều 44",
+      "title": "Điều khoản chuyển tiếp",
+      "content": "Các trường hợp đăng ký hộ tịch đã thực hiện trước khi nghị định này có hiệu lực thì tiếp tục được công nhận theo quy định của pháp luật."
+    },
+    {
+      "article": "Điều 45",
+      "title": "Hiệu lực thi hành",
+      "content": "Nghị định này có hiệu lực thi hành kể từ ngày được quy định trong văn bản ban hành."
+    }
+  ]
+}
