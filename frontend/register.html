@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng ký - Galaxy AI Law</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        /* Đồng bộ Style với Login */
+        .register-page { height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .register-box { 
+            width: 450px; padding: 40px; border-radius: 20px; 
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); 
+            backdrop-filter: blur(15px); box-shadow: 0 0 40px rgba(0,0,0,0.6); 
+        }
+        .register-box h2 { 
+            text-align: center; margin-bottom: 30px; 
+            background: linear-gradient(to right, #00d2ff, #92fe9d); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+        }
+        .login-input { 
+            width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; 
+        }
+        .login-btn-submit { 
+            width: 100%; padding: 14px; border: none; border-radius: 12px; 
+            background: #00d2ff; color: #0f0c29; font-weight: 600; cursor: pointer; transition: 0.3s; 
+        }
+        .login-btn-submit:hover { box-shadow: 0 0 15px #00d2ff; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+<div class="register-page">
+    <div class="register-box">
+        <h2><i class="fas fa-user-plus"></i> Đăng ký thành viên</h2>
+        <input id="fullname" class="login-input" placeholder="Họ và tên">
+        <input id="email" class="login-input" placeholder="Email">
+        <input id="username" class="login-input" placeholder="Tên đăng nhập">
+        <input id="password" type="password" class="login-input" placeholder="Mật khẩu">
+        <button class="login-btn-submit" onclick="register()">Đăng ký</button>
+        
+        <div style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
+            Đã có tài khoản? 
+            <a href="login.html" style="color: #00d2ff; text-decoration: none; font-weight: 600;">Đăng nhập ngay</a>
+        </div>
+        
+        <p id="error" style="margin-top: 15px; color: #ff6b6b; text-align: center;"></p>
+    </div>
+</div>
+
+<script>
+async function register() {
+    const fullname = document.getElementById("fullname").value;
+    const email = document.getElementById("email").value;
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if(!fullname || !email || !username || !password) {
+        document.getElementById("error").innerText = "Vui lòng nhập đầy đủ thông tin!";
+        return;
+    }
+
+    try {
+        const res = await fetch("http://127.0.0.1:8000/auth/register", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({fullname, email, username, password})
+        });
+
+        if(res.ok) {
+            alert("Đăng ký thành công! Hãy đăng nhập nhé.");
+            window.location = "login.html";
+        } else {
+            const err = await res.json();
+            document.getElementById("error").innerText = err.detail || "Tên đăng nhập hoặc Email đã tồn tại";
+        }
+    } catch (err) {
+        document.getElementById("error").innerText = "Không thể kết nối đến Server!";
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Galaxy AI Law - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        .login-page { height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .login-box { 
+            width: 420px; padding: 40px; border-radius: 20px; 
+            background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); 
+            backdrop-filter: blur(15px); box-shadow: 0 0 40px rgba(0,0,0,0.6); 
+        }
+        .login-box h2 { 
+            text-align: center; margin-bottom: 30px; 
+            background: linear-gradient(to right,#00d2ff,#92fe9d); 
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; 
+        }
+        .login-input { 
+            width: 100%; padding: 14px; margin-bottom: 15px; border-radius: 12px; 
+            border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.05); color: white; 
+        }
+        .login-btn-submit { 
+            width: 100%; padding: 14px; border: none; border-radius: 12px; 
+            background: #00d2ff; color: #0f0c29; font-weight: 600; cursor: pointer; transition: 0.3s; 
+        }
+        .login-btn-submit:hover { box-shadow: 0 0 15px #00d2ff; transform: translateY(-2px); }
+    </style>
+</head>
+<body>
+
+<div class="login-page">
+    <div class="login-box">
+        <h2><i class="fas fa-user-lock"></i> Đăng nhập hệ thống</h2>
+        <input id="username" class="login-input" placeholder="Tên đăng nhập">
+        <input id="password" type="password" class="login-input" placeholder="Mật khẩu">
+        <button class="login-btn-submit" onclick="login()">Đăng nhập</button>
+        
+        <div style="margin-top: 20px; text-align: center; font-size: 0.9rem;">
+            Chưa có tài khoản? 
+            <a href="register.html" style="color: #00d2ff; text-decoration: none; font-weight: 600;">Đăng ký ngay</a>
+        </div>
+
+        <p id="error" style="margin-top: 15px; color: #ff6b6b; text-align: center;"></p>
+    </div>
+</div>
+
+<script>
+async function login() {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    try {
+        const res = await fetch("http://127.0.0.1:8000/auth/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ username, password })
+        });
+
+        const data = await res.json();
+
+        if (res.ok) {
+            localStorage.setItem("role", data.role);
+            localStorage.setItem("user_id", data.user_id);
+            localStorage.setItem("user_name", data.name);
+
+            if (data.role === "ADMIN") {
+                window.location = "admin.html";
+            } else {
+                window.location = "index.html";
+            }
+        } else {
+            document.getElementById("error").innerText = data.detail || "Đăng nhập thất bại";
+        }
+    } catch (err) {
+        document.getElementById("error").innerText = "Không thể kết nối đến Server!";
+    }
+}
+</script>
+
+</body>
+</html>

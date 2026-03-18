@@ -71,8 +71,13 @@ Bạn là trợ lý pháp luật Việt Nam chuyên về Luật Hôn nhân và G
         return response.text.strip()
 
     except ClientError as e:
-        if e.status_code == 429:
-            return "⚠️ Hệ thống đang quá tải (giới hạn API miễn phí). Vui lòng thử lại sau."
+        error_message = str(e)
+
+        # ===== KIỂM TRA HẾT QUOTA =====
+        if "429" in error_message or "quota" in error_message.lower():
+            return "⚠️ Hệ thống đang quá tải (đã đạt giới hạn API miễn phí). Vui lòng thử lại sau."
+
+        print("Gemini ClientError:", e)
         return "❌ Lỗi kết nối tới hệ thống AI."
 
     except Exception as e:

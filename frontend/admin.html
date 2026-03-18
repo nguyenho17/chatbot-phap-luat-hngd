@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Galaxy AI Law - Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        /* --- CSS GỐC CỦA BẠN --- */
+        .admin-container {
+            display: flex;
+            height: 100vh;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: white;
+        }
+
+        .admin-sidebar {
+            width: 280px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .admin-sidebar h2 {
+            font-size: 1.6rem;
+            margin-bottom: 40px;
+            text-align: center;
+            background: linear-gradient(to right, #00d2ff, #92fe9d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .admin-menu { flex: 1; }
+
+        .admin-menu button {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: white;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 1rem;
+        }
+
+        .admin-menu button i { margin-right: 12px; width: 20px; text-align: center; }
+
+        .admin-menu button:hover {
+            background: #00d2ff;
+            color: #0f0c29;
+            transform: translateX(8px);
+            font-weight: bold;
+        }
+
+        .logout-btn {
+            color: #ff6b6b !important;
+            margin-top: auto !important;
+        }
+
+        .logout-btn:hover {
+            background: #ff6b6b !important;
+            color: white !important;
+        }
+
+        .admin-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        /* STATS CARDS */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .stat-box {
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-box.users { background: linear-gradient(135deg, rgba(0, 210, 255, 0.2), rgba(0, 210, 255, 0.05)); }
+        .stat-box.chats { background: linear-gradient(135deg, rgba(146, 254, 157, 0.2), rgba(146, 254, 157, 0.05)); }
+        .stat-box.rating { background: linear-gradient(135deg, rgba(255, 107, 107, 0.2), rgba(255, 107, 107, 0.05)); }
+
+        .stat-box:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .stat-box i { font-size: 2.5rem; margin-bottom: 15px; display: block; }
+        .stat-box .number { font-size: 2.2rem; font-weight: bold; display: block; }
+        .stat-box .label { font-size: 1rem; color: #ccc; margin-top: 5px; }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 { margin-bottom: 25px; font-size: 1.4rem; color: #00d2ff; }
+
+        .admin-table { width: 100%; border-collapse: collapse; }
+        .admin-table th {
+            text-align: left;
+            padding: 15px;
+            border-bottom: 2px solid rgba(0, 210, 255, 0.3);
+            color: #00d2ff;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .admin-table td { padding: 15px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.95rem; }
+        .admin-table tr:hover { background: rgba(255, 255, 255, 0.03); }
+
+        .badge { padding: 5px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: bold; }
+        .badge-admin { background: rgba(255, 107, 107, 0.2); color: #ff6b6b; border: 1px solid #ff6b6b; }
+        .badge-user { background: rgba(146, 254, 157, 0.2); color: #92fe9d; border: 1px solid #92fe9d; }
+
+        .truncate { max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+        /* --- CSS MỚI CHO THAO TÁC & MODAL --- */
+        .btn-action {
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: 0.2s;
+            margin-right: 5px;
+            color: white;
+        }
+        .btn-lock { background: #f39c12; }
+        .btn-delete { background: #e74c3c; }
+        .btn-view { background: #3498db; }
+        .btn-action:hover { opacity: 0.8; transform: scale(1.05); }
+
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 9999; 
+            left: 0; top: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+        }
+        .modal-content {
+            background: #1a1a2e;
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #00d2ff;
+            width: 60%;
+            border-radius: 20px;
+            color: white;
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.3);
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            right: 20px; top: 15px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #ff6b6b;
+        }
+        .chat-detail-container {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-top: 20px;
+            max-height: 450px;
+            overflow-y: auto;
+        }
+        .report-filter{
+            display:flex;
+            gap:20px;
+            margin-bottom:25px;
+            align-items:center;
+            }
+
+            .report-filter input{
+            padding:8px 12px;
+            border-radius:8px;
+            border:none;
+            }
+
+            .report-stat{
+            display:flex;
+            gap:40px;
+            margin:25px 0;
+            }
+
+            .stat-mini{
+            background:rgba(255,255,255,0.05);
+            padding:20px;
+            border-radius:12px;
+            text-align:center;
+            min-width:150px;
+            }
+            .btn-lock{
+                background: linear-gradient(135deg,#ff9f43,#f39c12);
+                border:none;
+                color:white;
+                padding:8px 16px;
+                border-radius:10px;
+                font-size:0.85rem;
+                cursor:pointer;
+                transition:all 0.25s ease;
+                display:inline-flex;
+                align-items:center;
+                gap:6px;
+                font-weight:500;
+            }
+
+            .btn-lock:hover{
+                transform:translateY(-2px);
+                box-shadow:0 6px 12px rgba(0,0,0,0.3);
+                background:linear-gradient(135deg,#ffb347,#f39c12);
+            }
+            .card{
+                background:#2c2f5b;
+                padding:25px;
+                border-radius:12px;
+            }
+            .chart-box{
+                width: 500px;
+                height: 500px;
+                margin: auto;
+            }
+            .accuracy-chart{
+                width:250px;
+                height:250px;
+                margin:auto;
+            }
+            .rating-chart{
+                width:600px;
+                margin:auto;
+            }
+
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="admin-container">
+    <div class="admin-sidebar">
+        <h2><i class="fas fa-atom"></i> CHATBOT ADMIN</h2>
+        <div class="admin-menu">
+            <button onclick="loadStats()"><i class="fas fa-th-large"></i> Tổng quan</button>
+            <button onclick="loadUsers()"><i class="fas fa-user-friends"></i> Quản lý User</button>
+            <button onclick="loadChats()"><i class="fas fa-comment-alt"></i> Nhật ký Chat</button>
+            <button onclick="loadReport()"><i class="fas fa-file-export"></i> Xuất báo cáo</button>
+            <button onclick="loadAnalytics()"><i class="fas fa-chart-line"></i>Phân tích Chatbot</button>
+            <button onclick="logout()" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Đăng xuất</button>
+        </div>
+    </div>
+
+    <div class="admin-content" id="content">
+        </div>
+</div>
+
+<div id="chatModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <h2 id="modalUser" style="color:#00d2ff; margin-bottom:10px;"></h2>
+        <p id="modalTime" style="font-size:0.9rem; color:#888;"></p>
+        <div class="chat-detail-container">
+            <p><strong><i class="fas fa-question-circle"></i> Câu hỏi khách hàng:</strong></p>
+            <p id="modalQuestion" style="margin: 10px 0 25px 0; color:#ddd; line-height:1.5;"></p>
+            <p><strong><i class="fas fa-robot"></i> Trợ lý AI tư vấn:</strong></p>
+            <div id="modalAnswer" style="margin-top:10px; color:#92fe9d; line-height:1.8; white-space: pre-line;"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Kiểm tra bảo mật
+    if (localStorage.getItem("role") !== "ADMIN") {
+        alert("Bạn không có quyền truy cập!");
+        window.location = "index.html";
+    }
+
+    // --- 1. TỔNG QUAN ---
+    async function loadStats() {
+        const res = await fetch("http://127.0.0.1:8000/admin/stats?role=ADMIN");
+        const data = await res.json();
+        const accuracyRes = await fetch("http://127.0.0.1:8000/admin/accuracy");
+        const accuracyData = await accuracyRes.json();
+        const accuracy = accuracyData.accuracy || 0;
+        document.getElementById("content").innerHTML = `
+            <div class="stats-grid">
+                <div class="stat-box users">
+                    <i class="fas fa-users" style="color: #00d2ff;"></i>
+                    <span class="number">${data.total_users}</span>
+                    <span class="label">Tổng người dùng</span>
+                </div>
+                <div class="stat-box chats">
+                    <i class="fas fa-comments" style="color: #92fe9d;"></i>
+                    <span class="number">${data.total_chats}</span>
+                    <span class="label">Tổng lượt Chat</span>
+                </div>
+                <div class="stat-box rating">
+                    <i class="fas fa-star" style="color: #ff6b6b;"></i>
+                    <span class="number">${accuracy}%</span>
+                    <span class="label">Đánh giá trung bình</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3><i class="fas fa-bolt"></i> Thông báo hệ thống</h3>
+                <p style="color: #ccc;">Server đang hoạt động ổn định. Đã đồng bộ hóa dữ liệu lúc ${new Date().toLocaleTimeString()}.</p>
+            </div>
+        `;
+    }
+
+    // --- 2. QUẢN LÝ NGƯỜI DÙNG ---
+    async function loadUsers() {
+    const res = await fetch("http://127.0.0.1:8000/admin/users?role=ADMIN");
+    const data = await res.json();
+
+    let rows = data.map(u => {
+
+        const isLocked = u.status === "Đã khóa";
+
+        return `
+        <tr>
+            <td>#${u.id}</td>
+            <td><strong>${u.name}</strong></td>
+            <td>${u.email}</td>
+
+            <td>
+                <span class="badge ${u.role === 'ADMIN' ? 'badge-admin' : 'badge-user'}">
+                    ${u.role}
+                </span>
+            </td>
+
+            <!-- THÊM TRẠNG THÁI -->
+            <td>
+                <span style="color:${isLocked ? '#ff6b6b' : '#92fe9d'}">
+                    ${isLocked ? "🔴 Đã khóa" : "🟢 Hoạt động"}
+                </span>
+            </td>
+
+            <td>
+                ${
+                    isLocked
+                    ? `
+                        <button onclick="unlockUser(${u.id})" class="btn-action btn-view">
+                            <i class="fas fa-lock-open"></i> Mở khóa
+                        </button>
+                      `
+                    : `
+                        <button onclick="lockUser(${u.id})" class="btn-lock">
+                            <i class="fas fa-lock"></i> Khóa
+                        </button>
+                      `
+                }
+            </td>
+        </tr>
+        `;
+    }).join('');
+
+    document.getElementById("content").innerHTML = `
+        <div class="card">
+            <h3><i class="fas fa-users"></i> Danh sách tài khoản</h3>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Họ tên</th>
+                        <th>Email</th>
+                        <th>Vai trò</th>
+                        <th>Trạng thái</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+            </table>
+        </div>
+    `;
+}
+async function unlockUser(userId) {
+
+    const confirmUnlock = confirm("Bạn có muốn mở khóa tài khoản này không?");
+
+    if (!confirmUnlock) return;
+
+    try {
+
+        const res = await fetch(
+            `http://127.0.0.1:8000/admin/unlock-user/${userId}?role=ADMIN`,
+            { method: "PUT" }
+        );
+
+        const data = await res.json();
+
+        alert(data.message);
+
+        loadUsers();
+
+    } catch (err) {
+
+        alert("Lỗi khi mở khóa tài khoản");
+
+    }
+}
+    // --- 3. NHẬT KÝ CHAT (CHI TIẾT) ---
+    async function loadChats() {
+
+    const res = await fetch("http://127.0.0.1:8000/admin/chat-history?role=ADMIN");
+    const data = await res.json();
+
+    // GOM NHÓM THEO USER
+    const grouped = {};
+
+    data.forEach(chat => {
+        if (!grouped[chat.user]) {
+            grouped[chat.user] = [];
+        }
+        grouped[chat.user].push(chat);
+    });
+
+    window.groupedChats = grouped;
+
+    let rows = Object.keys(grouped).map(user => {
+
+        const total = grouped[user].length;
+
+        return `
+            <tr>
+                <td>${new Date(grouped[user][0].time).toLocaleString('vi-VN')}</td>
+                <td><strong>${user}</strong></td>
+                <td>${total} câu hỏi</td>
+                <td>
+                    <button class="btn-action btn-view" onclick="viewUserChats('${user}')">
+                        <i class="fas fa-eye"></i> Xem
+                    </button>
+                </td>
+            </tr>
+        `;
+    }).join('');
+
+    document.getElementById("content").innerHTML = `
+        <div class="card">
+            <h3><i class="fas fa-history"></i> Nhật ký tư vấn pháp luật</h3>
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Thời gian gần nhất</th>
+                        <th>Người dùng</th>
+                        <th>Số câu hỏi</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>${rows}</tbody>
+            </table>
+        </div>
+    `;
+}
+    async function loadReport(){
+        document.getElementById("content").innerHTML = `
+        <div class="card">
+        <h3><i class="fas fa-chart-bar"></i> Báo cáo hoạt động Chatbot AI</h3>
+        <div class="report-filter">
+        <div>
+        <label>Từ ngày</label><br>
+        <input type="date" id="fromDate">
+        </div>
+        <div>
+        <label>Đến ngày</label><br>
+        <input type="date" id="toDate">
+        </div>
+        <button class="btn-action btn-view" onclick="previewReport()">
+        <i class="fas fa-search"></i> Xem báo cáo
+        </button>
+        <button class="btn-action btn-lock" onclick="exportReport()">
+        <i class="fas fa-file-excel"></i> Xuất Excel
+        </button>
+        </div>
+        <div id="reportResult"></div>
+        </div>
+        `;
+        }
+    async function previewReport(){
+
+    const start = document.getElementById("fromDate").value;
+    const end = document.getElementById("toDate").value;
+
+    if(!start || !end){
+        alert("Vui lòng chọn thời gian!");
+        return;
+    }
+
+    const res = await fetch(`http://127.0.0.1:8000/admin/report-preview?role=ADMIN&start=${start}&end=${end}`);
+    const data = await res.json();
+
+    let topUsers = "";
+
+    data.top_users.forEach((u,index)=>{
+        topUsers += `
+        <tr>
+            <td>${index+1}</td>
+            <td>${u.name}</td>
+            <td>${u.total}</td>
+        </tr>
+        `;
+    });
+
+    let topics = "";
+
+    data.top_topics.forEach((t,index)=>{
+        topics += `
+        <tr>
+            <td>${index+1}</td>
+            <td>${t.name}</td>
+            <td>${t.total}</td>
+        </tr>
+        `;
+    });
+
+    document.getElementById("reportResult").innerHTML = `
+
+    <div class="report-stat">
+
+        <div class="stat-mini">
+            <h2>${data.total_users}</h2>
+            <p>Tổng người dùng</p>
+        </div>
+
+        <div class="stat-mini">
+            <h2>${data.total_questions}</h2>
+            <p>Tổng câu hỏi</p>
+        </div>
+
+        <div class="stat-mini">
+            <h2>${data.active_users}</h2>
+            <p>User hoạt động</p>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h3>TOP USER</h3>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Người dùng</th>
+                    <th>Số câu hỏi</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                ${topUsers}
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class="card">
+
+        <h3>TOP CHỦ ĐỀ</h3>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Chủ đề</th>
+                    <th>Số câu</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                ${topics}
+            </tbody>
+        </table>
+
+    </div>
+
+    `;
+}
+    // --- 4. CÁC HÀM XỬ LÝ CHI TIẾT ---
+    function viewDetail(index) {
+        const chat = window.currentChats[index];
+        document.getElementById("modalUser").innerText = "Khách hàng: " + chat.user;
+        document.getElementById("modalTime").innerText = "Thời gian: " + new Date(chat.time).toLocaleString('vi-VN');
+        document.getElementById("modalQuestion").innerText = chat.question;
+        document.getElementById("modalAnswer").innerText = chat.answer;
+        document.getElementById("chatModal").style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("chatModal").style.display = "none";
+    }
+
+    function toggleUserStatus(id, name) {
+        if(confirm(`Khóa tài khoản ${name}?`)) alert("Yêu cầu khóa đã gửi!");
+    }
+
+    function deleteHistory(index) {
+        if(confirm("Xóa vĩnh viễn bản ghi này?")) alert("Đã xóa bản ghi!");
+    }
+
+    function exportReport(){
+        const start = document.getElementById("fromDate")?.value;
+        const end = document.getElementById("toDate")?.value;
+        if(!start || !end){
+        alert("Vui lòng chọn thời gian trước!");
+        return;
+        }
+        const url = `http://127.0.0.1:8000/admin/export-report?start=${start}&end=${end}`;
+        window.location.href = url;
+
+}
+
+    function logout() {
+        if (confirm("Đăng xuất khỏi Admin?")) {
+            localStorage.clear();
+            window.location = "login.html";
+        }
+    }
+    function viewUserChats(user) {
+
+    const chats = window.groupedChats[user];
+
+    document.getElementById("modalUser").innerText = "Khách hàng: " + user;
+    document.getElementById("modalTime").innerText = "Tổng câu hỏi: " + chats.length;
+
+    let html = "";
+
+    chats.forEach(chat => {
+        html += `
+            <div style="margin-bottom:20px;border-bottom:1px solid rgba(255,255,255,0.1);padding-bottom:15px;">
+                <p style="color:#888;font-size:0.85rem">
+                    ${new Date(chat.time).toLocaleString('vi-VN')}
+                </p>
+
+                <p><strong><i class="fas fa-question-circle"></i> Câu hỏi:</strong></p>
+                <p style="margin:5px 0 10px 0">${chat.question}</p>
+
+                <p><strong><i class="fas fa-robot"></i> AI trả lời:</strong></p>
+                <p style="color:#92fe9d">${chat.answer}</p>
+            </div>
+        `;
+    });
+
+    document.getElementById("modalQuestion").style.display = "none";
+    document.getElementById("modalAnswer").innerHTML = html;
+
+    document.getElementById("chatModal").style.display = "block";
+}
+async function lockUser(userId) {
+
+    const confirmLock = confirm("Bạn có chắc muốn khóa tài khoản này?");
+
+    if (!confirmLock) return;
+
+    try {
+
+        const res = await fetch(
+            `http://127.0.0.1:8000/admin/lock-user/${userId}?role=ADMIN`,
+            { method: "PUT" }
+        );
+
+        const data = await res.json();
+
+        alert(data.message);
+
+        loadUsers(); // reload danh sách
+
+    } catch (err) {
+
+        alert("Lỗi khi khóa tài khoản");
+
+    }
+
+}
+    //biểu đồ
+    async function loadAnalytics(){
+
+    document.getElementById("content").innerHTML = `
+    
+    <div class="card">
+        <h3><i class="fas fa-chart-line"></i> Phân tích hoạt động Chatbot AI</h3>
+        <canvas id="chatChart" height="120"></canvas>
+    </div>
+
+    <div class="card" style="margin-top:30px;">
+        <h3><i class="fas fa-chart-pie"></i> Phân loại chủ đề câu hỏi</h3>
+        <div class="chart-box"><canvas id="topicChart"></canvas></div>
+    </div>
+    <div class="chart-card">
+        <h3>🎯 Độ chính xác câu trả lời AI</h3>
+        <div class="accuracy-chart">
+        <canvas id="accuracyChart"></canvas>
+        </div>
+        </div>
+        <div class="accuracy-box">
+        AI Accuracy: <span id="accuracyValue">0%</span>
+        </div>
+        <div class="card" style="margin-top:30px;">
+    <h3><i class="fas fa-star"></i> Thống kê đánh giá Chatbot</h3>
+    <div class="rating-chart">
+<canvas id="ratingChart"></canvas>
+</div>
+</div>
+    `;
+
+    loadChart();       // biểu đồ hoạt động
+    loadTopicChart();  // biểu đồ chủ đề
+    loadAccuracy();
+    loadRatingChart()
+}
+async function loadRatingChart(){
+
+const res = await fetch("http://127.0.0.1:8000/admin/rating-stats");
+const data = await res.json();
+
+const ctx = document.getElementById("ratingChart");
+
+new Chart(ctx,{
+    type:"bar",
+    data:{
+        labels:data.labels.map(s => s + " ⭐"),
+        datasets:[{
+            label:"Số lượt đánh giá",
+            data:data.values,
+            backgroundColor:[
+                "#ff4d4d",
+                "#ff944d",
+                "#ffd11a",
+                "#66cc66",
+                "#00e5ff"
+            ],
+            borderRadius:8
+        }]
+    },
+    options:{
+        plugins:{
+            legend:{
+                labels:{color:"white"}
+            }
+        },
+        scales:{
+            x:{
+                ticks:{color:"#ccc"}
+            },
+            y:{
+                ticks:{color:"#ccc"},
+                beginAtZero:true
+            }
+        }
+    }
+})
+
+}
+async function loadTopicChart(){
+
+    const res = await fetch("http://127.0.0.1:8000/admin/topic-chart");
+    const data = await res.json();
+
+    const ctx = document.getElementById("topicChart");
+
+    new Chart(ctx,{
+        type:"pie",
+        data:{
+            labels:data.labels,
+            datasets:[{
+                label:"Chủ đề",
+                data:data.values,
+                backgroundColor:[
+                    "#00e5ff",
+                    "#ff6384",
+                    "#ffd166",
+                    "#4caf50",
+                    "#9c27b0"
+                ]
+            }]
+        },
+        options:{
+            plugins:{
+                legend:{
+                    labels:{color:"white"}
+                }
+            }
+        }
+    });
+
+}
+async function loadChart(){
+
+    const res = await fetch("http://127.0.0.1:8000/admin/chart-data");
+    const data = await res.json();
+
+    const ctx = document.getElementById("chatChart");
+
+    new Chart(ctx,{
+        type:"line",
+        data:{
+            labels:data.labels,
+            datasets:[{
+                label:"Số câu hỏi AI",
+                data:data.values,
+                borderColor:"#00e5ff",
+                backgroundColor:"rgba(0,229,255,0.2)",
+                borderWidth:3,
+                tension:0.4
+            }]
+        },
+        options:{
+            responsive:true,
+            plugins:{
+                legend:{
+                    labels:{
+                        color:"#00e5ff"
+                    }
+                }
+            },
+            scales:{
+                x:{
+                    ticks:{
+                        color:"#ccc"
+                    }
+                },
+                y:{
+                    ticks:{
+                        color:"#ccc"
+                    }
+                }
+            }
+        }
+    });
+
+}
+    async function loadAccuracy(){
+
+const res = await fetch("http://127.0.0.1:8000/admin/accuracy");
+const data = await res.json();
+
+const accuracy = data.accuracy || 0;
+
+document.getElementById("accuracyValue").innerText = accuracy + "%";
+
+const ctx = document.getElementById("accuracyChart");
+
+new Chart(ctx,{
+    type:"doughnut",
+    data:{
+        labels:["Đúng"],
+        datasets:[{
+            data:[accuracy,100-accuracy],
+            backgroundColor:[
+                "#00e5ff",
+                "#2c2c54"
+            ],
+            borderWidth:0
+        }]
+    },
+    options:{
+        plugins:{
+            legend:{
+                labels:{
+                    color:"white"
+                }
+            }
+        }
+    }
+});
+
+}
+
+    // Khởi tạo
+    loadStats();
+    // Hàm này dán ở đây
+    
+</script>
+
+</body>
+</html>

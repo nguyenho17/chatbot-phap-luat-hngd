@@ -190,47 +190,16 @@ Quy trình xử lý của hệ thống RAG trong đề tài được mô tả nh
 5. Mô hình LLM sinh câu trả lời dựa hoàn toàn trên dữ liệu đã được cung cấp.
 
 Quy trình này đảm bảo chatbot chỉ sử dụng thông tin từ tài liệu pháp luật nội bộ và có thể từ chối trả lời khi dữ liệu không đủ.
-CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
-3.1. Phân tích yêu cầu hệ thống
-3.1.1. Mô tả tổng quan hệ thống
+# CHƯƠNG 3: PHÂN TÍCH VÀ THIẾT KẾ HỆ THỐNG
+## 3.1. Phân tích yêu cầu hệ thống
+### 3.1.1. Mô tả tổng quan hệ thống
 Hệ thống được xây dựng nhằm cung cấp một chatbot tư vấn pháp luật trong lĩnh vực Hôn nhân và Gia đình Việt Nam. Người dùng có thể đặt câu hỏi bằng ngôn ngữ tự nhiên thông qua giao diện web, hệ thống sẽ tự động phân tích câu hỏi, truy xuất các điều luật liên quan từ tập dữ liệu pháp luật nội bộ và sinh câu trả lời dựa trên các điều luật đó.
 Hệ thống hoạt động theo mô hình client–server, trong đó frontend đảm nhiệm việc tương tác với người dùng, backend xử lý logic nghiệp vụ và tích hợp mô hình trí tuệ nhân tạo.
 ________________________________________
-3.1.2. Use Case Diagram
+### 3.1.2. Use Case Diagram
 a) Mô tả Use Case
-Tác nhân (Actor):
-•	Người dùng (User)
-Các Use Case chính:
-•	Gửi câu hỏi pháp luật
-•	Nhận câu trả lời tư vấn
-•	Xem trích dẫn điều luật
-•	Xem lịch sử hội thoại
-•	Tạo cuộc hội thoại mới
-Use Case Diagram thể hiện mối quan hệ giữa người dùng và các chức năng chính của hệ thống chatbot.
-b) Prompt vẽ Use Case Diagram
-👉 Prompt dùng cho AI hoặc vẽ tay:
-Vẽ Use Case Diagram cho hệ thống Chatbot AI tư vấn pháp luật Hôn nhân và Gia đình Việt Nam.
-
-Actor:
-- User
-
-Use Cases:
-- Send Legal Question
-- Receive Legal Answer
-- View Legal References
-- View Chat History
-- Start New Chat Session
-
-Mối quan hệ:
-- User liên kết với tất cả các Use Case
-- Các Use Case không phụ thuộc lẫn nhau
-
-Phong cách:
-- UML chuẩn
-- Đơn giản, rõ ràng
-- Phù hợp báo cáo đồ án đại học
-3.2. Yêu cầu chức năng và phi chức năng
-3.2.1. Yêu cầu chức năng (Functional Requirements)
+## 3.2. Yêu cầu chức năng và phi chức năng
+### 3.2.1. Yêu cầu chức năng (Functional Requirements)
 Hệ thống cần đáp ứng các yêu cầu chức năng sau:
 •	Cho phép người dùng nhập câu hỏi pháp luật bằng ngôn ngữ tự nhiên.
 •	Tự động truy xuất các điều luật liên quan từ tập dữ liệu nội bộ.
@@ -238,22 +207,22 @@ Hệ thống cần đáp ứng các yêu cầu chức năng sau:
 •	Hiển thị rõ ràng nội dung trả lời và trích dẫn điều luật.
 •	Lưu trữ và hiển thị lịch sử hội thoại của người dùng.
 ________________________________________
-3.2.2. Yêu cầu phi chức năng (Non-functional Requirements)
+### 3.2.2. Yêu cầu phi chức năng (Non-functional Requirements)
 •	Tính chính xác: câu trả lời phải dựa trên dữ liệu pháp luật nội bộ.
 •	Tính hiệu năng: thời gian phản hồi nhanh (dưới vài giây).
 •	Tính mở rộng: dễ dàng bổ sung thêm văn bản luật mới.
 •	Tính bảo mật: không lưu trữ thông tin cá nhân nhạy cảm.
 •	Tính khả dụng: giao diện thân thiện, dễ sử dụng.
 ________________________________________
-3.3. Thiết kế kiến trúc hệ thống
-3.3.1. Kiến trúc tổng thể
+## 3.3. Thiết kế kiến trúc hệ thống
+### 3.3.1. Kiến trúc tổng thể
 Hệ thống được thiết kế theo kiến trúc phân tầng, bao gồm:
 •	Tầng giao diện (Frontend): Web UI (HTML, CSS, JavaScript).
 •	Tầng ứng dụng (Backend API): FastAPI xử lý logic.
 •	Tầng AI & Xử lý ngôn ngữ: Embedding, Retrieval, Gemini API.
 •	Tầng dữ liệu: Tập dữ liệu pháp luật nội bộ (JSON, vector embedding).
 ________________________________________
-3.3.2. Prompt vẽ sơ đồ kiến trúc hệ thống (Architecture Diagram)
+### 3.3.2. Prompt vẽ sơ đồ kiến trúc hệ thống (Architecture Diagram)
 Vẽ sơ đồ kiến trúc hệ thống Chatbot AI tư vấn pháp luật theo mô hình RAG.
 
 Các thành phần:
@@ -279,15 +248,15 @@ Phong cách:
 - Có mũi tên chỉ luồng dữ liệu
 - Phù hợp báo cáo học thuật
 ________________________________________
-3.4. Thiết kế dữ liệu
-3.4.1. Mô hình dữ liệu (ERD)
+## 3.4. Thiết kế dữ liệu
+### 3.4.1. Mô hình dữ liệu (ERD)
 Dữ liệu trong hệ thống bao gồm:
 •	Law: thông tin luật (tên luật, nhóm luật).
 •	Article: điều luật, tiêu đề, nội dung.
 •	ChatSession: phiên hội thoại.
 •	ChatMessage: câu hỏi và câu trả lời trong mỗi phiên.
 ________________________________________
-3.4.2. Prompt vẽ ERD Diagram
+### 3.4.2. Prompt vẽ ERD Diagram
 Vẽ ERD cho hệ thống Chatbot AI tư vấn pháp luật.
 
 Entities:
@@ -304,8 +273,8 @@ Phong cách:
 - ERD chuẩn
 - Ghi rõ khóa chính (PK) và khóa ngoại (FK)
 ________________________________________
-3.5. Sequence Diagram – Luồng xử lý câu hỏi
-3.5.1. Mô tả luồng xử lý
+## 3.5. Sequence Diagram – Luồng xử lý câu hỏi
+### 3.5.1. Mô tả luồng xử lý
 Trình tự xử lý một câu hỏi của người dùng diễn ra như sau:
 1.	Người dùng gửi câu hỏi từ giao diện web.
 2.	Frontend gửi yêu cầu đến Backend API.
@@ -315,7 +284,7 @@ Trình tự xử lý một câu hỏi của người dùng diễn ra như sau:
 6.	Gemini API sinh câu trả lời.
 7.	Backend trả kết quả về frontend để hiển thị cho người dùng.
 ________________________________________
-3.5.2. Prompt vẽ Sequence Diagram
+### 3.5.2. Prompt vẽ Sequence Diagram
 Vẽ Sequence Diagram cho luồng xử lý câu hỏi của Chatbot AI tư vấn pháp luật.
 
 Participants:
@@ -340,14 +309,14 @@ Phong cách:
 - UML Sequence Diagram
 - Có đánh số bước
 ________________________________________
-3.6. Thiết kế API
-3.6.1. Mô tả API chính
+## 3.6. Thiết kế API
+### 3.6.1. Mô tả API chính
 •	Endpoint: /chat
 •	Method: POST
 •	Request: câu hỏi pháp luật của người dùng
 •	Response: câu trả lời và danh sách điều luật liên quan
 ________________________________________
-3.6.2. Prompt vẽ sơ đồ API Flow
+### 3.6.2. Prompt vẽ sơ đồ API Flow
 Vẽ sơ đồ luồng API cho endpoint /chat của Chatbot AI pháp luật.
 
 Thành phần:
@@ -365,10 +334,10 @@ Chat API → Client
 Phong cách:
 - Flow Diagram
 - Đơn giản, rõ ràng
-CHƯƠNG 4: XÂY DỰNG VÀ CÀI ĐẶT HỆ THỐNG
-4.1. Công nghệ và công cụ sử dụng
+# CHƯƠNG 4: XÂY DỰNG VÀ CÀI ĐẶT HỆ THỐNG
+## 4.1. Công nghệ và công cụ sử dụng
 Hệ thống chatbot AI tư vấn pháp luật được xây dựng dựa trên các công nghệ hiện đại, phù hợp với yêu cầu xử lý ngôn ngữ tự nhiên và triển khai web.
-4.1.1. Công nghệ Backend
+### 4.1.1. Công nghệ Backend
 •	Ngôn ngữ lập trình: Python
 •	Framework Backend: FastAPI
 •	Ưu điểm của FastAPI:
@@ -377,7 +346,7 @@ o	Dễ xây dựng API RESTful
 o	Phù hợp triển khai các hệ thống AI
 Backend chịu trách nhiệm xử lý câu hỏi người dùng, truy xuất dữ liệu pháp luật, tích hợp mô hình AI và trả kết quả cho frontend.
 ________________________________________
-4.1.2. Công nghệ Frontend
+### 4.1.2. Công nghệ Frontend
 •	HTML, CSS, JavaScript
 •	Giao diện web cho phép người dùng:
 o	Nhập câu hỏi pháp luật
@@ -386,14 +355,14 @@ o	Xem lịch sử hội thoại
 o	Tạo phiên chat mới
 Frontend giao tiếp với backend thông qua API /chat bằng giao thức HTTP.
 ________________________________________
-4.1.3. Công nghệ AI và NLP
+### 4.1.3. Công nghệ AI và NLP
 •	SentenceTransformer: tạo vector embedding cho câu hỏi và điều luật
 •	Semantic Search: tìm kiếm ngữ nghĩa dựa trên độ tương đồng cosine
 •	Gemini API: mô hình ngôn ngữ lớn dùng để sinh câu trả lời
 •	Mô hình RAG: kết hợp Retrieval + Generation
 ________________________________________
-4.2. Thu thập và xử lý dữ liệu pháp luật
-4.2.1. Thu thập dữ liệu
+## 4.2. Thu thập và xử lý dữ liệu pháp luật
+### 4.2.1. Thu thập dữ liệu
 Nguồn dữ liệu pháp luật được sử dụng trong hệ thống là các văn bản thuộc Luật Hôn nhân và Gia đình năm 2014, được thu thập và lưu trữ dưới dạng tệp JSON nội bộ.
 Mỗi văn bản luật được cấu trúc bao gồm:
 •	Tên luật
@@ -401,7 +370,7 @@ Mỗi văn bản luật được cấu trúc bao gồm:
 •	Danh sách các điều luật
 •	Tiêu đề và nội dung chi tiết của từng điều
 ________________________________________
-4.2.2. Tiền xử lý dữ liệu
+### 4.2.2. Tiền xử lý dữ liệu
 Trước khi đưa vào hệ thống AI, dữ liệu pháp luật được xử lý như sau:
 •	Làm sạch văn bản (loại bỏ ký tự thừa, chuẩn hóa encoding).
 •	Tách luật thành các đơn vị nhỏ theo từng điều luật.
@@ -409,8 +378,8 @@ Trước khi đưa vào hệ thống AI, dữ liệu pháp luật được xử 
 •	Chuẩn bị trường văn bản dùng cho embedding.
 Việc chia nhỏ theo từng điều luật giúp hệ thống truy xuất chính xác và tăng độ liên quan của kết quả tìm kiếm.
 ________________________________________
-4.3. Pipeline xử lý theo mô hình RAG
-4.3.1. Mô tả pipeline tổng thể
+## 4.3. Pipeline xử lý theo mô hình RAG
+### 4.3.1. Mô tả pipeline tổng thể
 Pipeline xử lý của hệ thống chatbot được xây dựng theo mô hình Retrieval-Augmented Generation, bao gồm các bước chính:
 1.	Người dùng nhập câu hỏi pháp luật.
 2.	Backend tiếp nhận câu hỏi thông qua API.
@@ -421,7 +390,7 @@ Pipeline xử lý của hệ thống chatbot được xây dựng theo mô hình
 7.	Gửi prompt đến Gemini API.
 8.	Nhận câu trả lời và trả về cho người dùng.
 ________________________________________
-4.3.2. Prompt vẽ sơ đồ Pipeline RAG
+### 4.3.2. Prompt vẽ sơ đồ Pipeline RAG
 Vẽ sơ đồ pipeline xử lý RAG cho Chatbot AI tư vấn pháp luật.
 
 Các bước:
@@ -441,16 +410,16 @@ Phong cách:
 - Có đánh số thứ tự các bước
 - Phù hợp báo cáo học thuật
 ________________________________________
-4.4. Thuật toán tìm kiếm ngữ nghĩa
-4.4.1. Embedding văn bản
+## 4.4. Thuật toán tìm kiếm ngữ nghĩa
+### 4.4.1. Embedding văn bản
 Mỗi điều luật và câu hỏi người dùng được chuyển đổi thành một vector số có cùng số chiều thông qua mô hình embedding. Các vector này phản ánh ý nghĩa ngữ nghĩa của văn bản trong không gian vector.
 Việc sử dụng embedding giúp hệ thống có khả năng tìm kiếm các điều luật liên quan ngay cả khi câu hỏi không trùng khớp từ khóa.
 ________________________________________
-4.4.2. Tính độ tương đồng
+### 4.4.2. Tính độ tương đồng
 Độ tương đồng giữa câu hỏi và các điều luật được tính bằng phép nhân vô hướng (cosine similarity). Các điều luật có độ tương đồng cao nhất sẽ được lựa chọn để đưa vào ngữ cảnh cho mô hình sinh ngôn ngữ.
 Phương pháp này giúp tăng độ chính xác và giảm thiểu việc truy xuất các điều luật không liên quan.
 ________________________________________
-4.4.3. Prompt vẽ sơ đồ Semantic Search
+### 4.4.3. Prompt vẽ sơ đồ Semantic Search
 Vẽ sơ đồ minh họa quá trình tìm kiếm ngữ nghĩa trong Chatbot AI pháp luật.
 
 Thành phần:
@@ -464,18 +433,18 @@ Phong cách:
 - Vector Search Diagram
 - Đơn giản, dễ hiểu
 ________________________________________
-4.5. Tích hợp mô hình ngôn ngữ lớn (Gemini API)
-4.5.1. Xây dựng Prompt có kiểm soát
+## 4.5. Tích hợp mô hình ngôn ngữ lớn (Gemini API)
+### 4.5.1. Xây dựng Prompt có kiểm soát
 Prompt gửi đến Gemini API được thiết kế theo nguyên tắc:
 •	Chỉ sử dụng dữ liệu pháp luật được truy xuất.
 •	Không bổ sung kiến thức bên ngoài.
 •	Nếu dữ liệu không đủ, phải nêu rõ giới hạn.
 Cách thiết kế này giúp chatbot tránh hiện tượng suy diễn và đảm bảo tính chính xác pháp lý.
 ________________________________________
-4.5.2. Cơ chế kiểm soát câu trả lời
+### 4.5.2. Cơ chế kiểm soát câu trả lời
 Trong trường hợp hệ thống không tìm thấy điều luật phù hợp, chatbot sẽ trả về thông báo rằng dữ liệu pháp luật chưa đủ để trả lời câu hỏi. Điều này giúp nâng cao tính minh bạch và độ tin cậy của hệ thống.
 ________________________________________
-4.6. Triển khai và chạy thử hệ thống
+## 4.6. Triển khai và chạy thử hệ thống
 Hệ thống được triển khai trên môi trường local với các bước:
 •	Cài đặt các thư viện cần thiết.
 •	Cấu hình biến môi trường cho Gemini API.

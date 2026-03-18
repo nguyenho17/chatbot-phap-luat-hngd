@@ -11,14 +11,22 @@
     <div class="app">
         <aside class="sidebar">
             <h2><i class="fas fa-atom"></i> Chatbot - Tư vấn luật pháp</h2>
-            <button id="newChat"><i class="fas fa-plus-circle"></i> Chat mới</button>
-            <div style="margin-top: 25px;" class="history" id="history"></div>
+            <button id="newChat">
+                <i class="fas fa-plus-circle"></i> Chat mới
+            </button>
+            <div class="history-header" onclick="toggleHistory()">
+                <span>Các đoạn chat của bạn</span>
+                <i id="historyArrow" class="fas fa-chevron-right"></i>
+            </div>
+            <div class="history" id="history"></div>
         </aside>
 
         <main class="chat-area">
             <header class="header">
                 <div><i class="fas fa-stars"></i> Trợ lý AI Pháp luật</div>
-                <button class="login-btn"><i class="fas fa-sign-in-alt"></i> Đăng nhập</button>
+                <button class="login-btn" onclick="window.location='login.html'">
+                <i class="fas fa-sign-in-alt"></i> Đăng nhập
+                </button>
             </header>
 
             <div class="messages" id="messages"></div>
