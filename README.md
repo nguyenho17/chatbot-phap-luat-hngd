@@ -1,7 +1,7 @@
 # Video demo dự án ChatBot
-C:\ChatbotAI_HonNhan\ảnh sơ đồ\Galaxy AI Law – Tư vấn pháp luật - Google Chrome 2026-03-21 21-28-14.mp4
+https://drive.google.com/drive/folders/1YUqrKCwX8h5zI1MdZQZvctEZnpnRlB75?usp=sharing
 # Mô tả sơ lược
-Do em không đẩy trang web lên github được nên em xin phép up video bên README.md này ạ. Kèm với mô tả sơ lược về cấu trúc báo cáo đồ án ạ
+Do em không đẩy trang web lên github được nên em xin phép up video lên drive rồi dán link này bên README.md này ạ. Kèm với mô tả sơ lược về cấu trúc báo cáo đồ án ạ
 # CHƯƠNG 1: GIỚI THIỆU ĐỀ TÀI
 
 ## 1.1. Lý do chọn đề tài
