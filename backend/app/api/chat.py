@@ -3,36 +3,56 @@ from pydantic import BaseModel
 from app.services.retrieval_service import retrieve_laws_semantic
 from app.services.gemini_service import ask_gemini
 # Import thêm hàm lưu
+from typing import Optional # T
 from app.services.user_service import save_chat_to_db, get_history_from_db
 from app.config import get_connection
 router = APIRouter(prefix="/chat", tags=["Chat"])
 
 class ChatRequest(BaseModel):
     question: str
-    user_id: int # Thêm user_id vào request
-    session_id: int
+    user_id: Optional[int] = None    # Cho phép để trống
+    session_id: Optional[int] = None # Cho phép để trống
 class RatingRequest(BaseModel):
     user_id: int
     score: int
+from typing import Optional # Quan trọng: Phải import cái này
+from pydantic import BaseModel
+
+# Cập nhật Class để chấp nhận giá trị None
+class ChatRequest(BaseModel):
+    question: str
+    user_id: Optional[int] = None    # Có thể để trống
+    session_id: Optional[int] = None # Có thể để trống
+
 @router.post("/")
 def chat(req: ChatRequest):
     try:
+        # 1. Tìm kiếm luật
         laws = retrieve_laws_semantic(req.question)
 
+        # 2. Xử lý khi không thấy luật
         if not laws:
             answer = "Không tìm thấy căn cứ pháp lý phù hợp trong dữ liệu hiện có."
-            # Lưu vào DB để Admin thấy cả những câu hỏi không có kết quả
-            save_chat_to_db(req.user_id, req.question, answer)
+            
+            # CHỈ LƯU VÀO DB NẾU LÀ THÀNH VIÊN (CÓ ID)
+            if req.user_id:
+                save_chat_to_db(req.user_id, req.question, answer)
+                
             return {"answer": answer, "sources": []}
 
+        # 3. Hỏi Gemini
         answer = ask_gemini(req.question, laws)
 
-        # GỌI HÀM LƯU: Dữ liệu sẽ hiện bên Admin và Sidebar User
-        chat_id = save_chat_to_db(req.user_id, req.question, answer, req.session_id)
+        # 4. Lưu lịch sử
+        chat_id = None
+        if req.user_id:
+            # Chỉ gọi hàm lưu khi user_id khác None (đã đăng nhập)
+            chat_id = save_chat_to_db(req.user_id, req.question, answer, req.session_id)
+        
         return {
             "answer": answer,
-            "sources": laws,
-            "chat_id": chat_id
+            "sources": [l['content'] for l in laws] if laws else [],
+            "chat_id": chat_id # Sẽ trả về null nếu là khách
         }
 
     except Exception as e:

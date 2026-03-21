@@ -427,3 +427,185 @@ background:rgba(255,0,0,0.15);
 .history-menu.show{
 display:flex;
 }
+/* Guest Warning Bar */
+.guest-warning {
+    background: rgba(255, 193, 7, 0.1);
+    border: 1px solid rgba(255, 193, 7, 0.3);
+    color: #ffc107;
+    padding: 10px 20px;
+    margin: 15px 20px 0 20px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    animation: slideDown 0.5s ease;
+}
+
+.guest-warning a {
+    color: #00d2ff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.guest-warning a:hover {
+    text-decoration: underline;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* style.css */
+
+/* Container chính của menu */
+.user-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Định dạng Menu Dropdown */
+.user-dropdown-menu {
+    display: none; /* Mặc định ẩn */
+    position: absolute;
+    top: 100%; /* Nằm ngay dưới nút bấm */
+    right: 0;
+    background: rgba(15, 12, 41, 0.95); /* Màu Galaxy tối */
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    min-width: 180px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 1000;
+    margin-top: 10px;
+    overflow: hidden;
+    animation: fadeInSlideDown 0.3s ease;
+}
+
+/* Hiển thị dropdown khi có class 'show' */
+.user-dropdown-menu.show {
+    display: block !important;
+}
+
+/* Định dạng các item trong menu */
+.dropdown-item {
+    padding: 12px 20px;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+    background: rgba(0, 210, 255, 0.1);
+}
+
+.dropdown-item i {
+    width: 16px;
+    text-align: center;
+    color: #ccc;
+}
+
+/* Vạch kẻ ngang */
+.dropdown-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* Đặc biệt cho nút Thoát */
+.logout-item {
+    color: #ff6b6b;
+}
+.logout-item i {
+    color: #ff6b6b;
+}
+
+/* --- Style cho Modal Hồ Sơ --- */
+.profile-modal .modal-content {
+    background: #1a1a2e;
+    border: 1px solid var(--accent-glow);
+    width: 400px;
+}
+
+.profile-details {
+    margin-top: 25px;
+}
+
+.profile-info-group {
+    margin-bottom: 18px;
+    border-bottom: 1px dashed rgba(255,255,255,0.08);
+    padding-bottom: 10px;
+}
+
+.profile-info-group label {
+    display: block;
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.profile-info-group p {
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--accent-glow);
+}
+
+/* Hiệu ứng Animation */
+@keyframes fadeInSlideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Lớp nền mờ bao phủ toàn màn hình */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.7); /* Nền đen mờ */
+    backdrop-filter: blur(4px);
+}
+
+/* Hộp nội dung chính */
+.modal-content {
+    background-color: #1a1a2e;
+    margin: 10% auto; 
+    padding: 30px;
+    border: 1px solid #00d2ff;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 20px;
+    position: relative;
+    color: white;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+}
+
+.close-modal:hover { color: #fff; }
+/* Icon ghim nghiêng và có màu nổi bật */
+.pin-icon {
+    color: #00d2ff; /* Màu xanh giống theme của bạn */
+    transform: rotate(-45deg);
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+/* Tùy chọn: Highlight nhẹ background của item được ghim */
+.history-item.pinned {
+    background: rgba(255, 255, 255, 0.03);
+}

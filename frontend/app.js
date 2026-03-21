@@ -142,28 +142,26 @@ function addRating() {
  * 5. Quản lý Lịch sử Chat (CẬP NHẬT ĐỂ HIỂN THỊ ĐÚNG)
  */
 function renderHistory() {
-
     if (!historyBox) return;
-
     historyBox.innerHTML = "";
 
-    chatHistory.forEach((session, index) => {
+    // Sắp xếp: Ưu tiên is_pinned = true lên trước
+    const sortedHistory = [...chatHistory].sort((a, b) => (b.is_pinned ? 1 : 0) - (a.is_pinned ? 1 : 0));
 
+    sortedHistory.forEach((session, index) => {
         if (!session) return;
 
         const div = document.createElement("div");
         div.className = "history-item";
+        if (session.is_pinned) div.classList.add("pinned"); // Thêm class để CSS nếu cần
 
-        let displayTitle =
-            session.title ||
-            (session.messages && session.messages[0]
-                ? session.messages[0].question
-                : "Hội thoại mới");
+        let displayTitle = session.title || 
+            (session.messages && session.messages[0] ? session.messages[0].question : "Hội thoại mới");
 
         div.innerHTML = `
         <span class="history-title">
-            <i class="far fa-comment-dots"></i>
-            ${displayTitle.substring(0,25)}...
+            <i class="${session.is_pinned ? 'fas fa-thumbtack pin-icon' : 'far fa-comment-dots'}"></i>
+            ${displayTitle.substring(0, 25)}...
         </span>
 
         <span class="history-menu-btn">
@@ -171,41 +169,28 @@ function renderHistory() {
         </span>
 
         <div class="history-menu">
-            <div onclick="pinChat(${index})"><i class="fas fa-thumbtack"></i> Ghim</div>
+            <div onclick="pinChat(${index})">
+                <i class="fas fa-thumbtack"></i> ${session.is_pinned ? 'Bỏ ghim' : 'Ghim'}
+            </div>
             <div onclick="renameChat(${index})"><i class="fas fa-edit"></i> Đổi tên</div>
             <div onclick="deleteChat(${index})"><i class="fas fa-trash"></i> Xóa</div>
         </div>
         `;
 
+        // ... các logic click, active, menuBtn giữ nguyên như code của bạn ...
         div.onclick = () => loadSession(index);
-
-        if (session.id === currentSessionId) {
-            div.classList.add("active");
-        }
-
+        if (session.id === currentSessionId) div.classList.add("active");
         historyBox.appendChild(div);
-
+        
+        // Logic cho menuBtn
         const menuBtn = div.querySelector(".history-menu-btn");
         const menu = div.querySelector(".history-menu");
-
         menuBtn.onclick = (e) => {
-
             e.stopPropagation();
-
-            const item = e.target.closest(".history-item");
-
-            // reset z-index
-            document.querySelectorAll(".history-item").forEach(i=>{
-                i.style.zIndex = "1";
-            });
-
-            // item đang mở menu nổi lên
-            item.style.zIndex = "999";
-
+            document.querySelectorAll(".history-item").forEach(i => i.style.zIndex = "1");
+            div.style.zIndex = "999";
             menu.classList.toggle("show");
-
         };
-
     });
 }
 async function deleteChat(index){
@@ -265,35 +250,29 @@ async function renameChat(index){
 }
 
 
-async function pinChat(index){
+async function pinChat(index) {
+    const chat = chatHistory[index];
+    
+    // Đảo ngược trạng thái ghim (true <-> false)
+    chat.is_pinned = !chat.is_pinned;
 
-    const chat = chatHistory[index]
-
-    try{
-
-        await fetch("http://127.0.0.1:8000/chat/pin",{
-            method:"PUT",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                chat_id: chat.id
+    try {
+        await fetch("http://127.0.0.1:8000/chat/pin", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: chat.id,
+                is_pinned: chat.is_pinned // Gửi trạng thái để server lưu vào DB
             })
-        })
-
-    }catch(err){
-        console.error("Pin lỗi:",err)
+        });
+    } catch (err) {
+        console.error("Lỗi ghim:", err);
     }
 
-    const item = chatHistory.splice(index,1)[0]
-
-    chatHistory.unshift(item)
-
-    localStorage.setItem("chatHistory", JSON.stringify(chatHistory))
-
-    renderHistory()
+    // Cập nhật lại LocalStorage và vẽ lại giao diện
+    localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+    renderHistory();
 }
-
 function loadSession(index) {
     const session = chatHistory[index];
     if (!session) return;
@@ -320,20 +299,16 @@ sendBtn.onclick = async () => {
     let question = questionInput.value.trim();
     if (!question) return;
 
-    // 1. Kiểm tra User ID (Tránh lỗi 422)
+    // 1. Lấy User ID (Không chặn nữa, cho phép null nếu chưa đăng nhập)
     const rawUserId = localStorage.getItem("user_id");
-    const userId = parseInt(rawUserId);
-    if (!rawUserId || isNaN(userId)) {
-        addMessage("❌ Lỗi: Bạn chưa đăng nhập. Hãy đăng nhập lại!", "bot");
-        return;
-    }
+    const userId = rawUserId ? parseInt(rawUserId) : null;
 
     // 2. Xóa gợi ý cũ
     const oldSugg = document.querySelector('.suggestions-container');
     if (oldSugg) oldSugg.remove();
 
-    // 3. Khởi tạo Session nếu là câu hỏi đầu tiên
-    if (!currentSessionId) {
+    // 3. Khởi tạo Session (Chỉ thực hiện nếu đã đăng nhập)
+    if (userId && !currentSessionId) {
         currentSessionId = Date.now();
         const newSession = { id: currentSessionId, title: question, messages: [] };
         chatHistory.unshift(newSession);
@@ -353,8 +328,8 @@ sendBtn.onclick = async () => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 
                 question: question, 
-                user_id: userId,
-                session_id: currentSessionId
+                user_id: userId, // Sẽ là số nguyên hoặc null
+                session_id: currentSessionId || null
             })
         });
         
@@ -364,32 +339,34 @@ sendBtn.onclick = async () => {
         if (!res.ok) throw new Error(data.detail || "Lỗi máy chủ");
 
         addMessage(data.answer, "bot");
-        questionCount++; // tăng số câu hỏi
-        addRating();
-        displaySuggestions(data.answer);
-
-        // 4. LƯU LỊCH SỬ (SỬA LỖI CÂU THỨ 2 TẠI ĐÂY)
-        // Tìm lại session trong mảng chatHistory
-        let session = chatHistory.find(s => s.id === currentSessionId);
+        questionCount++; 
         
-        // Nếu không tìm thấy (do lỗi render), hãy ép tạo lại
-        if (!session) {
-            session = { id: currentSessionId, title: question, messages: [] };
-            chatHistory.unshift(session);
+        // Chỉ hiện đánh giá và lưu lịch sử nếu đã ĐĂNG NHẬP
+        if (userId) {
+            addRating();
+            displaySuggestions(data.answer);
+
+            // 4. CẬP NHẬT LỊCH SỬ TRONG LOCALSTORAGE
+            let session = chatHistory.find(s => s.id === currentSessionId);
+            if (!session) {
+                session = { id: currentSessionId, title: question, messages: [] };
+                chatHistory.unshift(session);
+            }
+
+            if (!session.messages) session.messages = [];
+            session.id = data.chat_id || session.id;
+            session.messages.push({ question, answer: data.answer });
+
+            localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
+            renderHistory();
+        } else {
+            // Đối với khách: Chỉ hiển thị gợi ý, không lưu
+            displaySuggestions(data.answer);
         }
-
-        // Đảm bảo cấu trúc messages luôn là mảng
-        if (!session.messages) session.messages = [];
-        session.id = data.chat_id || session.id;
-        session.messages.push({ question, answer: data.answer });
-
-        // Ghi đè lại toàn bộ vào LocalStorage để đồng bộ
-        localStorage.setItem("chatHistory", JSON.stringify(chatHistory));
-        renderHistory();
 
     } catch (err) {
         if (loading) loading.remove();
-        addMessage("❌ Lỗi xử lý: " + err.message, "bot");
+        addMessage("❌ Lỗi hệ thống: " + err.message, "bot");
     }
 };
 /**
@@ -398,7 +375,10 @@ sendBtn.onclick = async () => {
 async function fetchHistoryFromServer() {
 
     const userId = localStorage.getItem("user_id");
-    if (!userId) return;
+    if (!userId) {
+        console.log("Khách vãng lai: Bỏ qua load lịch sử.");
+        return; 
+    }
 
     try {
 
@@ -447,28 +427,111 @@ async function fetchHistoryFromServer() {
  * 7. Tiện ích & Hiển thị thông tin đăng nhập
  */
 window.addEventListener('DOMContentLoaded', () => {
-    // Hiển thị tên người dùng trên Header
+    const userId = localStorage.getItem("user_id");
     const userName = localStorage.getItem("user_name");
-    const headerBtn = document.querySelector(".login-btn"); // Chỉnh selector cho đúng với HTML của bạn
     
-    if (userName && headerBtn) {
-        headerBtn.innerHTML = `<i class="fas fa-user-circle"></i> ${userName} | Thoát`;
-        headerBtn.onclick = (e) => {
-            e.preventDefault();
+    const guestWarning = document.getElementById("guestWarning");
+    const authContainer = document.getElementById("authContainer");
+    const userMenuBtn = document.getElementById("userMenuBtn"); // Sửa thành userMenuBtn
+    const userDropdown = document.getElementById("userDropdown");
 
-            const confirmLogout = confirm("Bạn có chắc chắn muốn đăng xuất không?");
+    if (!userId) {
+        // --- CHẾ ĐỘ KHÁCH ---
+        if (guestWarning) guestWarning.style.display = "block";
+        if (userMenuBtn) {
+            userMenuBtn.innerHTML = `<i class="fas fa-sign-in-alt"></i> Đăng nhập`;
+            userMenuBtn.onclick = () => window.location.href = 'login.html';
+        }
+    } else {
+        // --- ĐÃ ĐĂNG NHẬP ---
+        if (guestWarning) guestWarning.style.display = "none";
+        
+        if (userMenuBtn) {
+            // Cập nhật tên người dùng vào nút
+            userMenuBtn.innerHTML = `
+                <i class="fas fa-user-circle"></i> 
+                <span>${userName}</span> 
+                <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i>
+            `;
+            
+            // BẮT SỰ KIỆN CLICK MỞ MENU
+            userMenuBtn.onclick = (e) => {
+                e.stopPropagation(); 
+                userDropdown.classList.toggle("show");
+            };
+        }
 
-            if (confirmLogout) {
-                localStorage.clear();
-                window.location.href = "login.html"; 
+        // Đóng menu khi click ra ngoài
+        window.onclick = (e) => {
+            if (userDropdown && userDropdown.classList.contains("show")) {
+                if (!authContainer.contains(e.target)) {
+                    userDropdown.classList.remove("show");
+                }
+            }
+            // Đóng modal hồ sơ nếu click ra ngoài vùng xám
+            const modal = document.getElementById("profileModal");
+            if (e.target == modal) {
+                modal.style.display = "none";
             }
         };
-    }
 
-    // Load lịch sử từ server
-    fetchHistoryFromServer();
-    renderHistory();
+        if (typeof fetchHistoryFromServer === "function") fetchHistoryFromServer();
+    }
+    
+    if (typeof renderHistory === "function") renderHistory();
 });
+// Hàm Đăng xuất (được gọi từ dropdown-item trong HTML)
+function handleLogout() {
+    if (confirm("Bạn có chắc chắn muốn đăng xuất không?")) {
+        localStorage.clear();
+        window.location.href = "index.html";
+    }
+}
+async function openProfileModal() {
+    // 1. Ẩn menu dropdown trước
+    const dropdown = document.getElementById("userDropdown");
+    if (dropdown) dropdown.classList.remove("show");
+
+    const userId = localStorage.getItem("user_id");
+    const modal = document.getElementById("profileModal");
+
+    if (!userId) return alert("Vui lòng đăng nhập!");
+
+    // 2. Hiển thị Modal và trạng thái chờ
+    modal.style.display = "block";
+    document.getElementById("profileDisplayName").innerText = "Đang tải...";
+
+    try {
+        // 3. Gọi API lấy dữ liệu
+        const res = await fetch(`http://127.0.0.1:8000/auth/profile/${userId}`);
+        const data = await res.json();
+
+        if (res.ok) {
+            // 4. Đổ dữ liệu thật vào các thẻ <p> trong Modal
+            document.getElementById("profileDisplayName").innerText = data.full_name;
+            document.getElementById("profileUsername").innerText = data.username;
+            document.getElementById("profileEmail").innerText = data.email || "Chưa cập nhật";
+        } else {
+            alert("Không thể lấy thông tin hồ sơ.");
+        }
+    } catch (err) {
+        console.error("Fetch error:", err);
+        alert("Lỗi kết nối đến máy chủ.");
+    }
+}
+
+// Hàm đóng Modal khi bấm dấu X hoặc bấm ra ngoài
+function closeProfileModal() {
+    document.getElementById("profileModal").style.display = "none";
+}
+
+// Đóng modal khi click ra ngoài vùng chứa
+window.onclick = function(event) {
+    const modal = document.getElementById("profileModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 document.getElementById("newChat").onclick = () => {
     currentSessionId = null;
@@ -515,5 +578,26 @@ document.addEventListener("click", function(){
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    fetchHistoryFromServer();
+    const userId = localStorage.getItem("user_id");
+    const guestWarning = document.getElementById("guestWarning");
+    const authBtn = document.getElementById("authBtn");
+
+    if (!userId) {
+        // Chế độ khách
+        guestWarning.style.display = "block";
+        authBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Đăng nhập';
+        authBtn.onclick = () => window.location.href = 'login.html';
+    } else {
+        // Đã đăng nhập
+        guestWarning.style.display = "none";
+        const userName = localStorage.getItem("user_name") || "Thành viên";
+        authBtn.innerHTML = `<i class="fas fa-user-circle"></i> ${userName} (Đăng xuất)`;
+        authBtn.classList.add("logged-in");
+        authBtn.onclick = () => {
+            if(confirm("Bạn có chắc chắn muốn đăng xuất không?")) {
+                localStorage.clear();
+                window.location.href = "index.html";
+            }
+        };
+    }
 });
