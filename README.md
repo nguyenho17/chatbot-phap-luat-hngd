@@ -1,5 +1,7 @@
 # Video demo dự án ChatBot
 https://drive.google.com/drive/folders/1YUqrKCwX8h5zI1MdZQZvctEZnpnRlB75?usp=sharing
+Tài khoản admin: admin . Pass: 123456
+Tài khoản user: nguyenho22 . Pass: 220704
 # Mô tả sơ lược
 Do em không đẩy trang web lên github được nên em xin phép up video lên drive rồi dán link này bên README.md này ạ. Kèm với mô tả sơ lược về cấu trúc báo cáo đồ án ạ
 # CHƯƠNG 1: GIỚI THIỆU ĐỀ TÀI
