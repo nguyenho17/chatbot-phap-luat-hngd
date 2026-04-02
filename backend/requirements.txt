@@ -4,5 +4,6 @@ python-dotenv
 google-generativeai
 sentence-transformers
 numpy
+pyodbcgit 
 streamlit
-pyodbc
+requests
