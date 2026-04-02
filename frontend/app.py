@@ -1,26 +1,33 @@
 import streamlit as st
-import streamlit.components.v1 as components
+import sys
 import os
 
-# Thiết lập trang
-st.set_page_config(page_title="Galaxy AI Law", layout="wide")
+with open("frontend/index.html", "r", encoding="utf-8") as f:
+    html = f.read()
 
-# Lấy đường dẫn thư mục hiện tại của file streamlit_app.py
-current_dir = os.path.dirname(os.path.abspath(__file__))
-html_file_path = os.path.join(current_dir, "index.html")
+st.components.v1.html(html, height=800)
+# Fix import backend
+sys.path.append(os.path.abspath("backend"))
 
-st.title("🌌 Galaxy AI Law System")
+st.set_page_config(page_title="Chatbot Luật HNGĐ")
 
-# Kiểm tra sự tồn tại của file trước khi đọc
-if os.path.exists(html_file_path):
-    with open(html_file_path, "r", encoding="utf-8") as f:
-        html_content = f.read()
-    
-    # Hiển thị giao diện HTML
-    # Tăng height lên để không bị đen khoảng dưới
-    components.html(html_content, height=1000, scrolling=True)
-else:
-    st.error(f"❌ Không tìm thấy file index.html!")
-    st.write(f"Đường dẫn đang tìm: `{html_file_path}`")
-    st.write("Danh sách file hiện có trong thư mục gốc:")
-    st.write(os.listdir(current_dir))
+st.title("🤖 Chatbot Luật Hôn Nhân & Gia Đình")
+
+# Lưu lịch sử chat
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+
+# Hiển thị chat
+for msg in st.session_state.messages:
+    st.chat_message(msg["role"]).write(msg["content"])
+
+# Input
+if prompt := st.chat_input("Nhập câu hỏi..."):
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.chat_message("user").write(prompt)
+
+    # 👉 TEST trước
+    reply = f"Bạn hỏi: {prompt}"
+
+    st.session_state.messages.append({"role": "assistant", "content": reply})
+    st.chat_message("assistant").write(reply)
